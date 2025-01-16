@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values":[
+        "tnt",
+        {
+            "id": "twilightforest:magic_map",
+            "required": false
+        }
+    ]
+}
