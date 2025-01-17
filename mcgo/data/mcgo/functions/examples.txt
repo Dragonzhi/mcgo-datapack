@@ -1,0 +1,4 @@
+枪械子弹位置提示备忘
+格洛克的弹药盒：
+inventory.18
+tacz:ammo_box{Level:0,AmmoCount:120,AmmoId:"tacz:9mm",display:{Lore:['"这是格洛克的弹药盒"']}} 1
