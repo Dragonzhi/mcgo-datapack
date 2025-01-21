@@ -1,0 +1,1 @@
+give @p written_book{pages:['{"text":"Minecraft Tools book","clickEvent":{"action":"change_page","value":"2"}}','["",{"text":" \\u0020 \\u0020 \\u0020 \\u0020"},{"text":"123123","clickEvent":{"action":"open_url","value":"say 1"}},{"text":"\\n\\n\\n\\n\\n\\n\\n\\n\\n "}]'],title:Book,author:"http://minecraft.tools/"}

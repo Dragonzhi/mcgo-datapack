@@ -1,18 +1,25 @@
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:p320"}}]},scores={Points=700..}] run scoreboard players add @s Points 400
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:p320"}}]},scores={Points=700..}] run clear @s tacz:modern_kinetic_gun{GunId:"tacz:p320"}
-execute if entity @s[nbt={Inventory:[{id:"tacz:ammo_box",tag:{display:{Lore:['"这是P320的弹药盒"']}}}]},scores={Points=700..}] run clear @s tacz:ammo_box{display:{Lore:['"这是P320的弹药盒"']}}
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:cz75"}}]},scores={Points=700..}] run scoreboard players add @s Points 500
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:p320"}}]},scores={Points=700..}] run clear @s tacz:modern_kinetic_gun{GunId:"tacz:cz75"}
-execute if entity @s[nbt={Inventory:[{id:"tacz:ammo_box",tag:{display:{Lore:['"这是CZ75的弹药盒"']}}}]},scores={Points=700..}] run clear @s tacz:ammo_box{display:{Lore:['"这是CZ75的弹药盒"']}}
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"suffuse:python"}}]},scores={Points=700..}] run scoreboard players add @s Points 600
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:p320"}}]},scores={Points=700..}] run clear @s tacz:modern_kinetic_gun{GunId:"suffuse:python"}
-execute if entity @s[nbt={Inventory:[{id:"tacz:ammo_box",tag:{display:{Lore:['"这是左轮手枪的弹药盒"']}}}]},scores={Points=700..}] run clear @s tacz:ammo_box{display:{Lore:['"这是左轮手枪的弹药盒"']}}
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:deagle"}}]},scores={Points=700..}] run scoreboard players add @s Points 700
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:p320"}}]},scores={Points=700..}] run clear @s tacz:modern_kinetic_gun{GunId:"tacz:deagle"}
-execute if entity @s[nbt={Inventory:[{id:"tacz:ammo_box",tag:{display:{Lore:['"这是沙漠之鹰的弹药盒"']}}}]},scores={Points=700..}] run clear @s tacz:ammo_box{display:{Lore:['"这是沙漠之鹰的弹药盒"']}}
+function mcgo:execute/pistol_isvalid
 
-execute as @s[scores={Points=700..}] run tellraw @s [{"text":"你已购买 ","color":"white"},{"text":"沙漠之鹰 ","color":"yellow"},{"text":"-$700","color":"red"}]
-execute as @s[scores={Points=700..}] run item replace entity @s hotbar.1 with tacz:modern_kinetic_gun{HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"tacz:deagle",GunCurrentAmmoCount:8} 1
-execute as @s[scores={Points=700..}] run item replace entity @s inventory.18 with tacz:ammo_box{Level:0,AmmoCount:35,AmmoId:"tacz:50ae",display:{Lore:['"这是沙漠之鹰的弹药盒"']}} 1
-execute as @s[scores={Points=700..}] run scoreboard players remove @s Points 700
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "沙漠之鹰"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "tacz:deagle"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 700
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_mode GunMode set value "SEMI"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 8
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_type GunType set value 1
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_used GunUsed set value 0
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmag GunAttMag set value {}
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmuz GunAttMuz set value {}
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attri GunAttri set value [{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:-0.000d,UUID:[I;-1396647189,-179877183,-1931787460,-1731335846]}]
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_name AmmoName set value "Deagle"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_id AmmoId set value "tacz:50ae"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_type AmmoType set value 1
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_count AmmoCount set value 35
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_lore Ammolore set value ['"这是沙漠之鹰的弹药箱"']
+
+execute if entity @s[scores={Allowance=10}] run execute if score @s GetGunForFree matches 0 run function mcgo:execute/money_isvalid
+execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 1
+#将@s mcs设置为1，进入get_guns.mcfunctions时执行对应指令
+execute if entity @s[scores={Allowance=10}] run function mcgo:execute/get_guns
+
+
 

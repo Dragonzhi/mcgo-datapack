@@ -1,0 +1,14 @@
+GunType:
+Pistol 1
+MainWeapon 2
+Knife 3
+C4 4
+kit 5
+Grenade 6
+other 0 or N/A
+
+AmmoType:
+Pistol 1
+MainWeapon 2
+other 0 or N/A
+
