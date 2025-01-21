@@ -38,7 +38,7 @@ item replace entity @a[team=CT] hotbar.2 with tacz:modern_kinetic_gun{tag:{GunTy
 function mcgo:game/reset_scoreboard2
 scoreboard players set S InGame 1
 
-
+# 转换执行主体为玩家本身
 execute as @a[team=CT] run schedule function mcgo:game/temp_ct 5t append
 execute as @a[team=T] run schedule function mcgo:game/temp_t 5t append
 
@@ -53,3 +53,4 @@ setblock 1080 -50 16 minecraft:redstone_block
 spreadplayers 1140 57 1 2 false @a[team=CT]
 spreadplayers 1249 -3 1 2 false @a[team=T]
 
+say start_new_game

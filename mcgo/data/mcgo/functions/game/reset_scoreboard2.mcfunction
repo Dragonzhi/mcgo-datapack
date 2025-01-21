@@ -8,13 +8,7 @@ scoreboard players set 游戏倒计时 Timer 115
 scoreboard players set GameCountDownTicks Ticks 0
 scoreboard players set C4ticks Ticks 0
 scoreboard players set Buying Ticks 0
-scoreboard players set CT MoneyGiving 1
-scoreboard players set T MoneyGiving 1
-scoreboard players set CT Wins 0
-scoreboard players set T Wins 0
-scoreboard players set Finished_Round Wins 0
-scoreboard players set @a[team=T] Points 800
-scoreboard players set @a[team=CT] Points 800
+
 scoreboard players set ticks GameProcess 0
 scoreboard players set seconds GameProcess 0
 scoreboard players set BombPlanted GameProcess 0
