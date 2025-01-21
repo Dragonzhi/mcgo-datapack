@@ -8,6 +8,11 @@ item replace entity @a[team=T] armor.legs with minecraft:leather_leggings{Unbrea
 item replace entity @a[team=CT] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:2s}],display:{color:636159,Name:'{"text":"CT"}',Lore:['{"text":"CT"}']}}
 item replace entity @a[team=T] hotbar.2 with tacz:modern_kinetic_gun{HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"test:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
 item replace entity @a[team=CT] hotbar.2 with tacz:modern_kinetic_gun{HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"test:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
+scoreboard players set @a[team=CT] GetGunForFree 1
+scoreboard players set @a[team=T] GetGunForFree 1
+execute as @s[team=CT] run function mcgo:pistols/pistol_get_usp
+execute as @s[team=T] run function mcgo:pistols/pistol_get_glock
+scoreboard players set @a GetGunForFree 0
 #给予初始装备
 effect clear @a[team=CT]
 effect clear @a[team=T]
@@ -25,14 +30,9 @@ item replace entity @r[team=T] hotbar.8 with block_bettle:c_4_false{tag:{GunType
 gamemode adventure @a[team=CT]
 gamemode adventure @a[team=T]
 #变为冒险模式
-scoreboard players set CT Wins 0 
-scoreboard players set T Wins 0 
-scoreboard players set Finished_Round Wins 0 
-scoreboard players set CT MoneyGiving 1
-scoreboard players set T MoneyGiving 1
+function mcgo:game/reset_scoreboard1
+function mcgo:game/reset_scoreboard2
 scoreboard players set S InGame 1
-scoreboard players set 商店时间 Timer 65
-scoreboard players set 游戏倒计时 Timer 115
 #重置部分计分板
 playsound minecraft:block.slime_block.place music @a ~ ~ ~ 256
 #播放音效
@@ -41,3 +41,6 @@ scoreboard objectives setdisplay sidebar Timer
 
 setblock 1080 -50 16 minecraft:redstone_block
 #开始商店倒计时
+
+spreadplayers 1140 57 1 2 false @a[team=CT]
+spreadplayers 1249 -3 1 2 false @a[team=T]

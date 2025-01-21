@@ -24,11 +24,11 @@ scoreboard players set S InGame 0
 scoreboard objectives setdisplay sidebar
 
 setblock 1069 -52 19 minecraft:white_wool
-#T
+#T赛点播报
 setblock 1069 -52 13 minecraft:white_wool
-#CT
+#CT赛点播报
 setblock 1059 -49 14 minecraft:white_wool
-#finish_round.mcfunction
+#finish_round.mcfunction换边
 
 kill @e[type=minecraft:experience_orb]
 kill @e[type=item]

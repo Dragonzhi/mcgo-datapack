@@ -1,26 +1,9 @@
 tellraw @a {"text":"已初始化游戏","color":"yellow"}
 
-scoreboard players set 商店时间 Timer 65
-scoreboard players set 游戏倒计时 Timer 115
-scoreboard players set GameCountDownTicks Ticks 0
-scoreboard players set C4ticks Ticks 0
-scoreboard players set Buying Ticks 0
-scoreboard players set Buying Ticks 0
+function mcgo:game/reset_scoreboard1
+function mcgo:game/reset_scoreboard2
+
 scoreboard players set S InGame 0
-scoreboard players set @a Deaths 0
-scoreboard players set CT MoneyGiving 1
-scoreboard players set T MoneyGiving 1
-scoreboard players set CT Wins 0
-scoreboard players set T Wins 0
-scoreboard players set Finished_Round Wins 0
-scoreboard players set @a[team=T] Points 800
-scoreboard players set @a[team=CT] Points 800
-scoreboard players set ticks GameProcess 0
-scoreboard players set seconds GameProcess 0
-scoreboard players reset @a mcs
-scoreboard players reset @a Allowance
-scoreboard players reset @a mcs
-scoreboard players reset @a mcs
 scoreboard objectives setdisplay sidebar
 #清除sidebar
 

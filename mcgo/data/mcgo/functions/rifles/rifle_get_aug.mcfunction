@@ -1,10 +1,24 @@
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"mcs2:cs_m4a1s"}}]},scores={Points=3300..}] run scoreboard players add @s Points 2900
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:m4a1"}}]},scores={Points=3300..}] run scoreboard players add @s Points 3000
-execute if entity @s[nbt={Inventory:[{id:"tacz:modern_kinetic_gun", tag:{GunId:"tacz:aug"}}]},scores={Points=3300..}] run scoreboard players add @s Points 3300
+function mcgo:execute/mainweapon_isvalid
 
-execute as @s[scores={Points=3300..}] run item replace entity @s hotbar.0 with tacz:modern_kinetic_gun{GunId:"tacz:aug", HasBulletInBarrel:1b, GunFireMode:"AUTO", GunCurrentAmmoCount:30} 1
-execute as @s[scores={Points=3300..}] run item replace entity @s inventory.9 with tacz:ammo_box{Level:0,AmmoCount:90,AmmoId:"tacz:556x45",display:{Lore:['"这是AUG的弹药盒"']}} 1
-execute as @s[scores={Points=3300..}] run scoreboard players remove @s Points 3300
-execute as @s[scores={Points=3300..}] run tellraw @s [{"text":"你已购买 ","color":"white"},{"text":"AUG ","color":"yellow"},{"text":"-$3300","color":"red"}]
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "AUG"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "tacz:aug"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 3300
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_mode GunMode set value "AUTO"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 30
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_type GunType set value 2
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_used GunUsed set value 0
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmag GunAttMag set value {}
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmuz GunAttMuz set value {}
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attsco GunAttSco set value {}
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attri GunAttri set value [{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:-0.000d,UUID:[I;-1396647189,-179877183,-1931787460,-1731335846]}]
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_name AmmoName set value "AUG"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_id AmmoId set value "tacz:556x45"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_type AmmoType set value 2
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_count AmmoCount set value 90
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_lore Ammolore set value ['"这是AUG的弹药箱"']
 
-give @a tacz:modern_kinetic_gun{GunId:"tacz:aug", HasBulletInBarrel:1b, GunFireMode:"AUTO", GunCurrentAmmoCount:30}
+execute if entity @s[scores={Allowance=10}] run execute if score @s GetGunForFree matches 0 run function mcgo:execute/money_isvalid
+execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 2
+#将@s mcs设置为2，进入get_guns.mcfunctions时执行对应指令
+execute if entity @s[scores={Allowance=10}] run function mcgo:execute/get_guns
+

@@ -1,5 +1,5 @@
 #购买武器时执行
-
+say get_guns
 # 在玩家脚下召唤盔甲架
 execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_change"],Invisible:1b}
 # 将玩家物品复制到盔甲架
@@ -13,6 +13,7 @@ execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data m
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set from storage mcs:gun_used GunUsed
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentEXTENDED_MAG set from storage mcs:gun_attmag GunAttMag
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentMUZZLE set from storage mcs:gun_attmuz GunAttMuz
+execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentSCOPE set from storage mcs:gun_attsco GunAttSco
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttributeModifiers set from storage mcs:gun_attri GunAttri
 execute if score @s mcs matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p hotbar.1 from entity @s weapon.mainhand
 execute if score @s mcs matches 2 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p hotbar.0 from entity @s weapon.mainhand
@@ -23,12 +24,11 @@ execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data m
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AmmoType set from storage mcs:ammo_type AmmoType
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AmmoCount set from storage mcs:ammo_count AmmoCount
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.display.Lore set from storage mcs:ammo_lore Ammolore
-
 execute if score @s mcs matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p inventory.18 from entity @s weapon.mainhand
 execute if score @s mcs matches 2 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p inventory.19 from entity @s weapon.mainhand
 
 # 杀死盔甲架
 execute as @e[type=minecraft:armor_stand,tag=iu_change] at @s run kill @s
 
-scoreboard players set @s Allowance 0
+#scoreboard players set @s Allowance 0
 #重置条件

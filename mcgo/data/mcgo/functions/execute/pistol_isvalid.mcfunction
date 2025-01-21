@@ -1,6 +1,6 @@
 #在购买手枪时最先执行，检查是否满足购买手枪的基本条件（除金钱外）。在购买初始手枪时，与pistol_isinitial.mcfunction配合
 
-
+say pistol_isvalid
 # 初始化
 data modify storage mcs:gun_price GunPrice set value 0
 data modify storage mcs:gun_type GunType set value 0
@@ -58,7 +58,7 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
             execute if score @s Allowance matches 3 run scoreboard players set @s Allowance 0
         execute if score @s Allowance matches 2 run execute if score @s mcs matches 1 run scoreboard players set @s Allowance 3
             #运行函数前 Allowance 设为3
-            execute if score @s Allowance matches 3 run clear @s tacz:modern_kinetic_gun{tag:{GunPrice:200}}
-            execute if score @s Allowance matches 3 run clear @s tacz:ammo_box{tag:{AmmoType:1}}
+            execute if score @s Allowance matches 3 run clear @s tacz:modern_kinetic_gun{GunType:1}
+            execute if score @s Allowance matches 3 run clear @s tacz:ammo_box{AmmoType:1}
             execute if score @s Allowance matches 3 run scoreboard players set @s Allowance 10
             # Allowance 被设为10
