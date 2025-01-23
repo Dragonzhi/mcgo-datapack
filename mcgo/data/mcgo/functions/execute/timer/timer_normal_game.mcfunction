@@ -1,0 +1,2 @@
+execute if score 游戏倒计时 Timer matches 1.. run execute if score RoundFinished GameProcess matches 0 run scoreboard players remove 游戏倒计时 Timer 1
+execute if score 游戏倒计时 Timer matches 1.. run execute if score RoundFinished GameProcess matches 0 run schedule function mcgo:execute/timer/timer_normal_game 1s append

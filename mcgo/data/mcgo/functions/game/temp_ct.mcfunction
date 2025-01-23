@@ -4,5 +4,5 @@
  #
  # Created by .
 ##
-say temp
-execute as @a[team=CT] run function mcgo:execute/gun_redirect
+
+execute as @a[team=CT] run function mcgo:game/get_guns/gun_redirect

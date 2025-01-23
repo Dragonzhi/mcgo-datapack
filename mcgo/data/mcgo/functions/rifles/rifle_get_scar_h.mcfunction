@@ -1,4 +1,4 @@
-function mcgo:execute/mainweapon_isvalid
+function mcgo:game/get_guns/mainweapon_isvalid
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "SCAR-H"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "tacz:scar_h"
@@ -17,10 +17,10 @@ execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_typ
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_count AmmoCount set value 80
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_lore Ammolore set value ['"这是M4A1-S的弹药箱"']
 
-execute if entity @s[scores={Allowance=10}] run execute if score @s GetGunForFree matches 0 run function mcgo:execute/money_isvalid
+execute if entity @s[scores={Allowance=10}] run execute if score @s GetGunForFree matches 0 run function mcgo:game/get_guns/money_isvalid
 execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 2
 #将@s mcs设置为2，进入get_guns.mcfunctions时执行对应指令
-execute if entity @s[scores={Allowance=10}] run function mcgo:execute/get_guns
+execute if entity @s[scores={Allowance=10}] run function mcgo:game/get_guns/get_guns
 
 
 
