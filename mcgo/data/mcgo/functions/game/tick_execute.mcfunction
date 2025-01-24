@@ -33,3 +33,4 @@ execute if score S InGame matches 1 run function mcgo:execute/is_valid/is_round
 execute if score S InGame matches 1 run function mcgo:execute/is_valid/is_game_finished
 
 # execute if score S InGame matches 1 run schedule function mcgo:game/tick_execute 1t append
+#tellraw @a [{"text":"Allowance: "},{"score":{"name":"Allowance","objective":"GameProcess"}}]

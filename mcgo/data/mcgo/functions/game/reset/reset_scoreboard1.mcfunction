@@ -15,7 +15,6 @@ scoreboard players set @a[team=T] Points 800
 scoreboard players set @a[team=CT] Points 800
 scoreboard players set S InGame 0
 
-scoreboard players set NormalMode GameProcess 0
 scoreboard players set RapidMode GameProcess 0
 scoreboard players set CTGamePoint GameProcess 0
 scoreboard players set TGamePoint GameProcess 0
@@ -24,4 +23,3 @@ scoreboard players set GameFinished GameProcess 0
 scoreboard players set CTWinTheGame GameProcess 0
 scoreboard players set TWinTheGame GameProcess 0
 scoreboard players set Tie GameProcess 0
-

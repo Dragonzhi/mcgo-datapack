@@ -3,6 +3,7 @@ execute if score HalfTimeSwitch GameProcess matches 1 run scoreboard players set
     execute if score Allowance GameProcess matches 1 run clear @a[team=CT]
     execute if score Allowance GameProcess matches 1 run clear @a[team=T]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
+schedule clear mcgo:execute/timer/timer_normal_game
 
 kill @e[type=item]
 kill @e[type=experience_orb]
@@ -47,6 +48,7 @@ execute as @a[team=CT] run execute if score @s Allowance matches 1 run scoreboar
 item replace entity @a[team=T] hotbar.2 with tacz:modern_kinetic_gun{tag:{GunType:3},HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"test:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
 item replace entity @a[team=CT] hotbar.2 with tacz:modern_kinetic_gun{tag:{GunType:3},HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"test:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
 #给予刀
+
 function mcgo:game/reset/reset_scoreboard2
 function mcgo:game/game_process/give_books
 function mcgo:game/game_process/round_result
@@ -55,9 +57,6 @@ scoreboard objectives setdisplay sidebar Timer
 
 execute as @a[team=CT] run schedule function mcgo:game/temp_ct 1t append
 execute as @a[team=T] run schedule function mcgo:game/temp_t 1t append
-
-setblock 1080 -52 16 air
-#sotp c4 ticking
 
 execute if score CTGamePoint GameProcess matches 1 run title @a title [{"text":"赛点","color":"blue","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]
 execute if score TGamePoint GameProcess matches 1 run title @a title [{"text":"赛点","color":"yellow","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]

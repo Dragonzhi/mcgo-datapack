@@ -15,8 +15,6 @@ title @a subtitle [{"text":"已完成8次对局","color":"white","bold":false,"i
 title @a title [{"text":"中场双方互换阵营","color":"white","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}]
 scoreboard players set @a[team=CT] Points 800
 scoreboard players set @a[team=T] Points 800
-clear @a[team=T]
-clear @a[team=CT]
 
 scoreboard players set CT MoneyGiving 1
 scoreboard players set T MoneyGiving 1

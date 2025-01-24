@@ -1,7 +1,9 @@
 ##其他游戏中每刻执行的杂项
 
-execute at @a[team=CT] run execute as @a[team=CT] run spawnpoint @s
-execute at @a[team=T] run execute as @a[team=T] run spawnpoint @s
+
+spawnpoint @a[team=CT]
+spawnpoint @a[team=T]
+
 scoreboard players set @a[scores={Points=10000..}] Points 10000
 execute if score CT MoneyGiving matches 5.. run scoreboard players set CT MoneyGiving 4
 execute if score T MoneyGiving matches 5.. run scoreboard players set T MoneyGiving 4

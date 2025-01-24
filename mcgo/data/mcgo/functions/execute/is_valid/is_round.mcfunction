@@ -5,7 +5,7 @@ execute if score S InGame matches 1 run execute if score Finished_Round Wins mat
     execute if score Allowance GameProcess matches 1 run scoreboard players set HalfTimeSwitch GameProcess 1
     execute if score Allowance GameProcess matches 1 run schedule function mcgo:game/game_process/half_time_switch 5s append
     #half_time_switch只执行暗箱换边操作，不传送玩家。start_new_round中执行。此时HalfTimeSwitch已为1，防止重复进入该分支
-    execute if score Allowance GameProcess matches 1 run schedule clear mcgo:game/start_new_round
+    execute if score Allowance GameProcess matches 1 run schedule clear mcgo:game/game_process/start_new_round
     execute if score Allowance GameProcess matches 1 run schedule function mcgo:game/game_process/start_new_round 10s append
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 

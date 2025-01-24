@@ -1,8 +1,5 @@
 tellraw @a {"text":"已初始化游戏","color":"yellow"}
-function mcgo:game/reset/set_scoreboard
-function mcgo:game/reset/reset_scoreboard1
-function mcgo:game/reset/reset_scoreboard2
-function mcgo:game/reset/reset_team
+
 
 scoreboard players set S InGame 0
 scoreboard objectives setdisplay sidebar
@@ -24,3 +21,12 @@ kill @e[type=area_effect_cloud]
 kill @e[type=block_bettle:c_4]
 gamemode adventure @a[team=T]
 gamemode adventure @a[team=CT]
+
+function mcgo:game/reset/set_scoreboard
+function mcgo:game/reset/reset_scoreboard1
+function mcgo:game/reset/reset_scoreboard2
+function mcgo:game/reset/reset_team
+schedule clear mcgo:game/reset/reset_world
+schedule clear mcgo:execute/timer/timer_normal_game
+schedule clear mcgo:execute/timer/timer_normal_shop
+schedule clear mcgo:execute/timer/timer_normal_finish
