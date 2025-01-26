@@ -4,26 +4,40 @@ execute if score mirage SelectedMap matches 1 run scoreboard players set Allowan
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 execute if score dust2 SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run spreadplayers 1125 -180 1 2 false @a[team=T]
-    execute if score Allowance GameProcess matches 1 run spreadplayers 1221 -150 1 2 under -54 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 1043 -229 1 2 under -44 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 1017 -140 1 2 under -50 false @a[team=CT]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 execute if score inferno SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run spreadplayers 1006 -205 1 2 false @a[team=T]
-    execute if score Allowance GameProcess matches 1 run spreadplayers 860 -144 1 2 under -54 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 970 186 1 2 under -49 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 1019 300 1 2 false @a[team=CT]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 execute if score nuke SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run spreadplayers 930 79 1 2 under -45 false @a[team=T]
-    execute if score Allowance GameProcess matches 1 run spreadplayers 915 -30 1 2 under -43 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 442 -78 1 2 under -25 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 428 -185 1 2 under -23 false @a[team=CT]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 execute if score vertigo SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run spreadplayers 7 -5 1 2 under 69 false @a[team=T]
-    execute if score Allowance GameProcess matches 1 run spreadplayers 62 7 1 2 under 78 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 1217 -185 1 2 under -3 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 1271 -173 1 2 under 6 false @a[team=CT]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 execute if score ancient SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run spreadplayers 930 79 1 2 under -45 false @a[team=T]
-    execute if score Allowance GameProcess matches 1 run spreadplayers 915 -30 1 2 under -43 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run spreadplayers -100 216 1 2 under -57 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 6 220 1 2 under -54 false @a[team=CT]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
+
+execute if score train SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
+    execute if score Allowance GameProcess matches 1 run spreadplayers -642 -185 1 2 under -40 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers -572 -283 1 2 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
+
+execute if score anubis SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
+    execute if score Allowance GameProcess matches 1 run spreadplayers -821 -140 1 2 under -46 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers -828 -254 1 2 under -48 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
+
+#泳池
+#T：/spreadplayers 42 -26 1 2 under -59 false @a
+#CT：/spreadplayers 5 -24 1 2 under -59 false @a

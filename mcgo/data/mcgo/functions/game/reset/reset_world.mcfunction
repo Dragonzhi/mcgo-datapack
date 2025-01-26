@@ -5,9 +5,6 @@ scoreboard players set S InGame 0
 scoreboard objectives setdisplay sidebar
 #清除sidebar
 
-spawnpoint @a[team=CT] 1027 -47 -27
-spawnpoint @a[team=T] 1027 -47 -27
-#重设双方重生点为主城
 effect clear @a[team=T]
 effect clear @a[team=CT]
 #清除双方效果
@@ -26,7 +23,10 @@ function mcgo:game/reset/set_scoreboard
 function mcgo:game/reset/reset_scoreboard1
 function mcgo:game/reset/reset_scoreboard2
 function mcgo:game/reset/reset_team
+function mcgo:game/reset/reset_gamerule
 schedule clear mcgo:game/reset/reset_world
 schedule clear mcgo:execute/timer/timer_normal_game
 schedule clear mcgo:execute/timer/timer_normal_shop
 schedule clear mcgo:execute/timer/timer_normal_finish
+
+execute as @a run attribute @s generic.max_health base set 20

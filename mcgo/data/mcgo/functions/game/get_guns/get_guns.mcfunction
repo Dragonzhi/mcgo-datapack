@@ -15,8 +15,8 @@ execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data m
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentMUZZLE set from storage mcs:gun_attmuz GunAttMuz
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentSCOPE set from storage mcs:gun_attsco GunAttSco
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttributeModifiers set from storage mcs:gun_attri GunAttri
-execute if score @s mcs matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p hotbar.1 from entity @s weapon.mainhand
-execute if score @s mcs matches 2 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p hotbar.0 from entity @s weapon.mainhand
+execute if score @s mcs matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p[distance=..1] hotbar.1 from entity @s weapon.mainhand
+execute if score @s mcs matches 2 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p[distance=..1] hotbar.0 from entity @s weapon.mainhand
 
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @s weapon.mainhand with tacz:ammo_box{Level:1,AmmoCount:0,AmmoId:"tacz:9mm",display:{Lore:['"这是格洛克的弹药盒"']}} 1
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AmmoName set from storage mcs:ammo_name AmmoName
@@ -24,8 +24,8 @@ execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data m
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AmmoType set from storage mcs:ammo_type AmmoType
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AmmoCount set from storage mcs:ammo_count AmmoCount
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.display.Lore set from storage mcs:ammo_lore Ammolore
-execute if score @s mcs matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p inventory.18 from entity @s weapon.mainhand
-execute if score @s mcs matches 2 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p inventory.19 from entity @s weapon.mainhand
+execute if score @s mcs matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p[distance=..1] inventory.18 from entity @s weapon.mainhand
+execute if score @s mcs matches 2 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p[distance=..1] inventory.19 from entity @s weapon.mainhand
 
 # 杀死盔甲架
 execute as @e[type=minecraft:armor_stand,tag=iu_change] at @s run kill @s

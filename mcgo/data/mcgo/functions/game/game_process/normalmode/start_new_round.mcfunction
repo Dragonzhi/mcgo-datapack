@@ -32,8 +32,8 @@ item replace entity @r[team=T] hotbar.8 with block_bettle:c_4_false{tag:{GunId:4
 #给予C4
 clear @a[team=CT] minecraft:leather_leggings
 clear @a[team=T] minecraft:leather_leggings
-item replace entity @a[team=T] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:2s}],display:{color:16767744,Name:'{"text":"T"}',Lore:['{"text":"T"}']}}
-item replace entity @a[team=CT] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:2s}],display:{color:636159,Name:'{"text":"CT"}',Lore:['{"text":"CT"}']}}
+item replace entity @a[team=T] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:1s}],display:{color:16767744,Name:'{"text":"T"}',Lore:['{"text":"T"}']}}
+item replace entity @a[team=CT] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:1s}],display:{color:636159,Name:'{"text":"CT"}',Lore:['{"text":"CT"}']}}
 #给予标志裤
 execute as @a[team=CT] run execute unless entity @s[nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] run execute unless entity @s[nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run item replace entity @s hotbar.8 with block_bettle:qian_zi{tag:{GunId:5}}
 execute as @a[team=CT,nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run scoreboard players set @s Allowance 1
@@ -50,19 +50,20 @@ item replace entity @a[team=CT] hotbar.2 with tacz:modern_kinetic_gun{tag:{GunTy
 #给予刀
 
 function mcgo:game/reset/reset_scoreboard2
-function mcgo:game/game_process/give_books
-function mcgo:game/game_process/round_result
+function mcgo:game/game_process/normalmode/give_books
+function mcgo:game/game_process/normalmode/round_result
 scoreboard players set S InGame 1
 scoreboard objectives setdisplay sidebar Timer
 
-execute as @a[team=CT] run schedule function mcgo:game/temp_ct 1t append
-execute as @a[team=T] run schedule function mcgo:game/temp_t 1t append
+function mcgo:game/map_select_tp/tp_to_selected_map
+execute as @a[team=CT] run function mcgo:game/temp_ct
+execute as @a[team=T] run function mcgo:game/temp_t
 
 execute if score CTGamePoint GameProcess matches 1 run title @a title [{"text":"赛点","color":"blue","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]
 execute if score TGamePoint GameProcess matches 1 run title @a title [{"text":"赛点","color":"yellow","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]
 
-scoreboard players set 商店时间 Timer 15
+scoreboard players set 商店时间 Timer 20
 schedule function mcgo:execute/timer/timer_normal_shop 1s append
 
-function mcgo:game/map_select_tp/tp_to_selected_map
+
 

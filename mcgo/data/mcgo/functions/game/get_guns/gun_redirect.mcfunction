@@ -9,9 +9,9 @@ execute if score @s mcs matches 0 run scoreboard players set @s Allowance 1
     execute if score @s Allowance matches 1 run execute if entity @s[team=CT] run function mcgo:pistols/pistol_get_usp
     execute if score @s Allowance matches 1 run execute if entity @s[team=T] run function mcgo:pistols/pistol_get_glock
     execute if score @s Allowance matches 10 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p hotbar.1
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.1
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p hotbar.1 from entity @s weapon.mainhand
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.1 from entity @s weapon.mainhand
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add] at @s run kill @s
 scoreboard players set @s Allowance 0
     
@@ -33,18 +33,17 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:1}
         execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_p320
 
-    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"左轮手枪"}}]}] run scoreboard players set @s Allowance 2
+    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"R8"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:1}
-        execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_sp
+        execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_r8
 
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"USP-S"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:1}
         execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_usp
-
     execute if score @s Allowance matches 10 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p hotbar.1
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.1
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p hotbar.1 from entity @s weapon.mainhand
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.1 from entity @s weapon.mainhand
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add] at @s run kill @s
 scoreboard players set @s Allowance 0
 
@@ -78,6 +77,10 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"AUG"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
         execute if score @s Allowance matches 2 run function mcgo:rifles/rifle_get_aug
+    
+    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"SSG-08"}}]}] run scoreboard players set @s Allowance 2
+        execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
+        execute if score @s Allowance matches 2 run function mcgo:rifles/rifle_get_ssg
 
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"AWP"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
@@ -112,9 +115,9 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
         execute if score @s Allowance matches 2 run function mcgo:submachine/submachine_get_uzi
 
     execute if score @s Allowance matches 10 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p hotbar.0
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.0
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p hotbar.0 from entity @s weapon.mainhand
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.0 from entity @s weapon.mainhand
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add] at @s run kill @s
 
 scoreboard players set @s Allowance 0

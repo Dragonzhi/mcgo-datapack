@@ -29,8 +29,8 @@ execute if score @s mcs matches 0 run scoreboard players set @s Allowance 1
         #检查玩家背包中的手枪是否为初始手枪
         execute if score @s Allowance matches 2 run execute if score @s mcs matches 200 run scoreboard players set @s Allowance 3
             #运行函数前 Allowance 设为3
-            execute if score @s Allowance matches 3 run clear @s tacz:modern_kinetic_gun{tag:{GunPrice:200}}
-            execute if score @s Allowance matches 3 run clear @s tacz:ammo_box{tag:{AmmoType:1}}
+            #execute if score @s Allowance matches 3 run clear @s tacz:modern_kinetic_gun{tag:{GunPrice:200}}
+            #execute if score @s Allowance matches 3 run clear @s tacz:ammo_box{tag:{AmmoType:1}}
             execute if score @s Allowance matches 3 run scoreboard players set @s Allowance 10
             # Allowance 被设为10
         execute if score @s Allowance matches 2 run execute if score @s mcs matches 0 run scoreboard players set @s Allowance 3
@@ -58,7 +58,7 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
             execute if score @s Allowance matches 3 run scoreboard players set @s Allowance 0
         execute if score @s Allowance matches 2 run execute if score @s mcs matches 1 run scoreboard players set @s Allowance 3
             #运行函数前 Allowance 设为3
-            execute if score @s Allowance matches 3 run clear @s tacz:modern_kinetic_gun{GunType:1}
-            execute if score @s Allowance matches 3 run clear @s tacz:ammo_box{AmmoType:1}
+            #execute if score @s Allowance matches 3 run clear @s tacz:modern_kinetic_gun{GunType:1}
+            #execute if score @s Allowance matches 3 run clear @s tacz:ammo_box{AmmoType:1}
             execute if score @s Allowance matches 3 run scoreboard players set @s Allowance 10
             # Allowance 被设为10

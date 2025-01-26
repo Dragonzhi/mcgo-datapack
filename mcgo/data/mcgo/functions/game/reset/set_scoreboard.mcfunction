@@ -1,4 +1,3 @@
-scoreboard objectives remove Ticks
 scoreboard objectives remove Timer
 scoreboard objectives remove Hp
 scoreboard objectives remove GetGunForFree
@@ -15,8 +14,9 @@ scoreboard objectives remove Allowance
 scoreboard objectives remove mcs
 scoreboard objectives remove Wins
 scoreboard objectives remove MVP
+scoreboard objectives remove sort
+scoreboard objectives remove SelectedMap
 
-scoreboard objectives add Ticks dummy
 scoreboard objectives add Timer dummy
 scoreboard objectives add Hp health
 scoreboard objectives add GetGunForFree dummy
@@ -33,6 +33,8 @@ scoreboard objectives add Allowance dummy
 scoreboard objectives add mcs dummy
 scoreboard objectives add Wins dummy
 scoreboard objectives add MVP dummy
+scoreboard objectives add sort dummy
+scoreboard objectives add sort dummy
 
 scoreboard objectives setdisplay belowName Hp
 scoreboard objectives setdisplay list Points
