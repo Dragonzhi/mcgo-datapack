@@ -29,11 +29,13 @@ effect give @a[team=T] health_boost 99999 2 true
 effect give @a[team=T] minecraft:saturation 99999 255 true
 effect give @a[team=T] minecraft:slowness 99999 10 true
 effect give @a[team=T] minecraft:jump_boost 99999 200 true
+effect give @a[team=T] minecraft:dolphins_grace infinite 1 true
 effect give @a[team=CT] minecraft:regeneration 3 255 true
 effect give @a[team=CT] health_boost 99999 2 true
 effect give @a[team=CT] minecraft:saturation 99999 255 true
 effect give @a[team=CT] minecraft:slowness 99999 10 true
 effect give @a[team=CT] minecraft:jump_boost 99999 200 true
+effect give @a[team=CT] minecraft:dolphins_grace infinite 1 true
 #给予效果
 
 item replace entity @a[team=CT] hotbar.8 with block_bettle:qian_zi{tag:{GunType:5,GunPrice:1}} 1
@@ -51,10 +53,11 @@ playsound minecraft:block.slime_block.place music @a ~ ~ ~ 256
 scoreboard objectives setdisplay sidebar Timer
 #将侧栏计分板改为Timer
 
-function mcgo:game/map_select_tp/tp_to_selected_map
+
 execute as @a[team=CT] run function mcgo:game/temp_ct
 execute as @a[team=T] run function mcgo:game/temp_t
 
 scoreboard players set 商店时间 Timer 20
 schedule function mcgo:execute/timer/timer_normal_shop 1s append
 
+schedule function mcgo:game/map_select_tp/tp_to_selected_map 5t append

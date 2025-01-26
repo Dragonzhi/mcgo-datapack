@@ -16,11 +16,13 @@ effect give @a[team=T] health_boost 99999 2 true
 effect give @a[team=T] minecraft:saturation 99999 255 true
 effect give @a[team=T] minecraft:slowness 99999 10 true
 effect give @a[team=T] minecraft:jump_boost 99999 200 true
+effect give @a[team=T] minecraft:dolphins_grace infinite 1 true
 effect give @a[team=CT] minecraft:regeneration 3 255 true
 effect give @a[team=CT] health_boost 99999 2 true
 effect give @a[team=CT] minecraft:saturation 99999 255 true
 effect give @a[team=CT] minecraft:slowness 99999 10 true
 effect give @a[team=CT] minecraft:jump_boost 99999 200 true
+effect give @a[team=CT] minecraft:dolphins_grace infinite 1 true
 gamemode adventure @a[team=CT]
 gamemode adventure @a[team=T]
 clear @a block_bettle:c_4_false
