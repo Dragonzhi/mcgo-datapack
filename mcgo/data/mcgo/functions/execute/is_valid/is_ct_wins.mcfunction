@@ -1,6 +1,6 @@
 ##检测CT胜利条件
 
-execute if score S InGame matches 1 run execute if entity @a[team=T] run execute unless entity @a[team=T,gamemode=adventure] run execute if score TAllDied GameProcess matches 0 run scoreboard players set Allowance GameProcess 1
+execute if score S InGame matches 1 run execute if entity @a[team=T] run execute unless entity @a[team=T,scores={Deaths=0}] run execute if score TAllDied GameProcess matches 0 run scoreboard players set Allowance GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set TAllDied GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
     #若检测不到Deaths为0的T，则设置TAllDied为1，且进入条件存在TAllDieD为0，防止重复进入该分支（设置T的Deaths为0会出现bug）

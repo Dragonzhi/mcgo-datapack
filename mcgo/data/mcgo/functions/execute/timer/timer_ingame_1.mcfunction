@@ -1,4 +1,4 @@
-##<-tick_execute.mcfunction检测相应的计时是否结束或是否要执行
+##检测相应的计时是否结束或是否要执行
 
 #商店计时
 execute if score NormalMode GameProcess matches 1 run execute if score 商店时间 Timer matches ..0 run scoreboard players set Allowance GameProcess 1

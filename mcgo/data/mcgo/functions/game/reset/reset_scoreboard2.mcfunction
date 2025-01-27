@@ -22,3 +22,8 @@ scoreboard players set CTMissing GameProcess 0
 scoreboard players set ReturnToTheGame GameProcess 0
 scoreboard players set RoundFinished GameProcess 0
 scoreboard players set RoundStart GameProcess 0
+
+scoreboard players set @a BoughtFlashbang 0
+scoreboard players set @a BoughtHEGrenade 0
+scoreboard players set @a BoughtSmokeGrenade 0
+scoreboard players set @a BoughtIncendiary 0
