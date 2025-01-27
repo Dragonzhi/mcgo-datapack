@@ -7,8 +7,6 @@ scoreboard players set @a Kills 0
 scoreboard players set 商店时间 Timer 1
 scoreboard players reset 游戏倒计时 Timer
 
-scoreboard players set ticks GameProcess 0
-
 scoreboard players set BombPlanted GameProcess 0
 scoreboard players set BombDefused GameProcess 0
 scoreboard players set BombExploded GameProcess 0

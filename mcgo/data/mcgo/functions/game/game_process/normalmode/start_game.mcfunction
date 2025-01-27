@@ -47,9 +47,9 @@ gamemode adventure @a[team=T]
 
 function mcgo:game/game_process/normalmode/give_books
 scoreboard players set S InGame 1
+scoreboard players set NormalMode GameProcess 1
 #重置部分计分板
-playsound minecraft:block.slime_block.place music @a ~ ~ ~ 256
-#播放音效
+
 scoreboard objectives setdisplay sidebar Timer
 #将侧栏计分板改为Timer
 

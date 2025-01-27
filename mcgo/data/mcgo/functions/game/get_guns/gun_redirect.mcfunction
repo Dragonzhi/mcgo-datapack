@@ -122,32 +122,31 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
 scoreboard players set @s Allowance 0
 
 ##########道具
+execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
 execute if entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:3b}]}] run scoreboard players set @s Allowance 1
-    execute if score @s Allowance matches 1 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.3
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.3 from entity @s weapon.mainhand
     execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 
 execute if entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:4b}]}] run scoreboard players set @s Allowance 1
-    execute if score @s Allowance matches 1 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.4
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.4 from entity @s weapon.mainhand
     execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 
 execute if entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:5b}]}] run scoreboard players set @s Allowance 1
-    execute if score @s Allowance matches 1 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.5
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.5 from entity @s weapon.mainhand
     execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 
 execute if entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:6b}]}] run scoreboard players set @s Allowance 1
-    execute if score @s Allowance matches 1 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.6
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
+    execute if score @s Allowance matches 1 run say 1
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.6 from entity @s weapon.mainhand
+    execute if score @s Allowance matches 1 run say 1
     execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 execute as @e[type=minecraft:armor_stand,tag=iu_add] at @s run kill @s
 

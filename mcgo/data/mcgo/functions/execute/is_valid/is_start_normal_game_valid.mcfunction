@@ -10,4 +10,7 @@ execute if score Allowance GameProcess matches 0 run tellraw @a [{"text":"CT和T
     execute if score Allowance GameProcess matches 1 run execute if score train SelectedMap matches 1 run scoreboard players set Allowance GameProcess 2
     execute if score Allowance GameProcess matches 1 run tellraw @a [{"text":"尚未选图，无法开始游戏！","color":"red"}]
         execute if score Allowance GameProcess matches 2 run scoreboard players set NormalMode GameProcess 1
-        execute if score Allowance GameProcess matches 2 run function mcgo:game/game_process/normalmode/start_game
+        execute if score Allowance GameProcess matches 2 run scoreboard players set S InGame 1
+        execute if score Allowance GameProcess matches 2 run scoreboard players set seconds GameProcess 5
+        execute if score Allowance GameProcess matches 2 run function mcgo:execute/timer/timer_starting_normal_game
+#若成功开局，在start_game中会将S InGame和NormalMode GameProcess都设置为1，此处设为1是要经过开局倒计时检测

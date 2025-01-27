@@ -23,6 +23,10 @@ scoreboard players set CTWinTheGame GameProcess 0
 scoreboard players set TWinTheGame GameProcess 0
 scoreboard players set Tie GameProcess 0
 scoreboard players set StopStartingGame GameProcess 0
+scoreboard players set NormalMode GameProcess 0
+scoreboard players set RapidMode GameProcess 0
+scoreboard players set seconds GameProcess 0
+scoreboard players set ticks GameProcess 0
 
 scoreboard players set #1 sort 0
 scoreboard players set #2 sort 0

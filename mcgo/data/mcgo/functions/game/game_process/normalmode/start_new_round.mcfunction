@@ -5,6 +5,7 @@ execute if score HalfTimeSwitch GameProcess matches 1 run scoreboard players set
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 schedule clear mcgo:execute/timer/timer_normal_game
 
+
 kill @e[type=item]
 kill @e[type=experience_orb]
 kill @e[type=minecraft:area_effect_cloud]
@@ -55,6 +56,7 @@ function mcgo:game/reset/reset_scoreboard2
 function mcgo:game/game_process/normalmode/give_books
 function mcgo:game/game_process/normalmode/round_result
 scoreboard players set S InGame 1
+scoreboard players set NormalMode GameProcess 1
 scoreboard objectives setdisplay sidebar Timer
 
 function mcgo:game/map_select_tp/tp_to_selected_map

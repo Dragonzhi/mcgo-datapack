@@ -1,3 +1,4 @@
+difficulty hard
 gamerule doImmediateRespawn true
 gamerule naturalRegeneration false
 team modify T friendlyFire false
