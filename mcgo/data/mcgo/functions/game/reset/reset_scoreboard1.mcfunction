@@ -32,3 +32,11 @@ scoreboard players set #1 sort 0
 scoreboard players set #2 sort 0
 scoreboard players set #highPlayKills sort 0
 scoreboard players set #minPlayDeaths sort 0
+
+scoreboard players set #CTNum Vote 0
+scoreboard players set #TNum Vote 0
+scoreboard players set #playersNumSet Vote 0
+scoreboard players set #playersNumEnd Vote 0
+scoreboard players set StartingNormalGame Vote 0
+scoreboard players set Voting Vote 0
+scoreboard players set @a Vote 0

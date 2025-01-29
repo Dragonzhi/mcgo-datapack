@@ -28,5 +28,6 @@ schedule clear mcgo:game/reset/reset_world
 schedule clear mcgo:execute/timer/timer_normal_game
 schedule clear mcgo:execute/timer/timer_normal_shop
 schedule clear mcgo:execute/timer/timer_normal_finish
+schedule clear mcgo:execute/vote_execute/starting_normal_game/execute_vote
 
 execute as @a run attribute @s generic.max_health base set 20
