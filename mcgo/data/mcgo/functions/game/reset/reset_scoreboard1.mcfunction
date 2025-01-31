@@ -8,11 +8,14 @@ scoreboard players set @a MVP 0
 scoreboard players set CT Wins 0
 scoreboard players set T Wins 0
 scoreboard players set Finished_Round Wins 0
+scoreboard players set #CTBackwards Wins 0
+scoreboard players set #TBackwards Wins 0
 scoreboard players set CT MoneyGiving 1
 scoreboard players set T MoneyGiving 1
 scoreboard players set @a[team=T] Points 800
 scoreboard players set @a[team=CT] Points 800
 scoreboard players set S InGame 0
+
 
 scoreboard players set RapidMode GameProcess 0
 scoreboard players set CTGamePoint GameProcess 0
@@ -27,16 +30,24 @@ scoreboard players set NormalMode GameProcess 0
 scoreboard players set RapidMode GameProcess 0
 scoreboard players set seconds GameProcess 0
 scoreboard players set ticks GameProcess 0
+scoreboard players set CTSurrenderValid GameProcess 0
+scoreboard players set TSurrenderValid GameProcess 0
+scoreboard players set CTSurrender GameProcess 0
+scoreboard players set TSurrender GameProcess 0
 
-scoreboard players set #1 sort 0
-scoreboard players set #2 sort 0
+scoreboard players set #1000 sort 1000
+scoreboard players set #10 sort 10
 scoreboard players set #highPlayKills sort 0
 scoreboard players set #minPlayDeaths sort 0
+scoreboard players set #kd1 sort 0
+scoreboard players set #kd2 sort 0
 
 scoreboard players set #CTNum Vote 0
 scoreboard players set #TNum Vote 0
 scoreboard players set #playersNumSet Vote 0
 scoreboard players set #playersNumEnd Vote 0
 scoreboard players set StartingNormalGame Vote 0
+scoreboard players set CTSurrender Vote 0
+scoreboard players set TSurrender Vote 0
 scoreboard players set Voting Vote 0
 scoreboard players set @a Vote 0

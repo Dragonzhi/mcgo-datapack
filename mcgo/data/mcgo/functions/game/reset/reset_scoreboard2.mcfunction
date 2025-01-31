@@ -4,7 +4,7 @@ scoreboard players set @a Allowance 0
 scoreboard players set @a Deaths 0
 scoreboard players set @a GetGunForFree 0
 scoreboard players set @a Kills 0
-scoreboard players set 商店时间 Timer 1
+scoreboard players set 商店时间 Timer 20
 scoreboard players reset 游戏倒计时 Timer
 
 scoreboard players set BombPlanted GameProcess 0
@@ -25,3 +25,4 @@ scoreboard players set @a BoughtFlashbang 0
 scoreboard players set @a BoughtHEGrenade 0
 scoreboard players set @a BoughtSmokeGrenade 0
 scoreboard players set @a BoughtIncendiary 0
+scoreboard players set @a BoughtMolotov 0

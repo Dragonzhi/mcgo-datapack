@@ -1,8 +1,6 @@
-tellraw @a {"text":"=================================================","color":"yellow"}
-tellraw @a {"text":"游戏正在启动。"}
-tellraw @a {"text":"祝游戏愉快！"}
-tellraw @a {"text":"[温馨提示]请按~键确定开启“禁止自动拾取”，自行设定按键以手动拾取物品。","color":"blue"}
-tellraw @a {"text":"=================================================","color":"yellow"}
+
+tellraw @a {"text":"[温馨提示]请按~键确定开启“禁止自动拾取”，自行设定按键以手动拾取物品。","color":"aqua"}
+
 clear @a[team=CT]
 clear @a[team=T]
 schedule clear mcgo:execute/timer/timer_normal_game
@@ -38,9 +36,6 @@ effect give @a[team=CT] minecraft:jump_boost 99999 200 true
 effect give @a[team=CT] minecraft:dolphins_grace 99999 1 true
 #给予效果
 
-item replace entity @a[team=CT] hotbar.8 with block_bettle:qian_zi{tag:{GunType:5,GunPrice:1}} 1
-item replace entity @r[team=T] hotbar.8 with block_bettle:c_4_false{tag:{GunType:4,GunPrice:1}} 1
-#给予CT初始钳子/T C4
 gamemode adventure @a[team=CT]
 gamemode adventure @a[team=T]
 #变为冒险模式

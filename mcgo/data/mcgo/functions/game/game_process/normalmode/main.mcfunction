@@ -4,10 +4,6 @@ function mcgo:execute/various_ingame_codes
 ##玩家击杀或阵亡
 function mcgo:execute/is_valid/is_kill_or_died
 
-##各个计时
-function mcgo:execute/timer/timer_ingame_1
-function mcgo:execute/timer/timer_ingame_0
-
 ##检测是否符合下包条件
 function mcgo:execute/is_valid/is_plant_valid
 
@@ -25,6 +21,9 @@ function mcgo:execute/is_valid/is_players_both_group
 
 ##检测游戏场次
 function mcgo:execute/is_valid/is_round
+
+##检测能否投降
+function mcgo:execute/is_valid/is_surrender_valid
 
 ##判断是否结束游戏
 function mcgo:execute/is_valid/is_game_finished

@@ -20,6 +20,7 @@ scoreboard objectives remove BoughtFlashbang
 scoreboard objectives remove BoughtHEGrenade
 scoreboard objectives remove BoughtSmokeGrenade
 scoreboard objectives remove BoughtIncendiary
+scoreboard objectives remove BoughtMolotov
 scoreboard objectives remove Vote
 
 scoreboard objectives add Timer dummy
@@ -43,6 +44,7 @@ scoreboard objectives add BoughtFlashbang dummy
 scoreboard objectives add BoughtHEGrenade dummy
 scoreboard objectives add BoughtSmokeGrenade dummy
 scoreboard objectives add BoughtIncendiary dummy
+scoreboard objectives add BoughtMolotov dummy
 scoreboard objectives add Vote dummy
 
 scoreboard objectives setdisplay belowName Hp

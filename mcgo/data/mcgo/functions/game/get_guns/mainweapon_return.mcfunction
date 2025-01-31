@@ -1,4 +1,4 @@
-#退回主武器时执行，满足条件则直接退回手枪
+#退回主武器时执行，满足条件则直接退回主武器
 
 # 初始化
 data modify storage mcs:gun_name GunName set value 0

@@ -150,6 +150,25 @@ execute if entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:6b}]}] run scoreboard
     execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 execute as @e[type=minecraft:armor_stand,tag=iu_add] at @s run kill @s
 
+##########拆弹器
+execute as @a[team=CT] run execute unless entity @s[nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] run execute unless entity @s[nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run item replace entity @s hotbar.8 with block_bettle:qian_zi{GunId:5}
+execute as @a[team=CT,nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run scoreboard players set @s Allowance 1
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run clear @s block_bettle:lei_qian
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run item replace entity @s hotbar.8 with block_bettle:lei_qian{GunType:5}
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
+execute as @a[team=CT,nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] run scoreboard players set @s Allowance 1
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run clear @s block_bettle:qian_zi
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run item replace entity @s hotbar.8 with block_bettle:qian_zi{GunType:5,GunUsed:1}
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 
+##########护甲
+execute as @a run execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_chestplate"}]}] run execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_helmet"}]}] run scoreboard players set @s Allowance 1
+    execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:iron_chestplate{GunUsed:1}
+    execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:iron_helmet{GunUsed:1}
+    execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
+execute as @a run execute if entity @s[nbt={Inventory:[{id:"minecraft:netherite_chestplate"}]}] run execute if entity @s[nbt={Inventory:[{id:"minecraft:netherite_helmet"}]}] run scoreboard players set @s Allowance 1
+    execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:netherite_chestplate{GunUsed:1}
+    execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:netherite_helmet{GunUsed:1}
+    execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 
 scoreboard players set @s GetGunForFree 0

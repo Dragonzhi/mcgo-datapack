@@ -34,5 +34,5 @@ execute unless entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:3b}]}] run item r
 execute unless entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:4b}]}] run item replace entity @s hotbar.4 with air
 execute unless entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:5b}]}] run item replace entity @s hotbar.5 with air
 execute unless entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:6b}]}] run item replace entity @s hotbar.6 with air
-execute unless entity @s[nbt={Inventory:[{tag:{GunType:7},Slot:7b}]}] run item replace entity @s hotbar.6 with air
-execute unless entity @s[nbt={Inventory:[{tag:{GunType:5},Slot:8b}]}] run item replace entity @s hotbar.6 with air
+execute unless entity @s[nbt={Inventory:[{tag:{GunType:7},Slot:7b}]}] run item replace entity @s hotbar.7 with air
+execute unless entity @s[nbt={Inventory:[{tag:{GunType:5},Slot:8b}]}] run item replace entity @s hotbar.8 with air

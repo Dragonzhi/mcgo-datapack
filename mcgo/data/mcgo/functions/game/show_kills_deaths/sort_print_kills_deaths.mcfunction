@@ -4,7 +4,7 @@ function mcgo:game/show_kills_deaths/search_for_highscore
 #tellraw @a [{"text":"#highPlayKills: "},{"score":{"name":"#highPlayKills","objective":"sort"}}]
 
 execute as @a[scores={PlayKills=0..}] run execute if score @s PlayKills = #highPlayKills sort run scoreboard players set Allowance GameProcess 1
-   execute if score Allowance GameProcess matches 1 run scoreboard players set #count sort 0
+    execute if score Allowance GameProcess matches 1 run scoreboard players set #count sort 0
     #检测是否有多名击杀数相同的实体，若只有一个，则直接输出，若有多个则进一步检索
     execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKills=0..}] run execute if score @s PlayKills = #highPlayKills sort run scoreboard players add #count sort 1
 
@@ -23,8 +23,7 @@ execute as @a[scores={PlayKills=0..}] run execute if score @s PlayKills = #highP
         #execute if score Allowance GameProcess matches 3 run scoreboard players set #2 sort 1
         execute if score Allowance GameProcess matches 3 run scoreboard players set Allowance GameProcess 0
 
-#scoreboard players set #1 sort 0
-#scoreboard players set #2 sort 0
+
 scoreboard players set Allowance GameProcess 0
 execute if entity @a[scores={PlayKills=0..}] run execute as @a[scores={PlayKills=0..}] run scoreboard players operation @s sort = @s PlayKills
 execute if entity @a[scores={PlayKills=0..}] run function mcgo:game/show_kills_deaths/sort_print_kills_deaths

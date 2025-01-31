@@ -13,6 +13,6 @@ execute if score S InGame matches 1 if score NormalMode GameProcess matches 1 if
 execute if score S InGame matches 1 if score NormalMode GameProcess matches 1 if score seconds GameProcess matches 0.. if score StopStartingGame GameProcess matches 0 run scoreboard players remove seconds GameProcess 1
 execute if score S InGame matches 1 if score NormalMode GameProcess matches 1 if score seconds GameProcess matches 0.. if score StopStartingGame GameProcess matches 0 run schedule function mcgo:execute/timer/timer_starting_normal_game 1s append
 
-execute if score S InGame matches 1 if score NormalMode GameProcess matches 1 if score seconds GameProcess matches ..-1 if score StopStartingGame GameProcess matches 0 run function mcgo:game/game_process/normalmode/start_game
 execute if score S InGame matches 1 if score NormalMode GameProcess matches 1 if score seconds GameProcess matches ..-1 if score StopStartingGame GameProcess matches 0 run title @a title [{"text":"游戏开始","color":"yellow","bold":true}]
 execute if score S InGame matches 1 if score NormalMode GameProcess matches 1 if score seconds GameProcess matches ..-1 if score StopStartingGame GameProcess matches 0 run title @a subtitle [{"text":""}]
+execute if score S InGame matches 1 if score NormalMode GameProcess matches 1 if score seconds GameProcess matches ..-1 if score StopStartingGame GameProcess matches 0 run function mcgo:game/game_process/normalmode/start_game

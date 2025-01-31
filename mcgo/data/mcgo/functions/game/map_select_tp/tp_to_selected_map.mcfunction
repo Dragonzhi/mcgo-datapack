@@ -14,8 +14,8 @@ execute if score inferno SelectedMap matches 1 run scoreboard players set Allowa
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 execute if score nuke SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run spreadplayers 442 -78 1 2 under -25 false @a[team=T]
-    execute if score Allowance GameProcess matches 1 run spreadplayers 428 -185 1 2 under -23 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run spreadplayers -130 796 1 2 under -20 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers -117 928 1 2 under -20 false @a[team=CT]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 execute if score vertigo SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1

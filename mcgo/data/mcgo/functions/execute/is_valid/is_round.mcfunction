@@ -21,10 +21,18 @@ execute if score S InGame matches 1 run execute if score T Wins matches 8 run ex
 execute if score S InGame matches 1 run execute if score T Wins matches 8 if score CT Wins matches 8 run execute if score GameFinished GameProcess matches 0 run scoreboard players set Allowance GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Tie GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
+
 #游戏胜利检测
 execute if score S InGame matches 1 run execute if score CT Wins matches 9.. run execute if score CTWinTheGame GameProcess matches 0 run scoreboard players set Allowance GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set CTWinTheGame GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 execute if score S InGame matches 1 run execute if score T Wins matches 9.. run execute if score TWinTheGame GameProcess matches 0 run scoreboard players set Allowance GameProcess 1
+    execute if score Allowance GameProcess matches 1 run scoreboard players set TWinTheGame GameProcess 1
+    execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
+
+execute if score S InGame matches 1 if score TSurrender GameProcess matches 1 if score TWinTheGame GameProcess matches 0 run scoreboard players set Allowance GameProcess 1
+    execute if score Allowance GameProcess matches 1 run scoreboard players set CTWinTheGame GameProcess 1
+    execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
+execute if score S InGame matches 1 if score CTSurrender GameProcess matches 1 if score CTWinTheGame GameProcess matches 0 run scoreboard players set Allowance GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set TWinTheGame GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0

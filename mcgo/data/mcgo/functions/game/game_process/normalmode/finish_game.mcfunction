@@ -15,6 +15,7 @@ execute if score Tie GameProcess matches 1 run schedule function mcgo:execute/ti
 execute if score Tie GameProcess matches 1 run title @a title [{"text":"游戏结束","color":"white","bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}]
 execute if score Tie GameProcess matches 1 run title @a subtitle [{"text":"平局","color":"white","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}]
 
-tellraw @a [{"text":"赛后总结","color":"yellow","bold":true},{"text":"\n%%%","color":"yellow","bold":false}]
-tellraw @a [{"text":"玩家    ","color":"white","bold":true},{"text":"击杀数    ","color":"white","bold":true},{"text":"死亡数","color":"white","bold":true}]
+tellraw @a [{"text":"\n赛后总结","color":"yellow","bold":true}]
+tellraw @a [{"text":"玩家    ","color":"white","bold":true},{"text":"击杀数    ","color":"white","bold":true},{"text":"死亡数    ","color":"white","bold":true},{"text":"K/D","color":"white","bold":true}]
 function mcgo:game/show_kills_deaths/sort_print_kills_deaths
+tellraw @a [{"text":"\n最终比分  ","color":"white","bold":true},{"text":"CT ","color":"aqua","bold":true},{"score":{"name":"CT","objective":"Wins"},"color":"aqua","bold":true},{"text":" : ","color":"white","bold":false},{"score":{"name":"T","objective":"Wins"},"color":"yellow","bold":true},{"text":" T","color":"yellow","bold":true}]
