@@ -1,0 +1,1 @@
+tellraw @a [{"text":"出现了问题？要不要尝试"},{"text":"重置游戏","color":"yellow","clickEvent":{"action":"run_command","value":"/function mcgo:execute/vote_execute/reset_world/set_vote"},"hoverEvent":{"action":"show_text","contents":"点击发起重置游戏投票"}}]

@@ -1,4 +1,4 @@
-scoreboard players set #highPlayKills sort 0
+scoreboard players set #highPlayKills sort -1
 
 #从当前playkills计分板中寻找最高分
 execute as @a[scores={sort=0..}] if score @s sort > #highPlayKills sort run scoreboard players operation #highPlayKills sort = @s sort

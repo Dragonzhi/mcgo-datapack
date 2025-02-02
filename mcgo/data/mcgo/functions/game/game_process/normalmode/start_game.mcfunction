@@ -6,6 +6,7 @@ clear @a[team=T]
 schedule clear mcgo:execute/timer/timer_normal_game
 function mcgo:game/reset/reset_scoreboard1
 function mcgo:game/reset/reset_scoreboard2
+function mcgo:execute/vote_execute/reset_world/is_reset_world_needed
 
 scoreboard players set @a[team=CT] Points 800
 scoreboard players set @a[team=T] Points 800
@@ -50,6 +51,9 @@ scoreboard objectives setdisplay sidebar Timer
 
 execute as @a[team=CT] run function mcgo:game/temp_ct
 execute as @a[team=T] run function mcgo:game/temp_t
+
+item replace entity @r[team=T] hotbar.8 with block_bettle:c_4_false{GunId:4} 1
+#给予C4，要在temp执行之后才能执行
 
 scoreboard players set 商店时间 Timer 20
 schedule function mcgo:execute/timer/timer_normal_shop 1s append

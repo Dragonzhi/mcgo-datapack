@@ -15,7 +15,7 @@ execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_nam
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_id AmmoId set value "tacz:12g"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_type AmmoType set value 2
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_count AmmoCount set value 24
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_lore Ammolore set value ['"这是M860的弹药箱"']
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_lore Ammolore set value ['"这是M870的弹药箱"']
 
 execute if entity @s[scores={Allowance=10}] run execute if score @s GetGunForFree matches 0 run function mcgo:game/get_guns/money_isvalid
 execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 2

@@ -1,6 +1,5 @@
 tellraw @a {"text":"已初始化游戏","color":"yellow"}
 
-
 scoreboard players set S InGame 0
 scoreboard objectives setdisplay sidebar
 #清除sidebar
@@ -28,6 +27,11 @@ schedule clear mcgo:game/reset/reset_world
 schedule clear mcgo:execute/timer/timer_normal_game
 schedule clear mcgo:execute/timer/timer_normal_shop
 schedule clear mcgo:execute/timer/timer_normal_finish
+schedule clear mcgo:execute/timer/timer_starting_arms_race
+schedule clear mcgo:execute/timer/timer_starting_normal_game
+schedule clear mcgo:execute/timer/timer_arms_race
 schedule clear mcgo:execute/vote_execute/starting_normal_game/execute_vote
+schedule clear mcgo:execute/vote_execute/surrender/execute_vote
+schedule clear mcgo:execute/vote_execute/starting_arms_race/execute_vote
 
 execute as @a run attribute @s generic.max_health base set 20

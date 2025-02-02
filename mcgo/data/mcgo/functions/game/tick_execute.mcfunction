@@ -10,3 +10,7 @@ execute if score NormalMode GameProcess matches 1 run execute if score S InGame 
 
 
 ##DeathMatch
+
+
+##ArmsRace
+execute if score ArmsRace GameProcess matches 1 run execute if score S InGame matches 1 run function mcgo:game/game_process/arms_race/main

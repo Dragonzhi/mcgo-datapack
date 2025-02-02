@@ -1,5 +1,5 @@
 ##其他杂项
-function mcgo:execute/various_ingame_codes
+function mcgo:game/game_process/normalmode/other_various_codes
 
 ##玩家击杀或阵亡
 function mcgo:execute/is_valid/is_kill_or_died
@@ -26,4 +26,4 @@ function mcgo:execute/is_valid/is_round
 function mcgo:execute/is_valid/is_surrender_valid
 
 ##判断是否结束游戏
-function mcgo:execute/is_valid/is_game_finished
+function mcgo:execute/is_valid/is_normal_game_finished

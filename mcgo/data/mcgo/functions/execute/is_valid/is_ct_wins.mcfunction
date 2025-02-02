@@ -20,8 +20,8 @@ execute if score S InGame matches 1 run execute if entity @a[team=T] run execute
     execute if score CTWinTheRound GameProcess matches 1 run function mcgo:game/game_process/normalmode/defeat_bonus
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add CT Wins 1
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add Finished_Round Wins 1
-    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players remove CT MoneyGiving 1
-    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add T MoneyGiving 1
+    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players remove CT DefeatBonus 1
+    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add T DefeatBonus 1
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add @a[team=CT] Points 3250
     execute if score CTWinTheRound GameProcess matches 1 run schedule function mcgo:game/game_process/normalmode/start_new_round 8s append
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players set RoundFinished GameProcess 1
@@ -36,8 +36,8 @@ execute if score S InGame matches 1 run execute if entity @a[team=T] run execute
     execute if score CTWinTheRound GameProcess matches 1 run function mcgo:game/game_process/normalmode/defeat_bonus
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add CT Wins 1
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add Finished_Round Wins 1
-    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players remove CT MoneyGiving 1
-    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add T MoneyGiving 1
+    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players remove CT DefeatBonus 1
+    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add T DefeatBonus 1
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add @a[team=CT] Points 3500
     execute if score CTWinTheRound GameProcess matches 1 run schedule function mcgo:game/game_process/normalmode/start_new_round 8s append
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players set RoundFinished GameProcess 1
@@ -52,8 +52,8 @@ execute if score S InGame matches 1 run execute if entity @a[team=T] run execute
     execute if score CTWinTheRound GameProcess matches 1 run function mcgo:game/game_process/normalmode/defeat_bonus
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add CT Wins 1
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add Finished_Round Wins 1
-    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players remove CT MoneyGiving 1
-    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add T MoneyGiving 1
+    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players remove CT DefeatBonus 1
+    execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add T DefeatBonus 1
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players add @a[team=CT] Points 3250
     execute if score CTWinTheRound GameProcess matches 1 run schedule function mcgo:game/game_process/normalmode/start_new_round 8s append
     execute if score CTWinTheRound GameProcess matches 1 run scoreboard players set RoundFinished GameProcess 1

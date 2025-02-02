@@ -6,3 +6,4 @@ team modify CT friendlyFire false
 gamerule reducedDebugInfo true
 gamerule maxCommandChainLength 65536
 gamerule doMobSpawning false
+gamerule keepInventory false

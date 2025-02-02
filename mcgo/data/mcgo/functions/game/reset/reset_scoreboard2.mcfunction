@@ -26,3 +26,5 @@ scoreboard players set @a BoughtHEGrenade 0
 scoreboard players set @a BoughtSmokeGrenade 0
 scoreboard players set @a BoughtIncendiary 0
 scoreboard players set @a BoughtMolotov 0
+
+scoreboard players set @a ArmsRaceProcess 0

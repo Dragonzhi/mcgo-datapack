@@ -6,9 +6,8 @@ execute if score HalfTimeSwitch GameProcess matches 1 run scoreboard players set
 schedule clear mcgo:execute/timer/timer_normal_game
 function mcgo:game/game_process/normalmode/round_result
 function mcgo:game/reset/reset_scoreboard2
-function mcgo:game/game_process/normalmode/give_books
-function mcgo:game/map_select_tp/tp_to_selected_map
 function mcgo:execute/is_valid/is_surrender_valid
+function mcgo:execute/vote_execute/reset_world/is_reset_world_needed
 
 kill @e[type=item]
 kill @e[type=minecraft:area_effect_cloud]
@@ -32,8 +31,7 @@ gamemode adventure @a[team=T]
 execute as @a[team=CT] run function mcgo:execute/clear_inventory
 execute as @a[team=T] run function mcgo:execute/clear_inventory
 #清理背包
-item replace entity @r[team=T] hotbar.8 with block_bettle:c_4_false{GunId:4} 1
-#给予C4
+
 clear @a[team=CT] minecraft:leather_leggings
 clear @a[team=T] minecraft:leather_leggings
 item replace entity @a[team=T] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:1s}],display:{color:16767744,Name:'{"text":"T"}',Lore:['{"text":"T"}']}}
@@ -45,19 +43,25 @@ item replace entity @a[team=CT] hotbar.2 with tacz:modern_kinetic_gun{tag:{GunTy
 #给予刀
 
 
-
 scoreboard players set S InGame 1
 scoreboard players set NormalMode GameProcess 1
 scoreboard objectives setdisplay sidebar Timer
 
+function mcgo:game/game_process/normalmode/give_books
 execute as @a[team=CT] run function mcgo:game/temp_ct
 execute as @a[team=T] run function mcgo:game/temp_t
+schedule function mcgo:game/map_select_tp/tp_to_selected_map 5t append
+
+item replace entity @r[team=T] hotbar.8 with block_bettle:c_4_false{GunId:4} 1
+#给予C4
 
 execute if score CTGamePoint GameProcess matches 1 run title @a title [{"text":"赛点","color":"blue","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]
 execute if score TGamePoint GameProcess matches 1 run title @a title [{"text":"赛点","color":"yellow","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]
 
+
 scoreboard players set 商店时间 Timer 20
 schedule function mcgo:execute/timer/timer_normal_shop 1s append
+
 
 
 

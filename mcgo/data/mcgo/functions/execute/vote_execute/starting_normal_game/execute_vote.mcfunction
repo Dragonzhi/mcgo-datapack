@@ -15,6 +15,7 @@ execute if score StartingNormalGame Vote < #playersNumSet Vote run execute unles
 execute if score StartingNormalGame Vote = #playersNumSet Vote run scoreboard players set Allowance GameProcess 1
 execute if score Allowance GameProcess matches 1 run tellraw @a [{"text":"投票成功，游戏即将开始！","color":"yellow"}]
 execute if score Allowance GameProcess matches 1 run scoreboard players set @a Deaths 0
+execute if score Allowance GameProcess matches 1 run scoreboard players set @a PlayKill 0
 execute if score Allowance GameProcess matches 1 run scoreboard players set NormalMode GameProcess 1
 execute if score Allowance GameProcess matches 1 run scoreboard players set S InGame 1
 execute if score Allowance GameProcess matches 1 run scoreboard players set seconds GameProcess 5

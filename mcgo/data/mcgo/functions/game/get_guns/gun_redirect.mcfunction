@@ -70,6 +70,10 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
         execute if score @s Allowance matches 2 run function mcgo:heavy_weapons/heavyweapon_get_sasg12
 
+    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"加利尔ACE-22"}}]}] run scoreboard players set @s Allowance 2
+        execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
+        execute if score @s Allowance matches 2 run function mcgo:rifles/rifle_get_gali
+    
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"AK47"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
         execute if score @s Allowance matches 2 run function mcgo:rifles/rifle_get_ak47
@@ -144,21 +148,24 @@ execute if entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:5b}]}] run scoreboard
 execute if entity @s[nbt={Inventory:[{tag:{GunType:6},Slot:6b}]}] run scoreboard players set @s Allowance 1
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.6
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
-    execute if score @s Allowance matches 1 run say 1
     execute if score @s Allowance matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.6 from entity @s weapon.mainhand
-    execute if score @s Allowance matches 1 run say 1
     execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 execute as @e[type=minecraft:armor_stand,tag=iu_add] at @s run kill @s
 
 ##########拆弹器
-execute as @a[team=CT] run execute unless entity @s[nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] run execute unless entity @s[nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run item replace entity @s hotbar.8 with block_bettle:qian_zi{GunId:5}
-execute as @a[team=CT,nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run scoreboard players set @s Allowance 1
+execute as @a[team=CT] run execute unless entity @s[nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] run execute unless entity @s[nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run item replace entity @s hotbar.8 with block_bettle:qian_zi{GunType:5,GunUsed:1}
+execute as @a[team=CT] if entity @s[nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] unless entity @s[nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] run scoreboard players set @s Allowance 1
 execute as @a[team=CT] run execute if score @s Allowance matches 1 run clear @s block_bettle:lei_qian
-execute as @a[team=CT] run execute if score @s Allowance matches 1 run item replace entity @s hotbar.8 with block_bettle:lei_qian{GunType:5}
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run item replace entity @s hotbar.8 with block_bettle:lei_qian{GunType:5,GunUsed:1}
 execute as @a[team=CT] run execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
-execute as @a[team=CT,nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] run scoreboard players set @s Allowance 1
+execute as @a[team=CT,nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] unless entity @s[nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run scoreboard players set @s Allowance 1
 execute as @a[team=CT] run execute if score @s Allowance matches 1 run clear @s block_bettle:qian_zi
 execute as @a[team=CT] run execute if score @s Allowance matches 1 run item replace entity @s hotbar.8 with block_bettle:qian_zi{GunType:5,GunUsed:1}
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
+execute as @a[team=CT,nbt={Inventory:[{id:"block_bettle:qian_zi"}]}] if entity @s[nbt={Inventory:[{id:"block_bettle:lei_qian"}]}] run scoreboard players set @s Allowance 1
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run clear @s block_bettle:lei_qian
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run clear @s block_bettle:qian_zi
+execute as @a[team=CT] run execute if score @s Allowance matches 1 run item replace entity @s hotbar.8 with block_bettle:lei_qian{GunType:5,GunUsed:1}
 execute as @a[team=CT] run execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 
 ##########护甲

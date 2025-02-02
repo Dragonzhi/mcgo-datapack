@@ -38,6 +38,7 @@ execute if score anubis SelectedMap matches 1 run scoreboard players set Allowan
     execute if score Allowance GameProcess matches 1 run spreadplayers -828 -254 1 2 under -48 false @a[team=CT]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
-#泳池
-#T：/spreadplayers 42 -26 1 2 under -59 false @a
-#CT：/spreadplayers 5 -24 1 2 under -59 false @a
+execute if score pool SelectedMap matches 1 run scoreboard players set Allowance GameProcess 1
+    execute if score Allowance GameProcess matches 1 run spreadplayers 42 -26 1 2 under -59 false @a[team=T]
+    execute if score Allowance GameProcess matches 1 run spreadplayers 5 -24 1 2 under -59 false @a[team=CT]
+    execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
