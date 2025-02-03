@@ -1,7 +1,15 @@
 function mcgo:game/get_guns/mainweapon_isvalid
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "AK47"
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_ak"
+
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={AK47Skin=0}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_ak"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={AK47Skin=1}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_ak_elite_build"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={AK47Skin=2}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_ak_vulcan"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={AK47Skin=3}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_ak_green_laminate"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={AK47Skin=4}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_ak_asiimov"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={AK47Skin=5}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_ak_abyssal_apparition"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={AK47Skin=6}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_ak_fire_serpent"
+
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 2700
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_mode GunMode set value "AUTO"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 30

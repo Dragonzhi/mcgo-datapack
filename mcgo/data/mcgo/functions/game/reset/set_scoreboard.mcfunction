@@ -58,6 +58,10 @@ scoreboard objectives add ArmsRaceSeed dummy
 scoreboard objectives add PlantC4 minecraft.used:block_bettle.c_4_down
 scoreboard objectives add DefuseC4 minecraft.killed:block_bettle.c_4
 scoreboard objectives add GlockSkin trigger
+scoreboard objectives add USPSkin trigger
+scoreboard objectives add AK47Skin trigger
+scoreboard objectives add M4A1Skin trigger
+scoreboard objectives add AWPSkin trigger
 
 scoreboard objectives setdisplay belowName Hp
 scoreboard objectives setdisplay list Points

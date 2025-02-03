@@ -1,14 +1,26 @@
 function mcgo:game/get_guns/pistol_isvalid
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "USP-S"
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_usp"
+
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=0}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_usp"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=1}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_usp_royal_blue"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=2}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_usp_whiteout"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=3}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_usp_stainless"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=4}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_usp_printstream"
+
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 200
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_mode GunMode set value "SEMI"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 12
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_type GunType set value 1
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_used GunUsed set value 0
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmag GunAttMag set value {}
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmuz GunAttMuz set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"mcs2:usp_silencer"}}
+
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=0}] run data modify storage mcs:gun_attmuz GunAttMuz set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"mcs2:usp_silencer"}}
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=1}] run data modify storage mcs:gun_attmuz GunAttMuz set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"mcs2:usp_silencer_royal_blue"}}
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=2}] run data modify storage mcs:gun_attmuz GunAttMuz set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"mcs2:usp_silencer_whiteout"}}
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=3}] run data modify storage mcs:gun_attmuz GunAttMuz set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"mcs2:usp_silencer_stainless"}}
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=4}] run data modify storage mcs:gun_attmuz GunAttMuz set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"mcs2:usp_silencer_printstream"}}
+
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attsco GunAttSco set value {}
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attri GunAttri set value [{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:-0.000d,UUID:[I;-1396647189,-179877183,-1931787460,-1731335846]}]
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_name AmmoName set value "USP-S"
