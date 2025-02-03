@@ -57,6 +57,7 @@ scoreboard players set ResetWorld Vote 0
 scoreboard players set Voting Vote 0
 scoreboard players set @a Vote 0
 
+scoreboard players set #broadcast17Scores ArmsRaceProcess 0
 scoreboard players set #broadcast10Scores ArmsRaceProcess 0
 scoreboard players set #broadcast5Scores ArmsRaceProcess 0
 

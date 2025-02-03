@@ -14,3 +14,17 @@ kill @e[type=item,nbt={Item:{id:"minecraft:iron_helmet"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:netherite_chestplate"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:netherite_helmet"}}]
 kill @e[type=experience_orb]
+
+#给掉落的C4打上粒子效果
+execute at @e[name="未激活的C4"] run particle block_bettle:c_4flag ~ ~0.5 ~
+execute as @e[name="已激活的C4"] run data modify entity @s Item.id set value "block_bettle:c_4_false"
+
+#在拥有C4的玩家的周围生成粒子
+execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_false"}]}] run particle block_bettle:c_4flag ~-0.3 ~0.2 ~
+execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_false"}]}] run particle block_bettle:c_4flag ~0.3 ~0.2 ~
+execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_false"}]}] run particle block_bettle:c_4flag ~ ~0.2 ~0.3
+execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_false"}]}] run particle block_bettle:c_4flag ~ ~0.2 ~-0.3
+execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block_bettle:c_4flag ~-0.3 ~0.2 ~
+execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block_bettle:c_4flag ~0.3 ~0.2 ~
+execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block_bettle:c_4flag ~ ~0.2 ~0.3
+execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block_bettle:c_4flag ~ ~0.2 ~-0.3

@@ -9,7 +9,8 @@ execute if score Voting Vote matches 1 run scoreboard players set Allowance Game
 
 execute if score CTSurrenderValid GameProcess matches 1 if score Voting Vote matches 0 run scoreboard players set Allowance GameProcess 1
 execute if score TSurrenderValid GameProcess matches 1 if score Voting Vote matches 0 run scoreboard players set Allowance GameProcess 1
-
+    execute if score Allowance GameProcess matches 1 if score CTSurrenderValid GameProcess matches 1 run playsound minecraft:ui.toast.in block @a[team=CT] ~ ~ ~ 15 1 1
+    execute if score Allowance GameProcess matches 1 if score TSurrenderValid GameProcess matches 1 run playsound minecraft:ui.toast.in block @a[team=T] ~ ~ ~ 15 1 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Voting Vote 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set @a Vote 0
     execute if score Allowance GameProcess matches 1 run scoreboard players set @a Allowance 0

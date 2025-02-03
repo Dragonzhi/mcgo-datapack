@@ -16,6 +16,7 @@ execute store result score @s mcs run data get storage mcs:gun_type GunType
 
 # 检测是否为手枪
 execute unless score @s mcs matches 1 run tellraw @s [{"text":"未能找到合适的武器并退回，请检查快捷栏第二格是否为手枪！","color":"red"}]
+
 execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
     execute if score @s Allowance matches 1 run execute store result score @s mcs run data get storage mcs:gun_price GunPrice
     #检查是否为初始手枪
@@ -39,5 +40,6 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
             execute if score @s Allowance matches 3 run scoreboard players set @s GetGunForFree 1
             execute if score @s Allowance matches 3 run execute if entity @s[team=CT] run function mcgo:pistols/pistol_get_usp
             execute if score @s Allowance matches 3 run execute if entity @s[team=T] run function mcgo:pistols/pistol_get_glock
-            execute if score @s Allowance matches 3 run scoreboard players set @s GetGunForFree 0
-            execute if score @s Allowance matches 3 run scoreboard players set @s Allowance 0
+            #执行给枪函数后allowance都变为10！
+            execute if score @s Allowance matches 10 run scoreboard players set @s GetGunForFree 0
+            execute if score @s Allowance matches 10 run scoreboard players set @s Allowance 0

@@ -4,6 +4,8 @@ clear @a[team=T]
 function mcgo:game/reset/reset_scoreboard2
 gamerule keepInventory true
 
+spawnpoint @a[team=CT] 0 -60 -22
+spawnpoint @a[team=T] 46 -60 -28
 
 effect clear @a[team=CT]
 effect clear @a[team=T]
@@ -22,7 +24,10 @@ scoreboard players set @a PlayKill 0
 scoreboard players set @a Deaths 0
 scoreboard players set @a ArmsRaceProcess 0
 scoreboard players set S InGame 1
+
+scoreboard players set @a ArmsRaceSeed 0
 #重置部分计分板
+
 
 effect give @a[team=T] minecraft:regeneration 3 255 true
 effect give @a[team=T] health_boost 99999 2 true

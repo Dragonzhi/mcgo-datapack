@@ -3,6 +3,7 @@ tellraw @a {"text":"已初始化游戏","color":"yellow"}
 scoreboard players set S InGame 0
 scoreboard objectives setdisplay sidebar
 #清除sidebar
+spawnpoint @a 24 -60 -39
 
 effect clear @a[team=T]
 effect clear @a[team=CT]
@@ -35,3 +36,5 @@ schedule clear mcgo:execute/vote_execute/surrender/execute_vote
 schedule clear mcgo:execute/vote_execute/starting_arms_race/execute_vote
 
 execute as @a run attribute @s generic.max_health base set 20
+
+function mcgo:game/menu/menu

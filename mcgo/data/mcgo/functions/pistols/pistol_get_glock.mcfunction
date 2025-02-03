@@ -1,7 +1,15 @@
 function mcgo:game/get_guns/pistol_isvalid
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "格洛克"
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock"
+
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=0}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=1}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_candy_apple"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=2}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_dragon_tattoo"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=3}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_reactor"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=4}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_moonrise"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=5}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_bunsen_burner"
+execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=6}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_high_beam"
+
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 200
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_mode GunMode set value "SEMI"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 20

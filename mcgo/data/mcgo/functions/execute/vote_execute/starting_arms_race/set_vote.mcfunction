@@ -1,5 +1,6 @@
 #判断是否正在执行一个投票的内容在is_start_normal_game_valid.mcfunction中执行
 
+playsound minecraft:ui.toast.in block @a ~ ~ ~ 15 1 1
 scoreboard players set Voting Vote 1
 scoreboard players set @a Vote 0
 scoreboard players set @a Allowance 0

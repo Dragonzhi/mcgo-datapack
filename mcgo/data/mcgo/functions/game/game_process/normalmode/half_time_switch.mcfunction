@@ -4,10 +4,7 @@
 execute if score TWinTheRound GameProcess matches 1 run playsound minecraft:entity.player.levelup music @a ~ ~ ~ 256
 
 scoreboard players set S InGame 0
-scoreboard players operation temp Wins = CT Wins
-scoreboard players operation CT Wins = T Wins
-scoreboard players operation T Wins = temp Wins
-scoreboard players reset temp Wins
+scoreboard players operation T Wins >< CT Wins
 team join switch @a[team=T]
 team join T @a[team=CT]
 team join CT @a[team=switch]

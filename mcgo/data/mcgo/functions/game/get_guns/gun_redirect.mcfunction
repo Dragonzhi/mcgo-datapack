@@ -5,18 +5,8 @@ scoreboard players set @s GetGunForFree 1
 
 ##########手枪
 function mcgo:game/get_guns/search_for_pistol
-execute if score @s mcs matches 0 run scoreboard players set @s Allowance 1
-    execute if score @s Allowance matches 1 run execute if entity @s[team=CT] run function mcgo:pistols/pistol_get_usp
-    execute if score @s Allowance matches 1 run execute if entity @s[team=T] run function mcgo:pistols/pistol_get_glock
-    execute if score @s Allowance matches 10 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.1
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.1 from entity @s weapon.mainhand
-    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add] at @s run kill @s
-scoreboard players set @s Allowance 0
-    
-
 execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
+    #execute if score @s Allowance matches 1 run say "1手枪"
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"CZ75"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:1}
         execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_cz75
@@ -29,9 +19,9 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:1}
         execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_glock
 
-    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"P320"}}]}] run scoreboard players set @s Allowance 2
+    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"P250"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:1}
-        execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_p320
+        execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_p250
 
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"R8"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:1}
@@ -40,11 +30,23 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"USP-S"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:1}
         execute if score @s Allowance matches 2 run function mcgo:pistols/pistol_get_usp
+
     execute if score @s Allowance matches 10 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.1
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.1 from entity @s weapon.mainhand
     execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add] at @s run kill @s
+scoreboard players set @s Allowance 0
+
+execute if score @s mcs matches 0 run scoreboard players set @s Allowance 1
+    #execute if score @s Allowance matches 1 run say "没有手枪"
+    execute if score @s Allowance matches 1 run execute if entity @s[team=CT] run function mcgo:pistols/pistol_get_usp
+    execute if score @s Allowance matches 1 run execute if entity @s[team=T] run function mcgo:pistols/pistol_get_glock
+    execute if score @s Allowance matches 10 run execute as @s at @s run summon minecraft:armor_stand ~ ~ ~ {Tags:["iu_add"],Invisible:1b}
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @s weapon.mainhand from entity @p[distance=..1] hotbar.1
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run data modify entity @s HandItems[0].tag.GunUsed set value 1
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run item replace entity @p[distance=..1] hotbar.1 from entity @s weapon.mainhand
+    execute if score @s Allowance matches 10 run execute as @e[type=minecraft:armor_stand,tag=iu_add,limit=1] at @s run kill @s
 scoreboard players set @s Allowance 0
 
 ##########主武器
@@ -168,14 +170,15 @@ execute as @a[team=CT] run execute if score @s Allowance matches 1 run clear @s 
 execute as @a[team=CT] run execute if score @s Allowance matches 1 run item replace entity @s hotbar.8 with block_bettle:lei_qian{GunType:5,GunUsed:1}
 execute as @a[team=CT] run execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 
-##########护甲
-execute as @a run execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_chestplate"}]}] run execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_helmet"}]}] run scoreboard players set @s Allowance 1
-    execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:iron_chestplate{GunUsed:1}
-    execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:iron_helmet{GunUsed:1}
-    execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
-execute as @a run execute if entity @s[nbt={Inventory:[{id:"minecraft:netherite_chestplate"}]}] run execute if entity @s[nbt={Inventory:[{id:"minecraft:netherite_helmet"}]}] run scoreboard players set @s Allowance 1
-    execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:netherite_chestplate{GunUsed:1}
-    execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:netherite_helmet{GunUsed:1}
-    execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
+##########护甲（会影响到手枪的判断，世纪难题，请求高人指点）
+# execute as @a run execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_chestplate"}]}] run execute if entity @s[nbt={Inventory:[{id:"minecraft:iron_helmet"}]}] run scoreboard players set @s Allowance 1
+#     execute if score @s Allowance matches 1 run item replace entity @s armor.chest with minecraft:iron_chestplate{GunUsed:1}
+#     execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:iron_helmet{GunUsed:1}
+#     execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
+# execute as @a run execute if entity @s[nbt={Inventory:[{id:"minecraft:netherite_chestplate"}]}] run execute if entity @s[nbt={Inventory:[{id:"minecraft:netherite_helmet"}]}] run scoreboard players set @s Allowance 1
+#     execute if score @s Allowance matches 1 run item replace entity @s armor.chest with minecraft:netherite_chestplate{GunUsed:1}
+#     execute if score @s Allowance matches 1 run item replace entity @s armor.head with minecraft:netherite_helmet{GunUsed:1}
+#     execute if score @s Allowance matches 1 run scoreboard players set @s Allowance 0
 
+scoreboard players set @s Allowance 0
 scoreboard players set @s GetGunForFree 0

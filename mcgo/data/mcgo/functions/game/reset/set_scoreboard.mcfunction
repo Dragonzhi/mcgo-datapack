@@ -23,6 +23,10 @@ scoreboard objectives remove BoughtIncendiary
 scoreboard objectives remove BoughtMolotov
 scoreboard objectives remove Vote
 scoreboard objectives remove ArmsRaceProcess
+scoreboard objectives remove ArmsRaceSeed
+scoreboard objectives remove PlantC4
+scoreboard objectives remove DefuseC4
+# scoreboard objectives remove GlockSkin
 
 scoreboard objectives add Timer dummy
 scoreboard objectives add Hp health
@@ -49,6 +53,11 @@ scoreboard objectives add BoughtIncendiary dummy
 scoreboard objectives add BoughtMolotov dummy
 scoreboard objectives add Vote dummy
 scoreboard objectives add ArmsRaceProcess dummy "军备竞赛进程"
+# 随机数种子，一个不断增加的数值
+scoreboard objectives add ArmsRaceSeed dummy
+scoreboard objectives add PlantC4 minecraft.used:block_bettle.c_4_down
+scoreboard objectives add DefuseC4 minecraft.killed:block_bettle.c_4
+scoreboard objectives add GlockSkin trigger
 
 scoreboard objectives setdisplay belowName Hp
 scoreboard objectives setdisplay list Points

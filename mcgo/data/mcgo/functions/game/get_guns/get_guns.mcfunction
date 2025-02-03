@@ -29,6 +29,8 @@ execute if score @s mcs matches 2 run execute as @e[type=minecraft:armor_stand,t
 
 # 杀死盔甲架
 execute as @e[type=minecraft:armor_stand,tag=iu_change] at @s run kill @s
+execute as @e[type=minecraft:armor_stand,tag=iu_change] at @s run kill @s
+execute as @e[type=minecraft:armor_stand,tag=iu_change] at @s run kill @s
 
 #scoreboard players set @s Allowance 0
 #重置条件

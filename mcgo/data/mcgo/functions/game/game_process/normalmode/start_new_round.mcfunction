@@ -38,8 +38,8 @@ item replace entity @a[team=T] armor.legs with minecraft:leather_leggings{Unbrea
 item replace entity @a[team=CT] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:1s}],display:{color:636159,Name:'{"text":"CT"}',Lore:['{"text":"CT"}']}}
 #给予标志裤
 
-item replace entity @a[team=T] hotbar.2 with tacz:modern_kinetic_gun{tag:{GunType:3},HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"test:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
-item replace entity @a[team=CT] hotbar.2 with tacz:modern_kinetic_gun{tag:{GunType:3},HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"test:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
+item replace entity @a[team=T] hotbar.2 with tacz:modern_kinetic_gun{GunType:3,HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"test:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
+item replace entity @a[team=CT] hotbar.2 with tacz:modern_kinetic_gun{GunType:3,HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"test:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
 #给予刀
 
 
@@ -48,8 +48,8 @@ scoreboard players set NormalMode GameProcess 1
 scoreboard objectives setdisplay sidebar Timer
 
 function mcgo:game/game_process/normalmode/give_books
-execute as @a[team=CT] run function mcgo:game/temp_ct
-execute as @a[team=T] run function mcgo:game/temp_t
+execute as @a[team=T] run function mcgo:game/get_guns/gun_redirect
+execute as @a[team=CT] run function mcgo:game/get_guns/gun_redirect
 schedule function mcgo:game/map_select_tp/tp_to_selected_map 5t append
 
 item replace entity @r[team=T] hotbar.8 with block_bettle:c_4_false{GunId:4} 1

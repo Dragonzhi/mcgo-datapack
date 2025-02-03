@@ -6,6 +6,8 @@ scoreboard players set @a GetGunForFree 0
 scoreboard players set @a Kills 0
 scoreboard players set 商店时间 Timer 20
 scoreboard players reset 游戏倒计时 Timer
+scoreboard players set @a PlantC4 0
+scoreboard players set @a DefuseC4 0
 
 scoreboard players set BombPlanted GameProcess 0
 scoreboard players set BombDefused GameProcess 0

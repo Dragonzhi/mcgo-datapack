@@ -22,17 +22,22 @@ execute if entity @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_ki
 execute as @a[scores={PlayKill=1..}] run scoreboard players add @s Kills 1
 execute as @a[scores={PlayKill=1..}] run scoreboard players set @s PlayKill 0
 
-execute if entity @a[scores={ArmsRaceProcess=5}] if score #broadcast5Scores ArmsRaceProcess matches 0 run scoreboard players set Allowance ArmsRaceProcess 1
+# 每一刻增加玩家的种子数值
+execute as @a run scoreboard players add @s ArmsRaceSeed 1
+# 设置一个取余数
+scoreboard players set 5 ArmsRaceSeed 5
+
+execute if entity @a[scores={ArmsRaceProcess=5}] if score #broadcast5Scores ArmsRaceProcess matches 0 run scoreboard players set Allowance GameProcess 1
     execute if score Allowance GameProcess matches 1 run execute as @a[scores={ArmsRaceProcess=5}] run tellraw @a [{"selector":"@s"},{"text":"首次达到5级！","color":"yellow"}]
     execute if score Allowance GameProcess matches 1 run scoreboard players set #broadcast5Scores ArmsRaceProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
-execute if entity @a[scores={ArmsRaceProcess=10}] if score #broadcast10Scores ArmsRaceProcess matches 0 run scoreboard players set Allowance ArmsRaceProcess 1
+execute if entity @a[scores={ArmsRaceProcess=10}] if score #broadcast10Scores ArmsRaceProcess matches 0 run scoreboard players set Allowance GameProcess 1
     execute if score Allowance GameProcess matches 1 run tellraw @a [{"selector":"@a[scores={ArmsRaceProcess=10}]"},{"text":"首次达到10级！","color":"yellow"}]
     execute if score Allowance GameProcess matches 1 run scoreboard players set #broadcast10Scores ArmsRaceProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
-execute if entity @a[scores={ArmsRaceProcess=17}] if score #broadcast17Scores ArmsRaceProcess matches 0 run scoreboard players set Allowance ArmsRaceProcess 1
+execute if entity @a[scores={ArmsRaceProcess=17}] if score #broadcast17Scores ArmsRaceProcess matches 0 run scoreboard players set Allowance GameProcess 1
     execute if score Allowance GameProcess matches 1 run tellraw @a [{"selector":"@a[scores={ArmsRaceProcess=17}]"},{"text":"首次达到17级！","color":"yellow"}]
     execute if score Allowance GameProcess matches 1 run scoreboard players set #broadcast17Scores ArmsRaceProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
@@ -69,7 +74,7 @@ execute as @a[team=CT] if score @s ArmsRaceProcess matches 13 unless entity @s[n
 
 execute as @a[team=CT] if score @s ArmsRaceProcess matches 14 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"CZ75"}}]}] run function mcgo:pistols/pistol_get_cz75
 
-execute as @a[team=CT] if score @s ArmsRaceProcess matches 15 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"P320"}}]}] run function mcgo:pistols/pistol_get_p320
+execute as @a[team=CT] if score @s ArmsRaceProcess matches 15 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"P250"}}]}] run function mcgo:pistols/pistol_get_p250
 
 execute as @a[team=CT] if score @s ArmsRaceProcess matches 16 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"USP-S"}}]}] run function mcgo:pistols/pistol_get_usp
 
@@ -107,7 +112,7 @@ execute as @a[team=T] if score @s ArmsRaceProcess matches 13 unless entity @s[nb
 
 execute as @a[team=T] if score @s ArmsRaceProcess matches 14 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"CZ75"}}]}] run function mcgo:pistols/pistol_get_cz75
 
-execute as @a[team=T] if score @s ArmsRaceProcess matches 15 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"P320"}}]}] run function mcgo:pistols/pistol_get_p320
+execute as @a[team=T] if score @s ArmsRaceProcess matches 15 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"P250"}}]}] run function mcgo:pistols/pistol_get_p250
 
 execute as @a[team=T] if score @s ArmsRaceProcess matches 16 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"格洛克"}}]}] run function mcgo:pistols/pistol_get_glock
 

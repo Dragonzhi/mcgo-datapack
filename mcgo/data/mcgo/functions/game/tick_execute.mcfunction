@@ -4,7 +4,7 @@
 function mcgo:game/weather_select/turn_to_selected_weather
 
 ##NormalMode
-execute if score NormalMode GameProcess matches 1 run execute if score S InGame matches 1 run function mcgo:game/game_process/normalmode/main
+execute if score NormalMode GameProcess matches 1 run function mcgo:game/game_process/normalmode/main
 
 ##RapidMode
 

@@ -3,9 +3,6 @@
 kill @e[type=item]
 kill @e[type=experience_orb]
 
-spawnpoint @a[team=T] 42 -60 -26
-spawnpoint @a[team=CT] 5 -60 -24
-
 function mcgo:game/game_process/arms_race/clear_inventory
 
 
@@ -17,7 +14,7 @@ item replace entity @a[team=T] armor.chest with minecraft:netherite_chestplate{U
 item replace entity @a[team=CT] armor.chest with minecraft:netherite_chestplate{Unbreakable:true}
 
 
-execute as @a if score @s Deaths matches 1.. run function mcgo:game/game_process/arms_race/death_reborn
+execute if entity @a[scores={Deaths=1..}] run schedule function mcgo:game/game_process/arms_race/death_reborn 15t append
 
 
 scoreboard players set @a GetGunForFree 1
