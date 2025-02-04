@@ -6,6 +6,10 @@ scoreboard players set @a GetGunForFree 0
 scoreboard players set @a Kills 0
 scoreboard players set 商店时间 Timer 20
 scoreboard players reset 游戏倒计时 Timer
+scoreboard players set C4CountDownSeconds Timer 0
+scoreboard players set #RealCountDownSeconds Timer 0
+scoreboard players set #RealCountDownTicks Timer 0
+scoreboard players set #RealCountDownMS Timer 0
 scoreboard players set @a PlantC4 0
 scoreboard players set @a DefuseC4 0
 
@@ -22,6 +26,12 @@ scoreboard players set CTMissing GameProcess 0
 scoreboard players set ReturnToTheGame GameProcess 0
 scoreboard players set RoundFinished GameProcess 0
 scoreboard players set RoundStart GameProcess 0
+scoreboard players set AliveCTNum GameProcess 0
+scoreboard players set CTLeft1 GameProcess 0
+scoreboard players set CTLeft1Kills GameProcess 0
+scoreboard players set AliveTNum GameProcess 0
+scoreboard players set TLeft1Kills GameProcess 0
+scoreboard players set TLeft1 GameProcess 0
 
 scoreboard players set @a BoughtFlashbang 0
 scoreboard players set @a BoughtHEGrenade 0

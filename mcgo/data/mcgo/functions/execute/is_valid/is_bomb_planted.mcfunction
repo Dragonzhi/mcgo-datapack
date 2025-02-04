@@ -12,3 +12,6 @@ execute if entity @a[team=T] run execute if entity @e[type=block_bettle:c_4,nbt=
     execute if score Allowance GameProcess matches 1 run scoreboard objectives setdisplay sidebar
     #将侧栏隐藏
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
+
+execute store result score C4CountDownSeconds Timer as @e[type=block_bettle:c_4,nbt={CustomName:'{"text":" C4 "}'}] run data get entity @s ForgeData.CountDown
+execute store result score C4CountDownTicks Timer as @e[type=block_bettle:c_4,nbt={CustomName:'{"text":" C4 "}'}] run data get entity @s ForgeData.Tick

@@ -34,6 +34,7 @@ schedule clear mcgo:execute/timer/timer_arms_race
 schedule clear mcgo:execute/vote_execute/starting_normal_game/execute_vote
 schedule clear mcgo:execute/vote_execute/surrender/execute_vote
 schedule clear mcgo:execute/vote_execute/starting_arms_race/execute_vote
+schedule clear mcgo:execute/vote_execute/reset_world/execute_vote
 
 execute as @a run attribute @s generic.max_health base set 20
 

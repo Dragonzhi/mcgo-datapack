@@ -26,7 +26,8 @@ scoreboard objectives remove ArmsRaceProcess
 scoreboard objectives remove ArmsRaceSeed
 scoreboard objectives remove PlantC4
 scoreboard objectives remove DefuseC4
-# scoreboard objectives remove GlockSkin
+
+
 
 scoreboard objectives add Timer dummy
 scoreboard objectives add Hp health
@@ -40,7 +41,7 @@ scoreboard objectives add Kills dummy
 scoreboard objectives add PlayDeaths dummy
 scoreboard objectives add Deaths deathCount
 scoreboard objectives add GameProcess dummy
-scoreboard objectives add Allowance dummy
+scoreboard objectives add Allowance trigger
 scoreboard objectives add mcs dummy
 scoreboard objectives add Wins dummy
 scoreboard objectives add MVP dummy

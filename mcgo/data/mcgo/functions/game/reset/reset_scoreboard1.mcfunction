@@ -16,6 +16,9 @@ scoreboard players set @a[team=T] Points 800
 scoreboard players set @a[team=CT] Points 800
 scoreboard players set S InGame 0
 
+scoreboard players set #40 Timer 40
+scoreboard players set #20 Timer 20
+scoreboard players set #50 Timer 50
 
 scoreboard players set RapidMode GameProcess 0
 scoreboard players set CTGamePoint GameProcess 0
@@ -39,6 +42,7 @@ scoreboard players set ArmsRace_TimeOut GameProcess 0
 
 scoreboard players set #1000 sort 1000
 scoreboard players set #10 sort 10
+scoreboard players set #highKills sort 0
 scoreboard players set #highPlayKills sort 0
 scoreboard players set #minPlayDeaths sort 0
 scoreboard players set #highArmsRaceLevels sort 0
@@ -60,4 +64,3 @@ scoreboard players set @a Vote 0
 scoreboard players set #broadcast17Scores ArmsRaceProcess 0
 scoreboard players set #broadcast10Scores ArmsRaceProcess 0
 scoreboard players set #broadcast5Scores ArmsRaceProcess 0
-

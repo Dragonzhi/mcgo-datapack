@@ -90,4 +90,6 @@ execute as @a[scores={PlayKill=1..}] run scoreboard players set @s Allowance 1
 execute as @a[scores={PlayKill=1..}] run scoreboard players set @s Allowance 0
 execute as @a[scores={PlayKill=1..}] run scoreboard players add @s PlayKills 1
 execute as @a[scores={PlayKill=1..}] run scoreboard players add @s Kills 1
+execute as @a[scores={PlayKill=1..}] run execute if entity @s[team=CT] if score CTLeft1 GameProcess matches 1 run scoreboard players add CTLeft1Kills GameProcess 1
+execute as @a[scores={PlayKill=1..}] run execute if entity @s[team=T] if score TLeft1 GameProcess matches 1 run scoreboard players add TLeft1Kills GameProcess 1
 execute as @a[scores={PlayKill=1..}] run scoreboard players remove @s PlayKill 1

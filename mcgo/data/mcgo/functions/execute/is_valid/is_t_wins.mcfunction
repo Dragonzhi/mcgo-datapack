@@ -12,31 +12,33 @@ execute if entity @a[team=CT] run execute if entity @e[name="C 4 Exploded"] run 
 
 #若CT被歼灭或C4成功引爆，则T获胜
 execute if entity @a[team=CT] run execute if score CTAllDied GameProcess matches 1 run execute if score RoundFinished GameProcess matches 0 run scoreboard players set TWinTheRound GameProcess 1
-    execute if score TWinTheRound GameProcess matches 1 run tellraw @a[team=T] [{"text":"歼灭CT方，回合胜利 ","color":"white"},{"text":"+$3250","color":"green"}]
-    execute if score TWinTheRound GameProcess matches 1 run title @a title [{"text":"T阵营胜利","color":"yellow","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}]
-    execute if score TWinTheRound GameProcess matches 1 run playsound minecraft:entity.player.levelup music @a[team=T] ~ ~ ~ 256
-    execute if score TWinTheRound GameProcess matches 1 run playsound minecraft:entity.experience_orb.pickup music @a[team=CT] ~ ~ ~ 256
-    execute if score TWinTheRound GameProcess matches 1 run function mcgo:game/game_process/normalmode/defeat_bonus
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players add T Wins 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players add Finished_Round Wins 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players add CT DefeatBonus 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players remove T DefeatBonus 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players add @a[team=T] Points 3250
-    execute if score TWinTheRound GameProcess matches 1 run schedule function mcgo:game/game_process/normalmode/start_new_round 8s append
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players set RoundFinished GameProcess 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players set TWinTheRound GameProcess 0
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run tellraw @a[team=T] [{"text":"歼灭CT方，回合胜利 ","color":"white"},{"text":"+$3250","color":"green"}]
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run title @a title [{"text":"T阵营胜利","color":"yellow","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}]
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run playsound minecraft:entity.player.levelup music @a[team=T] ~ ~ ~ 256
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run playsound minecraft:entity.experience_orb.pickup music @a[team=CT] ~ ~ ~ 256
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/defeat_bonus
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/mvp_broadcast
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add T Wins 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add Finished_Round Wins 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add CT DefeatBonus 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players remove T DefeatBonus 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add @a[team=T] Points 3250
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run schedule function mcgo:game/game_process/normalmode/start_new_round 8s append
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players set RoundFinished GameProcess 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players set TWinTheRound GameProcess 0
 
 execute if entity @a[team=CT] run execute if score BombExploded GameProcess matches 1 run execute if score RoundFinished GameProcess matches 0 run scoreboard players set TWinTheRound GameProcess 1
-    execute if score TWinTheRound GameProcess matches 1 run tellraw @a[team=T] [{"text":"成功引爆，回合胜利 ","color":"white"},{"text":"+$3500","color":"green"}]
-    execute if score TWinTheRound GameProcess matches 1 run title @a title [{"text":"T阵营胜利","color":"yellow","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}]
-    execute if score TWinTheRound GameProcess matches 1 run playsound minecraft:entity.player.levelup music @a[team=T] ~ ~ ~ 256
-    execute if score TWinTheRound GameProcess matches 1 run playsound minecraft:entity.experience_orb.pickup music @a[team=CT] ~ ~ ~ 256
-    execute if score TWinTheRound GameProcess matches 1 run function mcgo:game/game_process/normalmode/defeat_bonus
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players add T Wins 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players add Finished_Round Wins 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players add CT DefeatBonus 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players remove T DefeatBonus 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players add @a[team=T] Points 3500
-    execute if score TWinTheRound GameProcess matches 1 run schedule function mcgo:game/game_process/normalmode/start_new_round 8s append
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players set RoundFinished GameProcess 1
-    execute if score TWinTheRound GameProcess matches 1 run scoreboard players set TWinTheRound GameProcess 0
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run tellraw @a[team=T] [{"text":"成功引爆，回合胜利 ","color":"white"},{"text":"+$3500","color":"green"}]
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run title @a title [{"text":"T阵营胜利","color":"yellow","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false}]
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run playsound minecraft:entity.player.levelup music @a[team=T] ~ ~ ~ 256
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run playsound minecraft:entity.experience_orb.pickup music @a[team=CT] ~ ~ ~ 256
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/defeat_bonus
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/mvp_broadcast
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add T Wins 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add Finished_Round Wins 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add CT DefeatBonus 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players remove T DefeatBonus 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add @a[team=T] Points 3500
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run schedule function mcgo:game/game_process/normalmode/start_new_round 8s append
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players set RoundFinished GameProcess 1
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players set TWinTheRound GameProcess 0

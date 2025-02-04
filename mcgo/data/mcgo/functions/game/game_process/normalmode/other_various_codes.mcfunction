@@ -28,3 +28,9 @@ execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block
 execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block_bettle:c_4flag ~0.3 ~0.2 ~
 execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block_bettle:c_4flag ~ ~0.2 ~0.3
 execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block_bettle:c_4flag ~ ~0.2 ~-0.3
+
+#判断场上一方是否只剩一人
+execute store result score AliveCTNum GameProcess run execute if entity @a[team=CT,scores={Deaths=0}]
+execute store result score AliveTNum GameProcess run execute if entity @a[team=T,scores={Deaths=0}]
+execute if score CTNum GameProcess matches 1 if score CTLeft1 GameProcess matches 0 run scoreboard players set CTLeft1 GameProcess 1
+execute if score TNum GameProcess matches 1 if score TLeft1 GameProcess matches 0 run scoreboard players set TLeft1 GameProcess 1

@@ -14,7 +14,8 @@ item replace entity @a[team=T] armor.chest with minecraft:netherite_chestplate{U
 item replace entity @a[team=CT] armor.chest with minecraft:netherite_chestplate{Unbreakable:true}
 
 
-execute if entity @a[scores={Deaths=1..}] run schedule function mcgo:game/game_process/arms_race/death_reborn 15t append
+#在之后的版本，如果地图数量变多，则这个函数可能还要往后延迟一定时间才能不出现bug
+execute if entity @a[scores={Deaths=1..}] run schedule function mcgo:game/game_process/arms_race/death_reborn 5t append
 
 
 scoreboard players set @a GetGunForFree 1
