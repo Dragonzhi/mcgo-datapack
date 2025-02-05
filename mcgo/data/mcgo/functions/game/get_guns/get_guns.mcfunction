@@ -32,6 +32,9 @@ execute as @e[type=minecraft:armor_stand,tag=iu_change] at @s run kill @s
 execute as @e[type=minecraft:armor_stand,tag=iu_change] at @s run kill @s
 execute as @e[type=minecraft:armor_stand,tag=iu_change] at @s run kill @s
 
+playsound minecraft:item.armor.equip_elytra player @s ~ ~ ~ 100 1.4 1
+#播放音效
+
 #scoreboard players set @s Allowance 0
 #重置条件
 

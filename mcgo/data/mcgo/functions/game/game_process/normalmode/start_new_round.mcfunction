@@ -57,7 +57,8 @@ item replace entity @r[team=T] hotbar.8 with block_bettle:c_4_false{GunId:4} 1
 
 execute if score CTGamePoint GameProcess matches 1 run title @a title [{"text":"赛点","color":"blue","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]
 execute if score TGamePoint GameProcess matches 1 run title @a title [{"text":"赛点","color":"yellow","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]
-
+execute if score CTGamePoint GameProcess matches 1 run playsound minecraft:item.goat_horn.sound.0 player @a ~ ~ ~ 100 1.5 1
+execute if score TGamePoint GameProcess matches 1 run playsound minecraft:item.goat_horn.sound.1 player @a ~ ~ ~ 100 1.5 1
 
 scoreboard players set 商店时间 Timer 20
 schedule function mcgo:execute/timer/timer_normal_shop 1s append

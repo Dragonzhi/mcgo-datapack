@@ -3,6 +3,7 @@ execute if score Voting Vote matches 1 if score @s Vote matches 1 run tellraw @s
 execute if score Voting Vote matches 1 if score @s Vote matches 0 run execute if entity @s[team=CT] run scoreboard players set @s Allowance 1
 execute if score Voting Vote matches 1 if score @s Vote matches 0 run execute if entity @s[team=T] run scoreboard players set @s Allowance 1
     execute if score @s Allowance matches 1 run tellraw @a [{"selector":"@s"},{"text":" 拒绝重置游戏","color":"red"}]
+    execute if score @s Allowance matches 1 run playsound minecraft:ui.stonecutter.take_result player @s ~ ~ ~ 100 2 1
     execute if score @s Allowance matches 1 run scoreboard players set @s Vote 1
 
 execute if score Voting Vote matches 1 if score @s Vote matches 0 run execute unless entity @s[team=T] unless entity @s[team=CT] run scoreboard players set @s Allowance 2
