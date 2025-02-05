@@ -6,7 +6,8 @@ scoreboard players set @a GetGunForFree 0
 scoreboard players set @a Kills 0
 scoreboard players set 商店时间 Timer 20
 scoreboard players reset 游戏倒计时 Timer
-scoreboard players set C4CountDownSeconds Timer 0
+scoreboard players reset C4CountDownSeconds Timer
+scoreboard players reset C4CountDownTicks Timer
 scoreboard players set #RealCountDownSeconds Timer 0
 scoreboard players set #RealCountDownTicks Timer 0
 scoreboard players set #RealCountDownMS Timer 0
