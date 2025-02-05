@@ -16,6 +16,8 @@ kill @e[type=item]
 kill @e[type=experience_orb]
 kill @e[type=area_effect_cloud]
 kill @e[type=block_bettle:c_4]
+kill @e[type=minecraft:armor_stand,tag=iu_change]
+kill @e[type=minecraft:armor_stand,tag=iu_add]
 gamemode adventure @a[team=T]
 gamemode adventure @a[team=CT]
 
