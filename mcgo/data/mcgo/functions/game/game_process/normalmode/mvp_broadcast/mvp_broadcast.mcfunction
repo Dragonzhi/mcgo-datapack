@@ -1,7 +1,7 @@
 scoreboard players set Allowance GameProcess 0
 
 ##CT
-execute if score CTWinTheRound Wins matches 1 run scoreboard players set Allowance GameProcess 1
+execute if score CTWinTheRound GameProcess matches 1 run scoreboard players set Allowance GameProcess 1
     #CTLeft1 0 | BombPlanted 0
     execute if score Allowance GameProcess matches 1 if score CTLeft1 GameProcess matches 0 if score BombPlanted GameProcess matches 0 run execute if entity @a[team=CT,scores={Kills=1..}] run scoreboard players set Allowance GameProcess 2
         execute if score Allowance GameProcess matches 2 run function mcgo:game/game_process/normalmode/mvp_broadcast/search_for_high_kills
@@ -44,7 +44,7 @@ execute if score CTWinTheRound Wins matches 1 run scoreboard players set Allowan
 
 
 ##T
-execute if score TWinTheRound Wins matches 1 run scoreboard players set Allowance GameProcess 1
+execute if score TWinTheRound GameProcess matches 1 run scoreboard players set Allowance GameProcess 1
     #TLeft1 0 | BombExploded 0
     execute if score Allowance GameProcess matches 1 if score TLeft1 GameProcess matches 0 if score BombExploded GameProcess matches 0 run scoreboard players set Allowance GameProcess 2
         execute if score Allowance GameProcess matches 2 run function mcgo:game/game_process/normalmode/mvp_broadcast/search_for_high_kills
