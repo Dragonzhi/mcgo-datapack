@@ -32,5 +32,5 @@ execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block
 #判断场上一方是否只剩一人
 execute store result score AliveCTNum GameProcess run execute if entity @a[team=CT,scores={Deaths=0}]
 execute store result score AliveTNum GameProcess run execute if entity @a[team=T,scores={Deaths=0}]
-execute if score CTNum GameProcess matches 1 if score CTLeft1 GameProcess matches 0 run scoreboard players set CTLeft1 GameProcess 1
-execute if score TNum GameProcess matches 1 if score TLeft1 GameProcess matches 0 run scoreboard players set TLeft1 GameProcess 1
+execute if score AliveCTNum GameProcess matches 1 if score CTLeft1 GameProcess matches 0 run scoreboard players set CTLeft1 GameProcess 1
+execute if score AliveTNum GameProcess matches 1 if score TLeft1 GameProcess matches 0 run scoreboard players set TLeft1 GameProcess 1
