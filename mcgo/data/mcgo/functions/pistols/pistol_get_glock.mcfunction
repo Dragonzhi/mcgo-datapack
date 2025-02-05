@@ -2,7 +2,7 @@ function mcgo:game/get_guns/pistol_isvalid
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "格洛克"
 
-execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=0}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock"
 execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=1}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_candy_apple"
 execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=2}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_dragon_tattoo"
 execute if entity @s[scores={Allowance=10}] if entity @s[scores={GlockSkin=3}] run data modify storage mcs:gun_id GunId set value "mcs2:cs_glock_reactor"
