@@ -38,6 +38,7 @@ effect give @a[team=CT] minecraft:regeneration 3 255 true
 effect give @a[team=CT] health_boost 99999 2 true
 effect give @a[team=CT] minecraft:saturation 99999 255 true
 effect give @a[team=CT] minecraft:dolphins_grace 99999 1 true
+item replace entity @a[scores={Deaths=1..}] hotbar.3 with block_bettle:dian_ji_qiang{GunType:7}
 
 scoreboard objectives setdisplay sidebar ArmsRaceProcess
 #将侧栏计分板改为Timer
