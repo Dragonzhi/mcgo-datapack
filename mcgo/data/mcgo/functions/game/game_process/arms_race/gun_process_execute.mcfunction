@@ -20,11 +20,11 @@ execute if entity @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_ki
 
 #如果使用电击枪击杀一名玩家则升级，过程中将玩家的PlayKill和Kills归零
 execute if entity @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:3}}}] run scoreboard players add Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:3}}}] run playsound minecraft:block.note_block.bell block @s ~ ~ ~ 100 1 1
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:3}}}] run tellraw @s [{"text":"武器升级！！！！","color":"yellow"}]
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:3}}}] run scoreboard players add @s ArmsRaceProcess 1
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:3}}}] run scoreboard players set @s Kills 0
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:3}}}] run scoreboard players set @s PlayKill 0
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:7}}}] run playsound minecraft:block.note_block.bell block @s ~ ~ ~ 100 1 1
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:7}}}] run tellraw @s [{"text":"武器升级！！！！","color":"yellow"}]
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:7}}}] run scoreboard players add @s ArmsRaceProcess 1
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:7}}}] run scoreboard players set @s Kills 0
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{tag:{Guntype:7}}}] run scoreboard players set @s PlayKill 0
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 #若为普通击杀，则对应玩家的Kills+1，PlayKill归零

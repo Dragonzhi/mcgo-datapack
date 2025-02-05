@@ -74,5 +74,6 @@ effect give @a[scores={Deaths=1..}] health_boost 99999 2 true
 effect give @a[scores={Deaths=1..}] minecraft:saturation 99999 255 true
 effect give @a[scores={Deaths=1..}] minecraft:dolphins_grace 99999 1 true
 effect give @a[scores={Deaths=1..}] minecraft:regeneration 3 4 true
+item replace entity @a[scores={Deaths=1..}] hotbar.3 with block_bettle:dian_ji_qiang
 scoreboard players set @a[scores={Deaths=1..}] Deaths 0
 
