@@ -17,7 +17,7 @@ execute if entity @a[team=CT] run execute if score CTAllDied GameProcess matches
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run playsound minecraft:entity.player.levelup music @a[team=T] ~ ~ ~ 256
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run playsound minecraft:entity.experience_orb.pickup music @a[team=CT] ~ ~ ~ 256
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/defeat_bonus
-    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/mvp_broadcast
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/mvp_broadcast/mvp_broadcast
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add T Wins 1
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add Finished_Round Wins 1
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add CT DefeatBonus 1
@@ -33,7 +33,7 @@ execute if entity @a[team=CT] run execute if score BombExploded GameProcess matc
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run playsound minecraft:entity.player.levelup music @a[team=T] ~ ~ ~ 256
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run playsound minecraft:entity.experience_orb.pickup music @a[team=CT] ~ ~ ~ 256
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/defeat_bonus
-    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/mvp_broadcast
+    execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run function mcgo:game/game_process/normalmode/mvp_broadcast/mvp_broadcast
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add T Wins 1
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add Finished_Round Wins 1
     execute if score TWinTheRound GameProcess matches 1 if score RoundFinished GameProcess matches 0 run scoreboard players add CT DefeatBonus 1
