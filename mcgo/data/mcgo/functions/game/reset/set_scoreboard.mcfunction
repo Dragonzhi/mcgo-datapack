@@ -26,7 +26,11 @@ scoreboard objectives remove ArmsRaceProcess
 scoreboard objectives remove ArmsRaceSeed
 scoreboard objectives remove PlantC4
 scoreboard objectives remove DefuseC4
-
+scoreboard objectives remove csgrenade_killcount_hegrenade
+scoreboard objectives remove csgrenade_killcount_flashbang
+scoreboard objectives remove csgrenade_killcount_smokegrenade
+scoreboard objectives remove csgrenade_killcount_incendiary
+scoreboard objectives remove csgrenade_killcount_molotov
 
 
 scoreboard objectives add Timer dummy
@@ -63,6 +67,11 @@ scoreboard objectives add USPSkin trigger
 scoreboard objectives add AK47Skin trigger
 scoreboard objectives add M4A1Skin trigger
 scoreboard objectives add AWPSkin trigger
+scoreboard objectives add csgrenade_killcount_hegrenade dummy
+scoreboard objectives add csgrenade_killcount_flashbang dummy
+scoreboard objectives add csgrenade_killcount_smokegrenade dummy
+scoreboard objectives add csgrenade_killcount_incendiary dummy
+scoreboard objectives add csgrenade_killcount_molotov dummy
 
 scoreboard objectives setdisplay belowName Hp
 scoreboard objectives setdisplay list Points
