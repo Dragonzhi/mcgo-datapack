@@ -4,7 +4,6 @@ execute if score HalfTimeSwitch GameProcess matches 1 run scoreboard players set
     execute if score Allowance GameProcess matches 1 run clear @a[team=T]
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 schedule clear mcgo:execute/timer/timer_normal_game
-function mcgo:game/game_process/normalmode/round_result
 function mcgo:game/reset/reset_scoreboard2
 function mcgo:execute/is_valid/is_surrender_valid
 function mcgo:execute/vote_execute/reset_world/is_reset_world_needed
@@ -63,6 +62,7 @@ execute if score TGamePoint GameProcess matches 1 run playsound minecraft:item.g
 scoreboard players set 商店时间 Timer 20
 schedule function mcgo:execute/timer/timer_normal_shop 1s append
 
-
+#1.0.3以后，round_result函数被完全夺舍啦！
+tellraw @a [{"text":"\n当前比分  ","color":"white","bold":false},{"text":"CT ","color":"aqua","bold":true},{"score":{"name":"CT","objective":"Wins"},"color":"aqua","bold":true},{"text":" : ","color":"white","bold":false},{"score":{"name":"T","objective":"Wins"},"color":"yellow","bold":true},{"text":" T\n","color":"yellow","bold":true}]
 
 

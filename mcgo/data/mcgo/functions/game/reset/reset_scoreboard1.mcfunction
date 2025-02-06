@@ -39,6 +39,10 @@ scoreboard players set CTSurrender GameProcess 0
 scoreboard players set TSurrender GameProcess 0
 scoreboard players set ArmsRace_18ScoresReached GameProcess 0
 scoreboard players set ArmsRace_TimeOut GameProcess 0
+scoreboard players set AliveTNum GameProcess 0
+scoreboard players set AliveCTNum GameProcess 0
+scoreboard players set TotalCTNum GameProcess 0
+scoreboard players set TotalTNum GameProcess 0
 
 scoreboard players set #1000 sort 1000
 scoreboard players set #10 sort 10

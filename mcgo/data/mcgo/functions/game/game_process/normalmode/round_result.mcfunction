@@ -1,2 +1,0 @@
-
-tellraw @a [{"text":"当前比分  ","color":"white","bold":false},{"text":"CT ","color":"aqua","bold":true},{"score":{"name":"CT","objective":"Wins"},"color":"aqua","bold":true},{"text":" : ","color":"white","bold":false},{"score":{"name":"T","objective":"Wins"},"color":"yellow","bold":true},{"text":" T","color":"yellow","bold":true}]

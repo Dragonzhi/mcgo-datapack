@@ -33,7 +33,7 @@ scoreboard objectives remove csgrenade_killcount_incendiary
 scoreboard objectives remove csgrenade_killcount_molotov
 
 
-scoreboard objectives add Timer dummy
+scoreboard objectives add Timer dummy "倒计时"
 scoreboard objectives add Hp health
 scoreboard objectives add GetGunForFree dummy
 scoreboard objectives add Points dummy
@@ -67,6 +67,9 @@ scoreboard objectives add USPSkin trigger
 scoreboard objectives add AK47Skin trigger
 scoreboard objectives add M4A1Skin trigger
 scoreboard objectives add AWPSkin trigger
+
+#csgrenades mod相关计分板x5，因为不懂怎么创建新的criteria干脆自己加分了（悲
+#不直接写csgrenades自带的指令的原因是vscode不认识（x），而且这样写也可以有提示
 scoreboard objectives add csgrenade_killcount_hegrenade dummy
 scoreboard objectives add csgrenade_killcount_flashbang dummy
 scoreboard objectives add csgrenade_killcount_smokegrenade dummy

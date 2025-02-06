@@ -27,10 +27,8 @@ scoreboard players set CTMissing GameProcess 0
 scoreboard players set ReturnToTheGame GameProcess 0
 scoreboard players set RoundFinished GameProcess 0
 scoreboard players set RoundStart GameProcess 0
-scoreboard players set AliveCTNum GameProcess 0
 scoreboard players set CTLeft1 GameProcess 0
 scoreboard players set CTLeft1Kills GameProcess 0
-scoreboard players set AliveTNum GameProcess 0
 scoreboard players set TLeft1Kills GameProcess 0
 scoreboard players set TLeft1 GameProcess 0
 

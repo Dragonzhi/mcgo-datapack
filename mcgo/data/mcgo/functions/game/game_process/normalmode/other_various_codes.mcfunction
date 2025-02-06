@@ -1,7 +1,7 @@
 ##其他游戏中每刻执行的杂项
 
-execute as @a at @s if block ~ ~2 ~ air if block ~ ~1 ~ air run spawnpoint @s ~ ~1 ~
-execute as @a at @s if block ~ ~ ~ air run spawnpoint @s ~ ~ ~
+execute as @a at @s if block ~ ~1 ~ air if block ~ ~2 ~ air run spawnpoint @s ~ ~1 ~
+execute as @a at @s if block ~ ~ ~ air if block ~ ~1 ~ air run spawnpoint @s ~ ~ ~
 
 scoreboard players set @a[scores={Points=10000..}] Points 10000
 execute if score CT DefeatBonus matches 5.. run scoreboard players set CT DefeatBonus 4
@@ -32,5 +32,9 @@ execute at @a[nbt={Inventory:[{id:"block_bettle:c_4_down"}]}] run particle block
 #判断场上一方是否只剩一人
 execute store result score AliveCTNum GameProcess run execute if entity @a[team=CT,scores={Deaths=0}]
 execute store result score AliveTNum GameProcess run execute if entity @a[team=T,scores={Deaths=0}]
-execute if score AliveCTNum GameProcess matches 1 if score CTLeft1 GameProcess matches 0 run scoreboard players set CTLeft1 GameProcess 1
-execute if score AliveTNum GameProcess matches 1 if score TLeft1 GameProcess matches 0 run scoreboard players set TLeft1 GameProcess 1
+execute if score AliveCTNum GameProcess matches 1 if score CTLeft1 GameProcess matches 0 if score TotalCTNum GameProcess matches 1 run scoreboard players set CTLeft1 GameProcess 1
+execute if score AliveTNum GameProcess matches 1 if score TLeft1 GameProcess matches 0 if score TotalTNum GameProcess matches 1 run scoreboard players set TLeft1 GameProcess 1
+
+#检查双方玩家数量
+execute store result score TotalCTNum GameProcess run execute if entity @a[team=CT]
+execute store result score TotalTNum GameProcess run execute if entity @a[team=T]
