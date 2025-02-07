@@ -11,6 +11,7 @@ function mcgo:execute/vote_execute/reset_world/is_reset_world_needed
 kill @e[type=item]
 kill @e[type=minecraft:area_effect_cloud]
 kill @e[type=block_bettle:c_4]
+kill @e[type=tacz:bullet]
 effect clear @a[team=CT]
 effect clear @a[team=T]
 effect give @a[team=T] minecraft:regeneration 3 255 true
@@ -65,4 +66,5 @@ schedule function mcgo:execute/timer/timer_normal_shop 1s append
 #1.0.3以后，round_result函数被完全夺舍啦！
 tellraw @a [{"text":"\n当前比分  ","color":"white","bold":false},{"text":"CT ","color":"aqua","bold":true},{"score":{"name":"CT","objective":"Wins"},"color":"aqua","bold":true},{"text":" : ","color":"white","bold":false},{"score":{"name":"T","objective":"Wins"},"color":"yellow","bold":true},{"text":" T\n","color":"yellow","bold":true}]
 
-
+#趣事分享（如果以后多了就单独分离）
+tellraw @a [{"text":"[瞎几把搞的抽象统计]","color":"yellow","bold":false},{"text":"上一局一共发射了 ","color":"white","bold": false},{"score":{"name":"FiredBullet","objective": "FunnyCase"},"color":"yellow","bold":true},{"text":" 发子弹！","color":"white","bold":false}]

@@ -31,6 +31,7 @@ scoreboard players set CTLeft1 GameProcess 0
 scoreboard players set CTLeft1Kills GameProcess 0
 scoreboard players set TLeft1Kills GameProcess 0
 scoreboard players set TLeft1 GameProcess 0
+scoreboard players set FiredBullet FunnyCase 0
 
 scoreboard players set @a BoughtFlashbang 0
 scoreboard players set @a BoughtHEGrenade 0

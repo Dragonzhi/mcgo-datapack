@@ -1,6 +1,8 @@
 
 tellraw @a {"text":"[温馨提示]请按~键确定开启“禁止自动拾取”，自行设定按键以手动拾取物品。","color":"aqua"}
 
+kill @e[type=tacz:bullet]
+
 clear @a[team=CT]
 clear @a[team=T]
 schedule clear mcgo:execute/timer/timer_normal_game

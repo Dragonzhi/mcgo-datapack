@@ -38,3 +38,6 @@ execute if score AliveTNum GameProcess matches 1 if score TLeft1 GameProcess mat
 #检查双方玩家数量
 execute store result score TotalCTNum GameProcess run execute if entity @a[team=CT]
 execute store result score TotalTNum GameProcess run execute if entity @a[team=T]
+
+execute as @e[type=tacz:bullet] unless entity @s[tag=tagged] run scoreboard players add FiredBullet FunnyCase 1
+execute as @e[type=tacz:bullet] unless entity @s[tag=tagged] run tag @s add tagged
