@@ -39,7 +39,7 @@ item replace entity @a[team=CT] hotbar.4 with air
 item replace entity @a[team=CT] hotbar.5 with air
 item replace entity @a[team=CT] hotbar.6 with air
 item replace entity @a[team=CT] hotbar.7 with air
-execute if entity @a[team=CT] unless entity @s[nbt={Inventory:[{id:"minecraft:written_book"}]}] run function mcgo:game/game_process/deathmatch/give_books
+execute unless entity @a[team=CT] unless entity @s[nbt={Inventory:[{id:"minecraft:written_book"}]}] run function mcgo:game/game_process/deathmatch/give_books
 
 #T
 item replace entity @a[team=T] inventory.0 with air
@@ -82,4 +82,4 @@ item replace entity @a[team=T] hotbar.4 with air
 item replace entity @a[team=T] hotbar.5 with air
 item replace entity @a[team=T] hotbar.6 with air
 item replace entity @a[team=T] hotbar.7 with air
-execute if entity @a[team=T] unless entity @s[nbt={Inventory:[{id:"minecraft:written_book"}]}] run function mcgo:game/game_process/deathmatch/give_books
+execute unless entity @a[team=T] unless entity @s[nbt={Inventory:[{id:"minecraft:written_book"}]}] run function mcgo:game/game_process/deathmatch/give_books
