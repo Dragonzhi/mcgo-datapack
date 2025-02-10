@@ -1,5 +1,5 @@
 
-tellraw @a {"text":"[温馨提示]请按~键确定开启“禁止自动拾取”，自行设定按键以手动拾取物品。","color":"aqua"}
+tellraw @a {"text":"[温馨提示]默认请按~键确定开启“禁止自动拾取”，自行设定按键以手动拾取物品。","color":"aqua"}
 
 kill @e[type=tacz:bullet]
 
