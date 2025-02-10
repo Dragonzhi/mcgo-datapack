@@ -55,6 +55,7 @@ scoreboard players set #highPlayKills sort 0
 scoreboard players set #minPlayDeaths sort 0
 scoreboard players set #highArmsRaceLevels sort 0
 scoreboard players set #highDeathMatchPoints sort 0
+scoreboard players set #broadcastPlayersNum sort 0
 scoreboard players set #kd1 sort 0
 scoreboard players set #kd2 sort 0
 
