@@ -3,7 +3,7 @@
 kill @e[type=item]
 kill @e[type=experience_orb]
 
-function mcgo:game/game_process/arms_race/clear_inventory
+function mcgo:game/game_process/deathmatch/clear_inventory
 
 
 item replace entity @a[team=T] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:1s}],display:{color:16767744,Name:'{"text":"T"}',Lore:['{"text":"T"}']}}
