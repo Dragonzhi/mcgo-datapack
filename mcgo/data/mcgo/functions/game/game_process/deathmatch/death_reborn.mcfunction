@@ -29,3 +29,12 @@ execute if score dust2 SelectedMap matches 1 run scoreboard players set Allowonc
     execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 24 run spreadplayers 1020 -169 1 1 under -46 false @s
     execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed >= 25 DeathMatchSeed run spreadplayers 1013 -137 1 1 under -44 false @s
     execute if score Allowonce GameProcess matches 1 run scoreboard players set Allowonce GameProcess 0
+
+
+
+effect give @a[scores={Deaths=1..}] health_boost 99999 2 true
+effect give @a[scores={Deaths=1..}] minecraft:saturation 99999 255 true
+effect give @a[scores={Deaths=1..}] minecraft:dolphins_grace 99999 1 true
+effect give @a[scores={Deaths=1..}] minecraft:regeneration 3 4 true
+item replace entity @a[scores={Deaths=1..}] hotbar.3 with block_bettle:dian_ji_qiang{GunType:7}
+scoreboard players set @a[scores={Deaths=1..}] Deaths 0

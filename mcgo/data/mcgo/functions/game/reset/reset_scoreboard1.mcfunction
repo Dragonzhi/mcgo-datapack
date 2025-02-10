@@ -31,6 +31,9 @@ scoreboard players set Tie GameProcess 0
 scoreboard players set StopStartingGame GameProcess 0
 scoreboard players set NormalMode GameProcess 0
 scoreboard players set ArmsRace GameProcess 0
+scoreboard players set DeathMatch GameProcess 0
+scoreboard players set minutes1 GameProcess 0
+scoreboard players set minutes2 GameProcess 0
 scoreboard players set seconds GameProcess 0
 scoreboard players set ticks GameProcess 0
 scoreboard players set CTSurrenderValid GameProcess 0
@@ -43,6 +46,7 @@ scoreboard players set AliveTNum GameProcess 0
 scoreboard players set AliveCTNum GameProcess 0
 scoreboard players set TotalCTNum GameProcess 0
 scoreboard players set TotalTNum GameProcess 0
+scoreboard players set #60 GameProcess 60
 
 scoreboard players set #1000 sort 1000
 scoreboard players set #10 sort 10
@@ -50,6 +54,7 @@ scoreboard players set #highKills sort 0
 scoreboard players set #highPlayKills sort 0
 scoreboard players set #minPlayDeaths sort 0
 scoreboard players set #highArmsRaceLevels sort 0
+scoreboard players set #highDeathMatchPoints sort 0
 scoreboard players set #kd1 sort 0
 scoreboard players set #kd2 sort 0
 
@@ -59,6 +64,7 @@ scoreboard players set #playersNumSet Vote 0
 scoreboard players set #playersNumEnd Vote 0
 scoreboard players set StartingNormalGame Vote 0
 scoreboard players set StartingArmsRace Vote 0
+scoreboard players set StartingDeathMatch Vote 0
 scoreboard players set CTSurrender Vote 0
 scoreboard players set TSurrender Vote 0
 scoreboard players set ResetWorld Vote 0
@@ -68,3 +74,6 @@ scoreboard players set @a Vote 0
 scoreboard players set #broadcast17Scores ArmsRaceProcess 0
 scoreboard players set #broadcast10Scores ArmsRaceProcess 0
 scoreboard players set #broadcast5Scores ArmsRaceProcess 0
+
+
+scoreboard players set #25 DeathMatchSeed 25

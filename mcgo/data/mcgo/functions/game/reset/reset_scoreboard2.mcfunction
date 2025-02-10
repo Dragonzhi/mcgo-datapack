@@ -40,3 +40,7 @@ scoreboard players set @a BoughtIncendiary 0
 scoreboard players set @a BoughtMolotov 0
 
 scoreboard players set @a ArmsRaceProcess 0
+scoreboard players set @a ArmsRaceSeed 0
+
+scoreboard players set @a DeathMatchPoints 0
+scoreboard players set @a DeathMatchSeed 0
