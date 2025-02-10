@@ -1,5 +1,5 @@
 # 取模25（得到0~24），对应传送到特定地图的特定范围
-execute as @a[scores={Deaths=1..}] run scoreboard players operation @s DeathMatchSeed %= 25 DeathMatchSeed
+execute as @a[scores={Deaths=1..}] run scoreboard players operation @s DeathMatchSeed %= #25 DeathMatchSeed
 # 沙二 Dust2
 execute if score dust2 SelectedMap matches 1 run scoreboard players set Allowonce GameProcess 1
     execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 0 run spreadplayers 1081 -151 1 1 under -47 false @s

@@ -1,5 +1,5 @@
-execute if score S InGame matches 1 if score ArmsRace GameProcess matches 1 if score seconds GameProcess matches 1.. run scoreboard players remove seconds GameProcess 1
-execute if score S InGame matches 1 if score ArmsRace GameProcess matches 1 if score seconds GameProcess matches 1.. run schedule function mcgo:execute/timer/timer_arms_race 1s append
+execute if score S InGame matches 1 if score DeathMatch GameProcess matches 1 if score seconds GameProcess matches 1.. run scoreboard players remove seconds GameProcess 1
+execute if score S InGame matches 1 if score DeathMatch GameProcess matches 1 if score seconds GameProcess matches 1.. run schedule function mcgo:execute/timer/timer_arms_race 1s append
 
 scoreboard players operation minutes1 GameProcess = seconds GameProcess
 scoreboard players operation minutes2 GameProcess = seconds GameProcess
