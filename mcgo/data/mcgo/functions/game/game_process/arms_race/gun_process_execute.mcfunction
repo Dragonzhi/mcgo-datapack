@@ -61,7 +61,7 @@ execute as @a[team=CT] if score @s ArmsRaceProcess matches 2 unless entity @s[nb
 
 execute as @a[team=CT] if score @s ArmsRaceProcess matches 3 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"M4A1-S"}}]}] run function mcgo:rifles/rifle_get_m4a1_s
 
-execute as @a[team=CT] if score @s ArmsRaceProcess matches 4 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"MP5ST"}}]}] run function mcgo:submachine/submachine_get_mp5st
+execute as @a[team=CT] if score @s ArmsRaceProcess matches 4 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"MP7"}}]}] run function mcgo:submachine/submachine_get_mp7
 
 execute as @a[team=CT] if score @s ArmsRaceProcess matches 5 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"P90"}}]}] run function mcgo:submachine/submachine_get_p90
 
@@ -99,7 +99,7 @@ execute as @a[team=T] if score @s ArmsRaceProcess matches 2 unless entity @s[nbt
 
 execute as @a[team=T] if score @s ArmsRaceProcess matches 3 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"加利尔ACE-22"}}]}] run function mcgo:rifles/rifle_get_gali
 
-execute as @a[team=T] if score @s ArmsRaceProcess matches 4 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"UZI"}}]}] run function mcgo:submachine/submachine_get_uzi
+execute as @a[team=T] if score @s ArmsRaceProcess matches 4 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"MP7"}}]}] run function mcgo:submachine/submachine_get_mp7
 
 execute as @a[team=T] if score @s ArmsRaceProcess matches 5 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"P90"}}]}] run function mcgo:submachine/submachine_get_p90
 

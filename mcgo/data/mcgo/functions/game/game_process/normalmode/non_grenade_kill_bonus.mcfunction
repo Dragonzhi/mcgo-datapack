@@ -7,6 +7,12 @@ execute if entity @s[nbt={SelectedItem:{tag:{GunName:"格洛克"}}}] run tellraw
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"CZ75"}}}] run scoreboard players add @s Points 300
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"CZ75"}}}] run tellraw @s [{"text":"使用CZ75击杀一名敌人 ","color":"white"},{"text":"+$300","color":"green"}]
 
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Tec-9"}}}] run scoreboard players add @s Points 300
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Tec-9"}}}] run tellraw @s [{"text":"使用Tec-9击杀一名敌人 ","color":"white"},{"text":"+$300","color":"green"}]
+
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"FN57"}}}] run scoreboard players add @s Points 300
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"FN57"}}}] run tellraw @s [{"text":"使用FN57击杀一名敌人 ","color":"white"},{"text":"+$300","color":"green"}]
+
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"沙漠之鹰"}}}] run scoreboard players add @s Points 300
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"沙漠之鹰"}}}] run tellraw @s [{"text":"使用沙漠之鹰击杀一名敌人 ","color":"white"},{"text":"+$300","color":"green"}]
     
@@ -45,12 +51,15 @@ execute if entity @s[nbt={SelectedItem:{tag:{GunName:"P90"}}}] run tellraw @s [{
     
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"PP19"}}}] run scoreboard players add @s Points 600
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"PP19"}}}] run tellraw @s [{"text":"使用PP19击杀一名敌人 ","color":"white"},{"text":"+$600","color":"green"}]
+
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP7"}}}] run scoreboard players add @s Points 600
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP7"}}}] run tellraw @s [{"text":"使用MP7击杀一名敌人 ","color":"white"},{"text":"+$600","color":"green"}]
     
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"UMP45"}}}] run scoreboard players add @s Points 600
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"UMP45"}}}] run tellraw @s [{"text":"使用UMP45击杀一名敌人 ","color":"white"},{"text":"+$600","color":"green"}]
     
-execute if entity @s[nbt={SelectedItem:{tag:{GunName:"UZI"}}}] run scoreboard players add @s Points 600
-execute if entity @s[nbt={SelectedItem:{tag:{GunName:"UZI"}}}] run tellraw @s [{"text":"使用UZI击杀一名敌人 ","color":"white"},{"text":"+$600","color":"green"}]
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Mac-10"}}}] run scoreboard players add @s Points 600
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Mac-10"}}}] run tellraw @s [{"text":"使用Mac-10击杀一名敌人 ","color":"white"},{"text":"+$600","color":"green"}]
     
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"M249"}}}] run scoreboard players add @s Points 300
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"M249"}}}] run tellraw @s [{"text":"使用M249击杀一名敌人 ","color":"white"},{"text":"+$300","color":"green"}]
