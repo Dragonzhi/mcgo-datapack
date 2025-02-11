@@ -1,5 +1,5 @@
-scoreboard players set LaNterN_AloNe ArmsRaceProcess 15
-scoreboard players set Lythos ArmsRaceProcess 12
-scoreboard players set test1 ArmsRaceProcess 9
-scoreboard players set test2 ArmsRaceProcess 5
-execute as @a[scores={ArmsRaceProcess=0..}] run scoreboard players operation @s sort = @s ArmsRaceProcess
+scoreboard players set LaNterN_AloNe DeathMatchPoints 800
+scoreboard players set Lythos DeathMatchPoints 600
+scoreboard players set test1 DeathMatchPoints 400
+scoreboard players set test2 DeathMatchPoints 400
+execute as @a[scores={DeathMatchPoints=0..}] run scoreboard players operation @s sort = @s DeathMatchPoints

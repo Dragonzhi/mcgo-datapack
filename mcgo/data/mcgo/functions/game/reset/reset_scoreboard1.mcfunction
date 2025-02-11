@@ -78,3 +78,4 @@ scoreboard players set #broadcast5Scores ArmsRaceProcess 0
 
 
 scoreboard players set #25 DeathMatchSeed 25
+
