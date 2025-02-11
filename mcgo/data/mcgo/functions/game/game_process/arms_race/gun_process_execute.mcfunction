@@ -10,12 +10,12 @@ execute if entity @a[scores={Kills=2..}] run scoreboard players set Allowance Ga
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 #如果手持刀击杀一名玩家则升级，过程中将玩家的PlayKill和Kills归零
-execute if entity @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"test:m9"}}}] run scoreboard players add Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"test:m9"}}}] run playsound minecraft:block.note_block.bell block @s ~ ~ ~ 100 1 1
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"test:m9"}}}] run tellraw @s [{"text":"武器升级！！！！","color":"yellow"}]
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"test:m9"}}}] run scoreboard players add @s ArmsRaceProcess 1
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"test:m9"}}}] run scoreboard players set @s Kills 0
-    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"test:m9"}}}] run scoreboard players set @s PlayKill 0
+execute if entity @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"csgo_knife:m9"}}}] run scoreboard players add Allowance GameProcess 1
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"csgo_knife:m9"}}}] run playsound minecraft:block.note_block.bell block @s ~ ~ ~ 100 1 1
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"csgo_knife:m9"}}}] run tellraw @s [{"text":"武器升级！！！！","color":"yellow"}]
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"csgo_knife:m9"}}}] run scoreboard players add @s ArmsRaceProcess 1
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"csgo_knife:m9"}}}] run scoreboard players set @s Kills 0
+    execute if score Allowance GameProcess matches 1 run execute as @a[scores={PlayKill=1..},nbt={SelectedItem:{id:"tacz:modern_kinetic_gun",tag:{GunId:"csgo_knife:m9"}}}] run scoreboard players set @s PlayKill 0
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
 #如果使用电击枪击杀一名玩家则升级，过程中将玩家的PlayKill和Kills归零
