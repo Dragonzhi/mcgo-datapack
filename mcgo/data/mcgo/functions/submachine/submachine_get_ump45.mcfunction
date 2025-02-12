@@ -2,7 +2,7 @@ function mcgo:game/get_guns/mainweapon_isvalid
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "UMP45"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "tacz:ump45"
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 1800
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 1200
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_mode GunMode set value "AUTO"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 25
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_type GunType set value 2
