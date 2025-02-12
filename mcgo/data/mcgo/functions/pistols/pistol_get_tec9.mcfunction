@@ -1,10 +1,10 @@
 function mcgo:game/get_guns/pistol_isvalid
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "Tec-9"
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "ares:tec9"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "classicr:tec_9"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 500
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_mode GunMode set value "SEMI"
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 25
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 24
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_type GunType set value 1
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_used GunUsed set value 0
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmag GunAttMag set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"tacz:light_extended_mag_2"}}

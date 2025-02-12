@@ -75,7 +75,7 @@ execute as @a[team=CT] if score @s ArmsRaceProcess matches 9 unless entity @s[nb
 
 execute as @a[team=CT] if score @s ArmsRaceProcess matches 10 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"M870"}}]}] run function mcgo:heavy_weapons/heavyweapon_get_m870
 
-execute as @a[team=CT] if score @s ArmsRaceProcess matches 11 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"Saiga-12"}}]}] run function mcgo:heavy_weapons/heavyweapon_get_sasg12
+execute as @a[team=CT] if score @s ArmsRaceProcess matches 11 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"M1014"}}]}] run function mcgo:heavy_weapons/heavyweapon_get_m1014
 
 execute as @a[team=CT] if score @s ArmsRaceProcess matches 12 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"沙漠之鹰"}}]}] run function mcgo:pistols/pistol_get_deagle
 
@@ -113,7 +113,7 @@ execute as @a[team=T] if score @s ArmsRaceProcess matches 9 unless entity @s[nbt
 
 execute as @a[team=T] if score @s ArmsRaceProcess matches 10 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"M870"}}]}] run function mcgo:heavy_weapons/heavyweapon_get_m870
 
-execute as @a[team=T] if score @s ArmsRaceProcess matches 11 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"Saiga-12"}}]}] run function mcgo:heavy_weapons/heavyweapon_get_sasg12
+execute as @a[team=T] if score @s ArmsRaceProcess matches 11 unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunName:"M1014"}}]}] run function mcgo:heavy_weapons/heavyweapon_get_m1014
 
 execute as @a[team=T] if score @s ArmsRaceProcess matches 12 unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunName:"沙漠之鹰"}}]}] run function mcgo:pistols/pistol_get_deagle
 

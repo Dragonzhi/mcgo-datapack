@@ -1,7 +1,7 @@
 function mcgo:game/get_guns/mainweapon_isvalid
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_name GunName set value "MP7"
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "ares:mp7"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_id GunId set value "classicr:mp7"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_price GunPrice set value 1500
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_mode GunMode set value "AUTO"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_ammo GunAmmo set value 30
@@ -12,7 +12,7 @@ execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attm
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attsco GunAttSco set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"tacz:sight_coyote"}}
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attri GunAttri set value [{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:-0.000d,UUID:[I;-1396647189,-179877183,-1931787460,-1731335846]}]
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_name AmmoName set value "MP7"
-execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_id AmmoId set value "ares:46x30"
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_id AmmoId set value "tacz:46x30"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_type AmmoType set value 2
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_count AmmoCount set value 120
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_lore Ammolore set value ['"这是MP7的弹药箱"']

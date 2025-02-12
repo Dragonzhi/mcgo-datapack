@@ -68,9 +68,9 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
         execute if score @s Allowance matches 2 run function mcgo:heavy_weapons/heavyweapon_get_neglv
 
-    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"Saiga-12"}}]}] run scoreboard players set @s Allowance 2
+    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"M1014"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
-        execute if score @s Allowance matches 2 run function mcgo:heavy_weapons/heavyweapon_get_sasg12
+        execute if score @s Allowance matches 2 run function mcgo:heavy_weapons/heavyweapon_get_m1014
 
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"加利尔ACE-22"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
@@ -100,9 +100,9 @@ execute if score @s mcs matches 1 run scoreboard players set @s Allowance 1
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
         execute if score @s Allowance matches 2 run function mcgo:rifles/rifle_get_scar_h
 
-    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"MP5ST"}}]}] run scoreboard players set @s Allowance 2
+    execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"MP5-SD"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}
-        execute if score @s Allowance matches 2 run function mcgo:submachine/submachine_get_mp5st
+        execute if score @s Allowance matches 2 run function mcgo:submachine/submachine_get_mp5sd
 
     execute if score @s Allowance matches 1 run execute if entity @s[nbt={Inventory:[{tag:{GunName:"P90"}}]}] run scoreboard players set @s Allowance 2
         execute if score @s Allowance matches 2 run clear @s tacz:modern_kinetic_gun{GunType:2}

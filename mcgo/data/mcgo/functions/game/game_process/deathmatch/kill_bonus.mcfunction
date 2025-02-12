@@ -43,8 +43,8 @@ execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SCAR-H"}}}] run tellraw @s
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SSG-08"}}}] run scoreboard players add @s DeathMatchPoints 11
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SSG-08"}}}] run tellraw @s [{"text":"使用SSG-08击杀一名敌人 ","color":"white"},{"text":"+11分","color":"green"}]
     
-execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP5ST"}}}] run scoreboard players add @s DeathMatchPoints 12
-execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP5ST"}}}] run tellraw @s [{"text":"使用MP5ST击杀一名敌人 ","color":"white"},{"text":"+12分","color":"green"}]
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP5-SD"}}}] run scoreboard players add @s DeathMatchPoints 12
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP5-SD"}}}] run tellraw @s [{"text":"使用MP5-SD击杀一名敌人 ","color":"white"},{"text":"+12分","color":"green"}]
     
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"P90"}}}] run scoreboard players add @s DeathMatchPoints 12
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"P90"}}}] run tellraw @s [{"text":"使用P90击杀一名敌人 ","color":"white"},{"text":"+12分","color":"green"}]
@@ -70,8 +70,8 @@ execute if entity @s[nbt={SelectedItem:{tag:{GunName:"M870"}}}] run tellraw @s [
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"内格夫"}}}] run scoreboard players add @s DeathMatchPoints 11
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"内格夫"}}}] run tellraw @s [{"text":"使用内格夫击杀一名敌人 ","color":"white"},{"text":"+11分","color":"green"}]
     
-execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Saiga-12"}}}] run scoreboard players add @s DeathMatchPoints 11
-execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Saiga-12"}}}] run tellraw @s [{"text":"使用Saiga-12击杀一名敌人 ","color":"white"},{"text":"+11分","color":"green"}]
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"M1014"}}}] run scoreboard players add @s DeathMatchPoints 11
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"M1014"}}}] run tellraw @s [{"text":"使用M1014击杀一名敌人 ","color":"white"},{"text":"+11分","color":"green"}]
 
 #为了应为与敌人同时死亡的情况，枚举一个手持空物品击杀玩家的
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:air"}}] run scoreboard players add @s DeathMatchPoints 11
