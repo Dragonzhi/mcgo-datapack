@@ -10,6 +10,7 @@ execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_used
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmag GunAttMag set value {}
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attmuz GunAttMuz set value {}
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attsco GunAttSco set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"tacz:sight_coyote"}}
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attsto GunAttSto set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"tacz:oem_stock_light"}}
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attri GunAttri set value [{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:-0.000d,UUID:[I;-1396647189,-179877183,-1931787460,-1731335846]}]
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_name AmmoName set value "MP9"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_id AmmoId set value "tacz:9mm"
@@ -23,3 +24,4 @@ execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 2
 execute if entity @s[scores={Allowance=10}] run function mcgo:game/get_guns/get_guns
 
 
+#/setblock 31 -60 -39 minecraft:chest[facing=west,type=single,waterlogged=false]{ForgeCaps:{},Items:[{Count:1b,Slot:0b,id:"tacz:modern_kinetic_gun",tag:{AttachmentSTOCK:{Count:1b,id:"tacz:attachment",tag:{AttachmentId:"tacz:oem_stock_light"}},GunCurrentAmmoCount:0,GunFireMode:"AUTO",GunId:"classicr:mp9",HasBulletInBarrel:0b}}]}

@@ -22,6 +22,7 @@ execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=3}] run
 execute if entity @s[scores={Allowance=10}] if entity @s[scores={USPSkin=4}] run data modify storage mcs:gun_attmuz GunAttMuz set value {Count:1b,id:"tacz:attachment",tag:{AttachmentId:"mcs2:usp_silencer_printstream"}}
 
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attsco GunAttSco set value {}
+execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attsto GunAttSto set value {}
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:gun_attri GunAttri set value [{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:-0.000d,UUID:[I;-1396647189,-179877183,-1931787460,-1731335846]}]
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_name AmmoName set value "USP-S"
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_id AmmoId set value "tacz:45acp"

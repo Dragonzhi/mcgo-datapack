@@ -14,6 +14,7 @@ execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data m
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentEXTENDED_MAG set from storage mcs:gun_attmag GunAttMag
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentMUZZLE set from storage mcs:gun_attmuz GunAttMuz
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentSCOPE set from storage mcs:gun_attsco GunAttSco
+execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttachmentSTOCK set from storage mcs:gun_attsto GunAttSto
 execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run data modify entity @s HandItems[0].tag.AttributeModifiers set from storage mcs:gun_attri GunAttri
 execute if score @s mcs matches 1 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p[distance=..1] hotbar.1 from entity @s weapon.mainhand
 execute if score @s mcs matches 2 run execute as @e[type=minecraft:armor_stand,tag=iu_change,limit=1] at @s run item replace entity @p[distance=..1] hotbar.0 from entity @s weapon.mainhand
