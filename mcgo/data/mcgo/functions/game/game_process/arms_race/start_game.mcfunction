@@ -38,8 +38,11 @@ item replace entity @a[scores={Deaths=1..}] hotbar.3 with block_bettle:dian_ji_q
 
 scoreboard objectives setdisplay sidebar ArmsRaceProcess
 #将侧栏计分板改为Timer
+
+bossbar set mcs:arms_race_game_process visible true
+bossbar set mcs:arms_race_game_process name [{"text":"军备竞赛倒计时 ","color":"white","bold":false},{"text":"8","color":"yellow","bold":true},{"text":" : ","color":"white","bold":false},{"text":"00","color":"yellow","bold":true}]
 scoreboard players set seconds GameProcess 480
-schedule function mcgo:execute/timer/timer_deathmatch 1s append
-tellraw @a [{"text":"八分钟，开始！","color":"yellow","bold":true,"hoverEvent":{"action":"show_text","contents":{"text":"看什么看，打你的枪枪瞄（恼）","color":"white","bold": false}}}]
+schedule function mcgo:execute/timer/timer_arms_race 1s append
+
 
 schedule function mcgo:game/map_select_tp/tp_to_selected_map 5t append

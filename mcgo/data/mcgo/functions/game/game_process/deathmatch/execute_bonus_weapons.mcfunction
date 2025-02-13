@@ -55,4 +55,6 @@ execute if entity @s[nbt={Inventory:[{tag:{GunName:"M1014"},Slot:0b}]}] run scor
 # 获取该玩家手中武器名称
 data modify storage mcs:gun_name GunName set from entity @s Inventory[{Slot:0b}].tag.GunName
 # 使用execute语句限制，防止tellraw提前执行
-execute if data storage mcs:gun_name GunName run tellraw @a [{"text":"提示","color":"yellow"},{"text":"当前奖励武器 : "},{"storage":"mcs:gun_name","nbt":"GunName","nbttype":"string","color":"yellow","clickEvent":{"action":"run_command","value": "/function mcgo:game/game_process/deathmatch/get_bonus_weapons"},"hoverEvent":{"action":"show_text","contents":"点击快速获得该枪械"}}]
+execute if data storage mcs:gun_name GunName run tellraw @a [{"text":"[提示]","color":"yellow"},{"text":"当前奖励武器 : ","color":"white"},{"storage":"mcs:gun_name","nbt":"GunName","nbttype":"string","color":"yellow","clickEvent":{"action":"run_command","value": "/function mcgo:game/game_process/deathmatch/get_bonus_weapons"},"hoverEvent":{"action":"show_text","contents":"点击快速获得该枪械"}}]
+
+execute if data storage mcs:gun_name GunName run bossbar set mcs:deathmatch_bonus_weapons name [{"text":"死亡竞赛奖励武器 : ","color":"white","bold":false},{"storage":"mcs:gun_name","nbt":"GunName","nbttype":"string","color":"yellow","bold":true}]

@@ -40,9 +40,10 @@ item replace entity @a[team=T] hotbar.3 with block_bettle:dian_ji_qiang{GunType:
 scoreboard objectives setdisplay sidebar DeathMatchPoints
 #将侧栏计分板改为DeathMatchPoints
 
-scoreboard players set seconds GameProcess 600
+bossbar set mcs:deathmatch_game_process visible true
+bossbar set mcs:deathmatch_game_process name [{"text":"死亡竞赛倒计时 ","color":"white","bold":false},{"text":"10","color":"yellow","bold":true},{"text":" : ","color":"white","bold":false},{"text":"00","color":"yellow","bold":true}]
+execute store result bossbar mcs:deathmatch_bonus_weapons value run scoreboard players set seconds GameProcess 600
 schedule function mcgo:execute/timer/timer_deathmatch 1s append
-tellraw @a [{"text":"10分钟，开始！","color":"yellow","bold":true}]
 
 schedule function mcgo:game/map_select_tp/tp_to_selected_map 5t append
 
