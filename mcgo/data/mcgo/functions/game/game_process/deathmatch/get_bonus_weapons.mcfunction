@@ -25,6 +25,7 @@ execute if score BonusWeaponsSeed DeathMatchSeed matches 23 run function mcgo:su
 execute if score BonusWeaponsSeed DeathMatchSeed matches 24 run function mcgo:submachine/submachine_get_mp7
 execute if score BonusWeaponsSeed DeathMatchSeed matches 25 run function mcgo:submachine/submachine_get_ump45
 execute if score BonusWeaponsSeed DeathMatchSeed matches 26 run function mcgo:submachine/submachine_get_mac10
+execute if score BonusWeaponsSeed DeathMatchSeed matches 27 run function mcgo:submachine/submachine_get_mp5sd
  
 # === 重型武器类 === 
 execute if score BonusWeaponsSeed DeathMatchSeed matches 31 run function mcgo:heavy_weapons/heavyweapon_get_m249

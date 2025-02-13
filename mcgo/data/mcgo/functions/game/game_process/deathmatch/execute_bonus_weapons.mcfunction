@@ -42,6 +42,8 @@ execute if entity @s[nbt={Inventory:[{tag:{GunName:"UMP45"},Slot:0b}]}] run scor
 
 execute if entity @s[nbt={Inventory:[{tag:{GunName:"Mac-10"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 26
 
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"MP5-SD"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 27
+
 execute if entity @s[nbt={Inventory:[{tag:{GunName:"M249"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 31
 
 execute if entity @s[nbt={Inventory:[{tag:{GunName:"M870"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 32
