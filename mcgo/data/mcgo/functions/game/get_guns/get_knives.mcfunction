@@ -7,4 +7,4 @@ execute if score @s KnifeSkin matches 11 run item replace entity @s hotbar.2 wit
 
 
 
-item replace entity @s inventory.20 with tacz:ammo_box{Level:1,AmmoCount:9999,AmmoId:"csgo_knife:melee_weapon",display:{Lore:['"这是近战武器的弹药盒"','"不要在意为什么近战武器有弹药盒，当成刀完人擦刀就好（x）"','"划刀划太久了累了怎么了？Dragon_Zhi说的，不是我说的（恼）"']}}
+item replace entity @s inventory.20 with tacz:ammo_box{AmmoType:3,Level:1,AmmoCount:9999,AmmoId:"csgo_knife:melee_weapon",display:{Lore:['"这是近战武器的弹药盒"','"不要在意为什么近战武器有弹药盒，当成刀完人擦刀就好（x）"','"划刀划太久了累了怎么了？Dragon_Zhi说的，不是我说的（恼）"']}}

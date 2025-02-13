@@ -20,7 +20,7 @@ item replace entity @s inventory.16 with air
 item replace entity @s inventory.17 with air
 execute as @a run execute unless entity @s[nbt={Inventory:[{tag:{AmmoType:1},Slot:27b}]}] run item replace entity @s inventory.18 with air
 execute as @a run execute unless entity @s[nbt={Inventory:[{tag:{AmmoType:2},Slot:28b}]}] run item replace entity @s inventory.19 with air
-item replace entity @s inventory.20 with air
+execute as @a run execute unless entity @s[nbt={Inventory:[{tag:{AmmoType:3},Slot:29b}]}] run item replace entity @s inventory.20 with air
 item replace entity @s inventory.21 with air
 item replace entity @s inventory.22 with air
 item replace entity @s inventory.23 with air
