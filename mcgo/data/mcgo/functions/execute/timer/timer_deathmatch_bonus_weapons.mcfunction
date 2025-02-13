@@ -1,10 +1,10 @@
-execute if score S InGame matches 1 if score DeathMatchBonusWeaponGiveTimer GameProcess matches 1.. run scoreboard players remove DeathMatchBonusWeaponGiveTimer GameProcess 1
+execute if score S InGame matches 1 if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0.. run scoreboard players remove DeathMatchBonusWeaponGiveTimer GameProcess 1
 execute if score S InGame matches 1 if score DeathMatchBonusWeaponDurationTimer GameProcess matches 0.. run scoreboard players remove DeathMatchBonusWeaponDurationTimer GameProcess 1
 
 #每一轮回，给予一次奖励武器,同时重新给予一次轮回时间
 execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run scoreboard players set DeathMatchBonusWeaponDurationTimer GameProcess 30
 execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run execute as @r run function mcgo:game/game_process/deathmatch/execute_bonus_weapons
-execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run scoreboard players set DeathMatchBonusWeaponGiveTimer DeathMatchSeed 120
+execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run scoreboard players set DeathMatchBonusWeaponGiveTimer GameProcess 120
 #当时间结束时，设置BonusWeaponsSeed DeathMatchSeed为0
 execute if score DeathMatchBonusWeaponDurationTimer GameProcess matches 0 run scoreboard players set BonusWeaponsSeed DeathMatchSeed 0
 
