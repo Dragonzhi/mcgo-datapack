@@ -31,6 +31,8 @@ scoreboard players set CTLeft1 GameProcess 0
 scoreboard players set CTLeft1Kills GameProcess 0
 scoreboard players set TLeft1Kills GameProcess 0
 scoreboard players set TLeft1 GameProcess 0
+scoreboard players set DeathMatchBonusWeaponGiveTimer GameProcess 0
+scoreboard players set DeathMatchBonusWeaponDurationTimer GameProcess 0
 scoreboard players set FiredBullet FunnyCase 0
 
 scoreboard players set @a BoughtFlashbang 0

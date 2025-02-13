@@ -33,6 +33,7 @@ schedule clear mcgo:execute/timer/timer_normal_shop
 schedule clear mcgo:execute/timer/timer_normal_finish
 schedule clear mcgo:execute/timer/timer_starting_arms_race
 schedule clear mcgo:execute/timer/timer_starting_normal_game
+schedule clear mcgo:execute/timer/timer_deathmatch_bonus_weapons
 schedule clear mcgo:execute/timer/timer_arms_race
 schedule clear mcgo:execute/vote_execute/starting_normal_game/execute_vote
 schedule clear mcgo:execute/vote_execute/surrender/execute_vote

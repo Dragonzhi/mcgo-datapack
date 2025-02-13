@@ -45,3 +45,6 @@ schedule function mcgo:execute/timer/timer_deathmatch 1s append
 tellraw @a [{"text":"10分钟，开始！","color":"yellow","bold":true}]
 
 schedule function mcgo:game/map_select_tp/tp_to_selected_map 5t append
+
+scoreboard players set DeathMatchBonusWeaponGiveTimer GameProcess 120
+schedule function mcgo:execute/timer/timer_deathmatch_bonus_weapons 1s append
