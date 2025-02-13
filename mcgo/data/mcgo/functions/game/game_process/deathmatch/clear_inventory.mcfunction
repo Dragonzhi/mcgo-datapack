@@ -31,7 +31,7 @@ execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern
 
 execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunType:1}}]}] run function mcgo:pistols/pistol_get_usp
 
-execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:2b,id:"tacz:modern_kinetic_gun",tag:{GunId:"csgo_knife:m9"}}]}] run item replace entity @s hotbar.2 with tacz:modern_kinetic_gun{GunType:3,GunId:"csgo_knife:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
+execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:2b,id:"tacz:modern_kinetic_gun",tag:{GunType:3}}]}] run function mcgo:game/get_guns/get_knives
 
 execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"block_bettle:dian_ji_qiang",Slot:3b}]}] run item replace entity @a[team=CT] hotbar.3 with air
 
@@ -74,7 +74,7 @@ execute as @a[team=T] unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_
 
 execute as @a[team=T] unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunType:1}}]}] run function mcgo:pistols/pistol_get_glock
 
-execute as @a[team=T] unless entity @s[nbt={Inventory:[{Slot:2b,id:"tacz:modern_kinetic_gun",tag:{GunId:"csgo_knife:m9"}}]}] run item replace entity @s hotbar.2 with tacz:modern_kinetic_gun{GunType:3,GunId:"csgo_knife:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
+execute as @a[team=T] unless entity @s[nbt={Inventory:[{Slot:2b,id:"tacz:modern_kinetic_gun",tag:{GunType:3}}]}] run function mcgo:game/get_guns/get_knives
 
 execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"block_bettle:dian_ji_qiang",Slot:3b}]}] run item replace entity @a[team=CT] hotbar.3 with air
 
