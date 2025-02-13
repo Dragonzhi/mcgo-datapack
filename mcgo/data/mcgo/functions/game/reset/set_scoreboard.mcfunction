@@ -65,11 +65,13 @@ scoreboard objectives add ArmsRaceProcess dummy "军备竞赛进程"
 scoreboard objectives add ArmsRaceSeed dummy
 scoreboard objectives add PlantC4 minecraft.used:block_bettle.c_4_down
 scoreboard objectives add DefuseC4 minecraft.killed:block_bettle.c_4
+
 scoreboard objectives add GlockSkin trigger
 scoreboard objectives add USPSkin trigger
 scoreboard objectives add AK47Skin trigger
 scoreboard objectives add M4A1Skin trigger
 scoreboard objectives add AWPSkin trigger
+scoreboard objectives add KnifeSkin trigger
 
 #csgrenades mod相关计分板x5，因为不懂怎么创建新的criteria干脆自己加分了（悲
 #不直接写csgrenades自带的指令的原因是vscode不认识（x），而且这样写也可以有提示
