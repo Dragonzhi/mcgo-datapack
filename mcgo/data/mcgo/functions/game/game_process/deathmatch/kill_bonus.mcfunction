@@ -105,6 +105,11 @@ execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Mac-10"}}}] unless score B
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Mac-10"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 26 run scoreboard players add @s DeathMatchPoints 18
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"Mac-10"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 26 run tellraw @s [{"text":"使用Mac-10击杀一名敌人 ","color":"white"},{"text":"+18分","color":"green"}]
 
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP5-SD"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 27 run scoreboard players add @s DeathMatchPoints 12
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP5-SD"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 27 run tellraw @s [{"text":"使用MP5-SD击杀一名敌人 ","color":"white"},{"text":"+12分","color":"green"}]
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP5-SD"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 27 run scoreboard players add @s DeathMatchPoints 18
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP5-SD"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 27 run tellraw @s [{"text":"使用MP5-SD击杀一名敌人 ","color":"white"},{"text":"+18分","color":"green"}]
+
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"M249"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 31 run scoreboard players add @s DeathMatchPoints 11
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"M249"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 31 run tellraw @s [{"text":"使用M249击杀一名敌人 ","color":"white"},{"text":"+11分","color":"green"}]
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"M249"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 31 run scoreboard players add @s DeathMatchPoints 17
