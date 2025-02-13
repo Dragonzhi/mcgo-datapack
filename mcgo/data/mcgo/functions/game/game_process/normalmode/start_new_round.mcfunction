@@ -40,9 +40,8 @@ clear @a[team=T] minecraft:leather_leggings
 item replace entity @a[team=T] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:1s}],display:{color:16767744,Name:'{"text":"T"}',Lore:['{"text":"T"}']}}
 item replace entity @a[team=CT] armor.legs with minecraft:leather_leggings{Unbreakable:true,Enchantments:[{id:"swift_sneak",lvl:1s}],display:{color:636159,Name:'{"text":"CT"}',Lore:['{"text":"CT"}']}}
 #给予标志裤
-
-item replace entity @a[team=T] hotbar.2 with tacz:modern_kinetic_gun{GunType:3,HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"csgo_knife:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
-item replace entity @a[team=CT] hotbar.2 with tacz:modern_kinetic_gun{GunType:3,HasBulletInBarrel:1,GunFireMode:"SEMI",GunId:"csgo_knife:m9",GunCurrentAmmoCount:10000,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Operation:0,Amount:10.0d,UUID:[I;1075105064,1478773498,-1710059135,-341026296]},{AttributeName:"generic.movement_speed",Name:"generic.movement_speed",Slot:"mainhand",Operation:0,Amount:0.03d,UUID:[I;-1230441390,1310869827,-1271527859,1264434293]}]} 1
+execute as @a[team=CT] run function mcgo:game/get_guns/get_knives
+execute as @a[team=T] run function mcgo:game/get_guns/get_knives
 #给予刀
 
 
