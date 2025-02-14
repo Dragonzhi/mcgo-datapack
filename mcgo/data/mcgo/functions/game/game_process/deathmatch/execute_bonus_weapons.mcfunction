@@ -1,20 +1,20 @@
 # 进入函数时视为作为随机一名玩家执行该函数
 
-execute if entity @s[nbt={Inventory:[{tag:{GunName:"USP-S"},Slot:1b},{id:"minecraft:air",Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 1
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"USP-S"},Slot:1b}]}] unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 1
 
-execute if entity @s[nbt={Inventory:[{tag:{GunName:"格洛克"},Slot:1b},{id:"minecraft:air",Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 2
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"格洛克"},Slot:1b}]}] unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 2
 
-execute if entity @s[nbt={Inventory:[{tag:{GunName:"CZ75"},Slot:1b},{id:"minecraft:air",Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 3
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"CZ75"},Slot:1b}]}] unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 3
 
-execute if entity @s[nbt={Inventory:[{tag:{GunName:"Tec-9"},Slot:1b},{id:"minecraft:air",Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 4
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"Tec-9"},Slot:1b}]}] unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 4
 
-execute if entity @s[nbt={Inventory:[{tag:{GunName:"FN57"},Slot:1b},{id:"minecraft:air",Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 5
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"FN57"},Slot:1b}]}] unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 5
 
-execute if entity @s[nbt={Inventory:[{tag:{GunName:"沙漠之鹰"},Slot:1b},{id:"minecraft:air",Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 6
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"沙漠之鹰"},Slot:1b}]}] unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 6
 
-execute if entity @s[nbt={Inventory:[{tag:{GunName:"R8"},Slot:1b},{id:"minecraft:air",Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 7
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"R8"},Slot:1b}]}] unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 7
 
-execute if entity @s[nbt={Inventory:[{tag:{GunName:"P250"},Slot:1b},{id:"minecraft:air",Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 8
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"P250"},Slot:1b}]}] unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 8
  
 execute if entity @s[nbt={Inventory:[{tag:{GunName:"AK47"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 11
 
@@ -53,7 +53,8 @@ execute if entity @s[nbt={Inventory:[{tag:{GunName:"内格夫"},Slot:0b}]}] run 
 execute if entity @s[nbt={Inventory:[{tag:{GunName:"M1014"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 34
 
 # 获取该玩家手中武器名称
-data modify storage mcs:gun_name GunName set from entity @s Inventory[{Slot:0b}].tag.GunName
+execute unless entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run data modify storage mcs:gun_name GunName set from entity @s Inventory[{Slot:1b}].tag.GunName
+execute if entity @s[nbt={Inventory:[{tag:{GunType:2},Slot:0b}]}] run data modify storage mcs:gun_name GunName set from entity @s Inventory[{Slot:0b}].tag.GunName
 # 使用execute语句限制，防止tellraw提前执行
 execute if data storage mcs:gun_name GunName run tellraw @a [{"text":"[提示]","color":"yellow"},{"text":"当前奖励武器 : ","color":"white"},{"storage":"mcs:gun_name","nbt":"GunName","nbttype":"string","color":"yellow","underlined":true,"clickEvent":{"action":"run_command","value": "/function mcgo:game/game_process/deathmatch/get_bonus_weapons"},"hoverEvent":{"action":"show_text","contents":"点击快速获得该枪械"}}]
 

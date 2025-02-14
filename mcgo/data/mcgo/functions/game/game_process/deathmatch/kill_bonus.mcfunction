@@ -142,7 +142,7 @@ execute if entity @s[nbt={SelectedItem:{tag:{GunType:3}}}] run tellraw @s [{"tex
 execute if entity @s[nbt={SelectedItem:{id:"block_bettle:dian_ji_qiang"}}] run scoreboard players add @s DeathMatchPoints 15
 execute if entity @s[nbt={SelectedItem:{id:"block_bettle:dian_ji_qiang"}}] run tellraw @s [{"text":"使用电击枪击杀一名敌人 ","color":"white"},{"text":"+15分","color":"green"}]
 
-scoreboard players add @s Kills 1
-execute if score @s Kills matches 1 run experience add @s 1 levels
-execute if score @s Kills matches 2 run experience add @s 2 levels
-execute if score @s Kills matches 3 run experience set @s 0 levels
+
+experience add @s 1 levels
+
+scoreboard players set @s Kills 0

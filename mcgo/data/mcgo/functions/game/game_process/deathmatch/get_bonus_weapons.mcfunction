@@ -1,7 +1,5 @@
 execute if score BonusWeaponsSeed DeathMatchSeed matches 0 run tellraw @s [{"text":"当前并没有奖励武器！","color":"red"}]
 
-execute if score BonusWeaponsSeed DeathMatchSeed matches 1.. run tellraw @s [{"text":"快速获取了武器 ","color":"white"},{"storage":"mcs:gun_name","nbt":"GunName","nbttype":"string","color":"green","bold":true}]
-
 scoreboard players set @s GetGunRapidly 1
 
 # === 手枪类 === 
@@ -37,5 +35,7 @@ execute if score BonusWeaponsSeed DeathMatchSeed matches 31 run function mcgo:he
 execute if score BonusWeaponsSeed DeathMatchSeed matches 32 run function mcgo:heavy_weapons/heavyweapon_get_m870
 execute if score BonusWeaponsSeed DeathMatchSeed matches 33 run function mcgo:heavy_weapons/heavyweapon_get_neglv
 execute if score BonusWeaponsSeed DeathMatchSeed matches 34 run function mcgo:heavy_weapons/heavyweapon_get_m1014
+
+execute if score BonusWeaponsSeed DeathMatchSeed matches 1.. run tellraw @s [{"text":"快速获取了武器 ","color":"white"},{"storage":"mcs:gun_name","nbt":"GunName","nbttype":"string","color":"green","bold":true}]
 
 #为防止交叉执行指令可能出现的bug，将GetGunRapidly设为0放在get_guns.mcfunction中

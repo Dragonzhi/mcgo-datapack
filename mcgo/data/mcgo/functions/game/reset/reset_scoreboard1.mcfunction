@@ -76,8 +76,9 @@ scoreboard players set #broadcast17Scores ArmsRaceProcess 0
 scoreboard players set #broadcast10Scores ArmsRaceProcess 0
 scoreboard players set #broadcast5Scores ArmsRaceProcess 0
 
-
+scoreboard players set BonusWeaponsSeed DeathMatchSeed 0
 scoreboard players set #25 DeathMatchSeed 25
 scoreboard players set @a DeathMatchChosenMainWeapon 0
 scoreboard players set @a DeathMatchChosenPistol 0
+
 
