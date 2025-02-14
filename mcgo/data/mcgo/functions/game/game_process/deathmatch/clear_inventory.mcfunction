@@ -29,10 +29,10 @@ item replace entity @a[team=CT] inventory.26 with air
 
 execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:0b,id:"tacz:modern_kinetic_gun",tag:{GunType:2}}]}] run item replace entity @s hotbar.0 with air
 
-execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunType:1}}]}] run function mcgo:pistols/pistol_get_usp
-
 #判断条件多一条对Deaths分数的判断防止手动选择手枪的记录被覆盖
-execute as @a[team=CT,scores={Deaths=0}] unless entity @s[nbt={Inventory:[{Slot:2b,id:"tacz:modern_kinetic_gun",tag:{GunType:3}}]}] run function mcgo:game/get_guns/get_knives
+execute as @a[team=CT,scores={Deaths=0}] unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_kinetic_gun",tag:{GunType:1}}]}] run function mcgo:pistols/pistol_get_usp
+
+execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:2b,id:"tacz:modern_kinetic_gun",tag:{GunType:3}}]}] run function mcgo:game/get_guns/get_knives
 
 execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"block_bettle:dian_ji_qiang",Slot:3b}]}] run item replace entity @s hotbar.3 with air
 
