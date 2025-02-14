@@ -6,3 +6,4 @@ execute as @a[scores={sort=0..}] if score @s sort > #highDeathMatchPoints sort r
 
 execute as @a[scores={sort=0..}] if score @s sort <= #highDeathMatchPoints sort run scoreboard players reset @s sort
 
+execute if entity @a[scores={sort=0..}] run function mcgo:game/game_process/deathmatch/show_points/search_for_high_points
