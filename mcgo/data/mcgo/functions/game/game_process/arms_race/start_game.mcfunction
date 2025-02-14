@@ -4,6 +4,9 @@ clear @a[team=T]
 function mcgo:game/reset/reset_scoreboard2
 gamerule keepInventory true
 
+team modify CT nametagVisibility never
+team modify T nametagVisibility never
+
 spawnpoint @a[team=CT] 0 -60 -22
 spawnpoint @a[team=T] 46 -60 -28
 
@@ -15,6 +18,7 @@ gamemode adventure @a[team=CT]
 gamemode adventure @a[team=T]
 #变为冒险模式
 
+scoreboard players set @a GetGunForFree 1
 scoreboard players set ArmsRace GameProcess 1
 scoreboard players set @a Kills 0
 scoreboard players set @a PlayKill 0

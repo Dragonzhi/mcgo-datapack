@@ -11,3 +11,6 @@ team modify T nametagVisibility hideForOtherTeams
 team add spectator
 team modify spectator color gray
 team add switch
+
+team modify CT nametagVisibility hideForOtherTeams
+team modify T nametagVisibility hideForOtherTeams
