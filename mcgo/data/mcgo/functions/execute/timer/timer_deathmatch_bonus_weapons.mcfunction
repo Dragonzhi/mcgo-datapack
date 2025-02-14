@@ -5,7 +5,7 @@ execute if score S InGame matches 1 if score DeathMatchBonusWeaponDurationTimer 
 execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run scoreboard players set DeathMatchBonusWeaponDurationTimer GameProcess 30
 execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run bossbar set mcs:deathmatch_bonus_weapons visible true
 execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run execute as @r run function mcgo:game/game_process/deathmatch/execute_bonus_weapons
-execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run scoreboard players set DeathMatchBonusWeaponGiveTimer GameProcess 120
+execute if score DeathMatchBonusWeaponGiveTimer GameProcess matches 0 run scoreboard players set DeathMatchBonusWeaponGiveTimer GameProcess 100
 #当时间结束时，设置BonusWeaponsSeed DeathMatchSeed为0
 execute if score DeathMatchBonusWeaponDurationTimer GameProcess matches 0 run scoreboard players set BonusWeaponsSeed DeathMatchSeed 0
 execute if score DeathMatchBonusWeaponDurationTimer GameProcess matches 0 run bossbar set mcs:deathmatch_bonus_weapons visible false
