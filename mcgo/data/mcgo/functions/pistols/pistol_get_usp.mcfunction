@@ -30,6 +30,8 @@ execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_typ
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_count AmmoCount set value 24
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_lore Ammolore set value ['"这是USP的弹药箱"']
 
+execute if score DeathMatch GameProcess matches 1 unless score @s GetGunRapidly matches 1 run scoreboard players set @s DeathMatchChosenPistol 1
+
 execute if entity @s[scores={Allowance=10}] run execute if score @s GetGunForFree matches 0 run execute store result score @s mcs run data get entity @s Inventory[{Slot:1b}].tag.GunPrice
 execute if entity @s[scores={Allowance=10}] run execute if score @s GetGunForFree matches 0 run function mcgo:game/get_guns/pistol_isinitial
 #检测手枪格手枪状态，若为空且背包没有手枪，则可以购买，反之，此时Allowance为0
@@ -38,4 +40,4 @@ execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 1
 #将@s mcs设置为1，进入get_guns.mcfunctions时执行对应指令
 execute if entity @s[scores={Allowance=10}] run function mcgo:game/get_guns/get_guns
 
-execute if score DeathMatch GameProcess matches 1 unless score @s GetGunRapidly matches 1 run scoreboard players set @s DeathMatchChosenPistol 1
+

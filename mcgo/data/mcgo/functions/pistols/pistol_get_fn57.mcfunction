@@ -18,10 +18,12 @@ execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_typ
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_count AmmoCount set value 26
 execute if entity @s[scores={Allowance=10}] run data modify storage mcs:ammo_lore Ammolore set value ['"这是FN57的弹药箱"']
 
+execute if score DeathMatch GameProcess matches 1 unless score @s GetGunRapidly matches 1 run scoreboard players set @s DeathMatchChosenPistol 5
+
 execute if entity @s[scores={Allowance=10}] run execute if score @s GetGunForFree matches 0 run function mcgo:game/get_guns/money_isvalid
 execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 1
 #将@s mcs设置为1，进入get_guns.mcfunctions时执行对应指令
 execute if entity @s[scores={Allowance=10}] run function mcgo:game/get_guns/get_guns
 
-execute if score DeathMatch GameProcess matches 1 unless score @s GetGunRapidly matches 1 run scoreboard players set @s DeathMatchChosenPistol 5
+
 

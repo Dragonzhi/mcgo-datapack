@@ -18,6 +18,7 @@ gamemode adventure @a[team=CT]
 gamemode adventure @a[team=T]
 #变为冒险模式
 
+scoreboard players set @a GetGunForFree 1
 scoreboard players set DeathMatch GameProcess 1
 scoreboard players set @a Kills 0
 scoreboard players set @a PlayKill 0
