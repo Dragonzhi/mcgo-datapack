@@ -23,3 +23,4 @@ execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 2
 #将@s mcs设置为2，进入get_guns.mcfunctions时执行对应指令
 execute if entity @s[scores={Allowance=10}] run function mcgo:game/get_guns/get_guns
 
+execute if score DeathMatch GameProcess matches 1 unless score @s GetGunRapidly matches 1 run scoreboard players set @s DeathMatchChosenMainWeapon 23

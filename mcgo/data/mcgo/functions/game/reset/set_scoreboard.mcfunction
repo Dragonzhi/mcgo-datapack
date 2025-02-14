@@ -34,6 +34,9 @@ scoreboard objectives remove csgrenade_killcount_molotov
 scoreboard objectives remove FunnyCase
 scoreboard objectives remove DeathMatchSeed
 scoreboard objectives remove DeathMatchPoints
+scoreboard objectives remove DeathMatchChosenMainWeapon
+scoreboard objectives remove DeathMatchChosenPistol
+scoreboard objectives remove GetGunRapidly
 
 
 scoreboard objectives add Timer dummy "倒计时"
@@ -84,6 +87,9 @@ scoreboard objectives add csgrenade_killcount_molotov dummy
 scoreboard objectives add FunnyCase dummy
 scoreboard objectives add DeathMatchSeed dummy
 scoreboard objectives add DeathMatchPoints dummy "死亡竞赛得分"
+scoreboard objectives add DeathMatchChosenMainWeapon dummy
+scoreboard objectives add DeathMatchChosenPistol dummy
+scoreboard objectives add GetGunRapidly dummy
 
 scoreboard objectives setdisplay belowName Hp
 scoreboard objectives setdisplay list Points

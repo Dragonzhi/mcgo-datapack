@@ -37,4 +37,8 @@ effect give @a[scores={Deaths=1..}] minecraft:saturation 99999 255 true
 effect give @a[scores={Deaths=1..}] minecraft:dolphins_grace 99999 1 true
 effect give @a[scores={Deaths=1..}] minecraft:regeneration 3 4 true
 item replace entity @a[scores={Deaths=1..}] hotbar.3 with block_bettle:dian_ji_qiang{GunType:7}
+scoreboard players set @a[scores={Deaths=1..}] Kills 0
+clear @a[scores={Deaths=1..}] minecraft:potion
+experience set @a[scores={Deaths=1..}] 0 levels
+execute as @a[scores={Deaths=1..}] run function mcgo:game/game_process/deathmatch/get_chosen_weapons
 scoreboard players set @a[scores={Deaths=1..}] Deaths 0

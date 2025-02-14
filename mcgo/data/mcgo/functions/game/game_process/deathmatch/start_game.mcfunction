@@ -1,7 +1,9 @@
 clear @a[team=CT]
 clear @a[team=T]
 function mcgo:game/reset/reset_scoreboard2
-gamerule keepInventory true
+#gamerule keepInventory true
+team modify CT nametagVisibility never 
+team modify T nametagVisibility never
 team modify CT friendlyFire true
 team modify T friendlyFire true
 

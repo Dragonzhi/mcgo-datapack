@@ -33,12 +33,12 @@ execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern
 
 execute as @a[team=CT] unless entity @s[nbt={Inventory:[{Slot:2b,id:"tacz:modern_kinetic_gun",tag:{GunType:3}}]}] run function mcgo:game/get_guns/get_knives
 
-execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"block_bettle:dian_ji_qiang",Slot:3b}]}] run item replace entity @a[team=CT] hotbar.3 with air
+execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"block_bettle:dian_ji_qiang",Slot:3b}]}] run item replace entity @s hotbar.3 with air
 
 item replace entity @a[team=CT] hotbar.4 with air
 item replace entity @a[team=CT] hotbar.5 with air
 item replace entity @a[team=CT] hotbar.6 with air
-item replace entity @a[team=CT] hotbar.7 with air
+execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"minecraft:potion"}]}] run item replace entity @s hotbar.7 with air
 execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"minecraft:written_book"}]}] run function mcgo:game/game_process/deathmatch/give_books
 
 #T
@@ -76,10 +76,10 @@ execute as @a[team=T] unless entity @s[nbt={Inventory:[{Slot:1b,id:"tacz:modern_
 
 execute as @a[team=T] unless entity @s[nbt={Inventory:[{Slot:2b,id:"tacz:modern_kinetic_gun",tag:{GunType:3}}]}] run function mcgo:game/get_guns/get_knives
 
-execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"block_bettle:dian_ji_qiang",Slot:3b}]}] run item replace entity @a[team=CT] hotbar.3 with air
+execute as @a[team=CT] unless entity @s[nbt={Inventory:[{id:"block_bettle:dian_ji_qiang",Slot:3b}]}] run item replace entity @s hotbar.3 with air
 
 item replace entity @a[team=T] hotbar.4 with air
 item replace entity @a[team=T] hotbar.5 with air
 item replace entity @a[team=T] hotbar.6 with air
-item replace entity @a[team=T] hotbar.7 with air
+execute as @a[team=T] unless entity @s[nbt={Inventory:[{id:"minecraft:potion"}]}] run item replace entity @s hotbar.7 with air
 execute as @a[team=T] unless entity @s[nbt={Inventory:[{id:"minecraft:written_book"}]}] run function mcgo:game/game_process/deathmatch/give_books

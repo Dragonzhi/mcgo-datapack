@@ -23,5 +23,4 @@ execute if entity @s[scores={Allowance=10}] run scoreboard players set @s mcs 2
 #将@s mcs设置为2，进入get_guns.mcfunctions时执行对应指令
 execute if entity @s[scores={Allowance=10}] run function mcgo:game/get_guns/get_guns
 
-
-#/setblock 31 -60 -39 minecraft:chest[facing=west,type=single,waterlogged=false]{ForgeCaps:{},Items:[{Count:1b,Slot:0b,id:"tacz:modern_kinetic_gun",tag:{AttachmentSTOCK:{Count:1b,id:"tacz:attachment",tag:{AttachmentId:"tacz:oem_stock_light"}},GunCurrentAmmoCount:0,GunFireMode:"AUTO",GunId:"classicr:mp9",HasBulletInBarrel:0b}}]}
+execute if score DeathMatch GameProcess matches 1 unless score @s GetGunRapidly matches 1 run scoreboard players set @s DeathMatchChosenMainWeapon 21
