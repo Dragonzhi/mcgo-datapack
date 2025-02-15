@@ -31,6 +31,35 @@ execute if score dust2 SelectedMap matches 1 run scoreboard players set Allowonc
     execute if score Allowonce GameProcess matches 1 run scoreboard players set Allowonce GameProcess 0
 
 
+# 荒漠迷城 Mirage
+execute if score mirage SelectedMap matches 1 run scoreboard players set Allowonce GameProcess 1
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 0 run spreadplayers 1143 57 1 1 under -52 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 1 run spreadplayers 1168 78 1 1 under -45 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 2 run spreadplayers 1187 69 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 3 run spreadplayers 1162 40 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 4 run spreadplayers 1161 11 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 5 run spreadplayers 1178 26 1 1 under -50 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 6 run spreadplayers 1190 44 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 7 run spreadplayers 1205 73 1 1 under -44 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 8 run spreadplayers 1236 63 1 1 under -45 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 9 run spreadplayers 1245 41 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 10 run spreadplayers 1250 -5 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 11 run spreadplayers 1235 28 1 1 under -52 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 12 run spreadplayers 1217 45 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 13 run spreadplayers 1212 -30 1 1 under -52 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 14 run spreadplayers 1212 20 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 15 run spreadplayers 1172 -7 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 16 run spreadplayers 1152 -27 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 17 run spreadplayers 1112 -20 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 18 run spreadplayers 1132 -36 1 1 under -45 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 19 run spreadplayers 1163 -30 1 1 under -47 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 20 run spreadplayers 1193 -40 1 1 under -48 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 21 run spreadplayers 1166 -26 1 1 under -55 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 22 run spreadplayers 1132 9 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 23 run spreadplayers 1141 -7 1 1 under -49 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 24 run spreadplayers 1241 -32 1 1 under -52 false @s
+    execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed >= 25 DeathMatchSeed run spreadplayers 1235 28 1 1 under -52 false @s
+    execute if score Allowonce GameProcess matches 1 run scoreboard players set Allowonce GameProcess 0
 
 effect give @a[scores={Deaths=1..}] health_boost 99999 2 true
 effect give @a[scores={Deaths=1..}] minecraft:saturation 99999 255 true
@@ -42,3 +71,4 @@ clear @a[scores={Deaths=1..}] minecraft:potion
 experience set @a[scores={Deaths=1..}] 0 levels
 
 scoreboard players set @a[scores={Deaths=1..}] Deaths 0
+
