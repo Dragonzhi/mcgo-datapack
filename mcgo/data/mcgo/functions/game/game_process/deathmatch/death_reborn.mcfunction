@@ -62,7 +62,7 @@ execute if score mirage SelectedMap matches 1 run scoreboard players set Allowon
     execute if score Allowonce GameProcess matches 1 run scoreboard players set Allowonce GameProcess 0
 
 #远古遗迹ancient
-execute if score mirage SelectedMap matches 1 run scoreboard players set Allowonce GameProcess 1
+execute if score ancient SelectedMap matches 1 run scoreboard players set Allowonce GameProcess 1
     execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 0 run spreadplayers -20 194 1 1 under -53 false @s
     execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 1 run spreadplayers -45 187 1 1 under -53 false @s
     execute if score Allowonce GameProcess matches 1 as @a[scores={Deaths=1..}] if score @s DeathMatchSeed matches 2 run spreadplayers -45 198 1 1 under -53 false @s
