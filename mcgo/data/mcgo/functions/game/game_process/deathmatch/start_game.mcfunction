@@ -22,7 +22,7 @@ scoreboard players set @a GetGunForFree 1
 scoreboard players set DeathMatch GameProcess 1
 scoreboard players set @a Kills 0
 scoreboard players set @a PlayKill 0
-scoreboard players set @a Deaths 0
+scoreboard players set @a Deaths 1
 scoreboard players set S InGame 1
 #重置部分计分板
 
@@ -48,7 +48,6 @@ bossbar set mcs:deathmatch_game_process name [{"text":"死亡竞赛倒计时 ","
 execute store result bossbar mcs:deathmatch_bonus_weapons value run scoreboard players set seconds GameProcess 600
 schedule function mcgo:execute/timer/timer_deathmatch 1s append
 
-schedule function mcgo:game/map_select_tp/tp_to_selected_map 5t append
 
 scoreboard players set DeathMatchBonusWeaponGiveTimer GameProcess 120
 schedule function mcgo:execute/timer/timer_deathmatch_bonus_weapons 1s append
