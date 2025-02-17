@@ -28,7 +28,7 @@ function mcgo:game/reset/reset_scoreboard2
 function mcgo:game/reset/reset_team
 function mcgo:game/reset/reset_gamerule
 function mcgo:game/reset/set_bossbar
-function mcgo:game/reset/special_reset_deathmatchseed
+#function mcgo:game/reset/special_reset_deathmatchseed
 schedule clear mcgo:game/reset/reset_world
 schedule clear mcgo:execute/timer/timer_normal_game
 schedule clear mcgo:execute/timer/timer_normal_shop
