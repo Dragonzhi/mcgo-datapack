@@ -26,6 +26,13 @@ scoreboard players set @a Deaths 1
 scoreboard players set S InGame 1
 #重置部分计分板
 
+# 用于实现游戏对局开始时，玩家尽量不会在同一处出生（获取XpSeed作为基数，除于一个增加的数，再加上玩家的旋转值）
+execute as @a store result score @s DeathMatchSeed_cala run data get entity @s XpSeed
+execute as @a run scoreboard players operation @s DeathMatchSeed += @s DeathMatchSeed_cala
+execute as @a store result score @s DeathMatchSeed_cala run data get entity @s warden_spawn_tracker.ticks_since_last_warning
+execute as @a run scoreboard players operation @s DeathMatchSeed /= @s DeathMatchSeed_cala
+execute as @a store result score @s DeathMatchSeed_cala run data get entity @s Rotation[0]
+execute as @a run scoreboard players operation @s DeathMatchSeed += @s DeathMatchSeed_cala
 
 effect give @a[team=T] minecraft:regeneration 3 255 true
 effect give @a[team=T] health_boost 99999 2 true

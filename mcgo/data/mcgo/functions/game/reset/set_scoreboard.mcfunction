@@ -37,7 +37,7 @@ scoreboard objectives remove DeathMatchPoints
 scoreboard objectives remove DeathMatchChosenMainWeapon
 scoreboard objectives remove DeathMatchChosenPistol
 scoreboard objectives remove GetGunRapidly
-
+scoreboard objectives remove DeathMatchSeed_cala
 
 scoreboard objectives add Timer dummy "倒计时"
 scoreboard objectives add Hp health
@@ -86,6 +86,7 @@ scoreboard objectives add csgrenade_killcount_molotov dummy
 
 scoreboard objectives add FunnyCase dummy
 scoreboard objectives add DeathMatchSeed dummy
+scoreboard objectives add DeathMatchSeed_cala dummy
 scoreboard objectives add DeathMatchPoints dummy "死亡竞赛得分"
 scoreboard objectives add DeathMatchChosenMainWeapon dummy
 scoreboard objectives add DeathMatchChosenPistol dummy

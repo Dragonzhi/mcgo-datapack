@@ -46,3 +46,4 @@ scoreboard players set @a ArmsRaceSeed 0
 
 scoreboard players set @a DeathMatchPoints 0
 scoreboard players set @a DeathMatchSeed 0
+scoreboard players set @a DeathMatchSeed_cala 0
