@@ -93,4 +93,3 @@ scoreboard objectives add DeathMatchChosenPistol dummy
 scoreboard objectives add GetGunRapidly dummy
 
 scoreboard objectives setdisplay belowName Hp
-scoreboard objectives setdisplay list Points

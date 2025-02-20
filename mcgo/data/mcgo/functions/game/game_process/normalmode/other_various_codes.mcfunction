@@ -41,3 +41,7 @@ execute store result score TotalTNum GameProcess run execute if entity @a[team=T
 
 execute as @e[type=tacz:bullet] unless entity @s[tag=tagged] run scoreboard players add FiredBullet FunnyCase 1
 execute as @e[type=tacz:bullet] unless entity @s[tag=tagged] run tag @s add tagged
+
+#在商店时间时给所有人展示自己的钱
+execute as @a[team=CT] if score 商店时间 Timer matches 1.. run title @s actionbar [{"text":"你有的金钱："},{"text":"$ ","color":"green","bold":true},{"score":{"name":"@s","objective":"Points"},"color":"green","bold":true}]
+execute as @a[team=T] if score 商店时间 Timer matches 1.. run title @s actionbar [{"text":"你有的金钱："},{"text":"$ ","color":"green","bold":true},{"score":{"name":"@s","objective":"Points"},"color":"green","bold":true}]
