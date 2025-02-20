@@ -5,8 +5,8 @@ execute if entity @a[team=T] run execute unless entity @a[team=T,scores={Deaths=
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
     #若检测不到Deaths为0的T，则设置TAllDied为1，且进入条件存在TAllDieD为0，防止重复进入该分支（设置T的Deaths为0会出现bug）
 
-execute if entity @a[team=T] run execute if entity @e[name="C 4 Defused"] run scoreboard players set Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run kill @e[name="C 4 Defused"]
+execute if entity @a[team=T] if entity @e[type=item,nbt={Item:{id:"block_bettle:c_4_defused"}}] run scoreboard players set Allowance GameProcess 1
+    execute if score Allowance GameProcess matches 1 run kill @e[type=item,nbt={Item:{id:"block_bettle:c_4_defused"}}]
     execute if score Allowance GameProcess matches 1 run execute as @a[scores={DefuseC4=1..}] run scoreboard players add @s Points 300
     execute if score Allowance GameProcess matches 1 run execute as @a[scores={DefuseC4=1..}] run tellraw @s [{"text":"成功拆除C4 ","color":"white"},{"text":"+300$","color":"green"}]
     execute if score Allowance GameProcess matches 1 run scoreboard players set BombDefused GameProcess 1

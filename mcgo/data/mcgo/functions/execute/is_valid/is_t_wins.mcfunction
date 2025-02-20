@@ -5,8 +5,8 @@ execute if entity @a[team=CT] run execute unless entity @a[team=CT,scores={Death
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
     #若检测不到Deaths为0的CT，则设置CTAllDied为1，且进入条件存在CTAllDieD为0，防止重复进入该分支（设置CT的Deaths为0会出现bug）
 
-execute if entity @a[team=CT] run execute if entity @e[name="C 4 Exploded"] run scoreboard players set Allowance GameProcess 1
-    execute if score Allowance GameProcess matches 1 run kill @e[name="C 4 Exploded"]
+execute if entity @a[team=CT] run execute if entity @e[type=item,nbt={Item:{id:"block_bettle:c_4_exploded"}}] run scoreboard players set Allowance GameProcess 1
+    execute if score Allowance GameProcess matches 1 run kill @e[type=item,nbt={Item:{id:"block_bettle:c_4_exploded"}}]
     execute if score Allowance GameProcess matches 1 run scoreboard players set BombExploded GameProcess 1
     execute if score Allowance GameProcess matches 1 run scoreboard players set Allowance GameProcess 0
 
