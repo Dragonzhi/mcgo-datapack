@@ -75,6 +75,16 @@ execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SSG-08"}}}] unless score B
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SSG-08"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 17 run scoreboard players add @s DeathMatchPoints 17
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SSG-08"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 17 run tellraw @s [{"text":"使用SSG-08击杀一名敌人 ","color":"white"},{"text":"+17分","color":"green"}]
 
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"法玛斯"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 18 run scoreboard players add @s DeathMatchPoints 11 
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"法玛斯"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 18 run tellraw @s [{"text":"使用法玛斯击杀一名敌人 ","color":"white"},{"text":"+11分","color":"green"}]
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"法玛斯"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 18 run scoreboard players add @s DeathMatchPoints 17 
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"法玛斯"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 18 run tellraw @s [{"text":"使用法玛斯击杀一名敌人 ","color":"white"},{"text":"+17分","color":"green"}]
+
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SG-553"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 19 run scoreboard players add @s DeathMatchPoints 11 
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SG-553"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 19 run tellraw @s [{"text":"使用SG-553击杀一名敌人 ","color":"white"},{"text":"+11分","color":"green"}]
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SG-553"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 19 run scoreboard players add @s DeathMatchPoints 17 
+execute if entity @s[nbt={SelectedItem:{tag:{GunName:"SG-553"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 19 run tellraw @s [{"text":"使用SG-553击杀一名敌人 ","color":"white"},{"text":"+17分","color":"green"}]
+
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP9"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 21 run scoreboard players add @s DeathMatchPoints 12
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP9"}}}] unless score BonusWeaponsSeed DeathMatchSeed matches 21 run tellraw @s [{"text":"使用MP9击杀一名敌人 ","color":"white"},{"text":"+12分","color":"green"}]
 execute if entity @s[nbt={SelectedItem:{tag:{GunName:"MP9"}}}] if score BonusWeaponsSeed DeathMatchSeed matches 21 run scoreboard players add @s DeathMatchPoints 18

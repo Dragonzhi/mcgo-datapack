@@ -29,6 +29,10 @@ execute if entity @s[nbt={Inventory:[{tag:{GunName:"M4A1-S"},Slot:0b}]}] run sco
 execute if entity @s[nbt={Inventory:[{tag:{GunName:"SCAR-H"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 16
  
 execute if entity @s[nbt={Inventory:[{tag:{GunName:"SSG-08"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 17
+
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"法玛斯"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 18
+
+execute if entity @s[nbt={Inventory:[{tag:{GunName:"SG-553"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 19
  
 execute if entity @s[nbt={Inventory:[{tag:{GunName:"MP9"},Slot:0b}]}] run scoreboard players set BonusWeaponsSeed DeathMatchSeed 21
 

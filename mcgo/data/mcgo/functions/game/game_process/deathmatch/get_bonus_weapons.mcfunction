@@ -20,6 +20,8 @@ execute if score BonusWeaponsSeed DeathMatchSeed matches 14 run function mcgo:ri
 execute if score BonusWeaponsSeed DeathMatchSeed matches 15 run function mcgo:rifles/rifle_get_m4a1_s
 execute if score BonusWeaponsSeed DeathMatchSeed matches 16 run function mcgo:rifles/rifle_get_scar_h
 execute if score BonusWeaponsSeed DeathMatchSeed matches 17 run function mcgo:rifles/rifle_get_ssg
+execute if score BonusWeaponsSeed DeathMatchSeed matches 18 run function mcgo:rifles/rifle_get_famas
+execute if score BonusWeaponsSeed DeathMatchSeed matches 19 run function mcgo:rifles/rifle_get_sg553
  
 # === 冲锋枪类 === 
 execute if score BonusWeaponsSeed DeathMatchSeed matches 21 run function mcgo:submachine/submachine_get_mp9
